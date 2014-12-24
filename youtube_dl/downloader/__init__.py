@@ -14,7 +14,11 @@ from ..utils import (
 
 
 def get_suitable_downloader(info_dict):
-    """Get the downloader class that can handle the info dict."""
+    """Get the downloader class that can handle the info dict.
+     this is at this point that we can add the multi threading feature to increase downloading
+    after the right downloader has been found the class should be passed to another class
+    which will be like the controller class that controls who the downloader class
+    downloads the object"""
     url = info_dict['url']
     protocol = info_dict.get('protocol')
 
