@@ -3,9 +3,11 @@ from __future__ import unicode_literals
 from .abc import ABCIE
 from .academicearth import AcademicEarthCourseIE
 from .addanime import AddAnimeIE
+from .adobetv import AdobeTVIE
 from .adultswim import AdultSwimIE
 from .aftonbladet import AftonbladetIE
 from .aljazeera import AlJazeeraIE
+from .alphaporno import AlphaPornoIE
 from .anitube import AnitubeIE
 from .anysex import AnySexIE
 from .aol import AolIE
@@ -107,6 +109,7 @@ from .elpais import ElPaisIE
 from .empflix import EMPFlixIE
 from .engadget import EngadgetIE
 from .eporner import EpornerIE
+from .eroprofile import EroProfileIE
 from .escapist import EscapistIE
 from .everyonesmixtape import EveryonesMixtapeIE
 from .exfm import ExfmIE
@@ -405,6 +408,7 @@ from .ted import TEDIE
 from .telebruxelles import TeleBruxellesIE
 from .telecinco import TelecincoIE
 from .telemb import TeleMBIE
+from .teletask import TeleTaskIE
 from .tenplay import TenPlayIE
 from .testurl import TestURLIE
 from .tf1 import TF1IE
