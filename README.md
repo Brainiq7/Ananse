@@ -1,7 +1,8 @@
-youtube-dl - download videos from youtube.com or other video platforms
+Ananse - A true cross platform downloader base on youtube-dl
 
 - [INSTALLATION](#installation)
 - [DESCRIPTION](#description)
+- [FEATURES](#features)
 - [OPTIONS](#options)
 - [CONFIGURATION](#configuration)
 - [OUTPUT TEMPLATE](#output-template)
@@ -13,38 +14,45 @@ youtube-dl - download videos from youtube.com or other video platforms
 
 # INSTALLATION
 
-To install it right away for all UNIX users (Linux, OS X, etc.), type:
-
-    sudo curl https://yt-dl.org/latest/youtube-dl -o /usr/local/bin/youtube-dl
-    sudo chmod a+x /usr/local/bin/youtube-dl
-
-If you do not have curl, you can alternatively use a recent wget:
-
-    sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-    sudo chmod a+x /usr/local/bin/youtube-dl
-
-Windows users can [download a .exe file](https://yt-dl.org/latest/youtube-dl.exe) and place it in their home directory or any other location on their [PATH](http://en.wikipedia.org/wiki/PATH_%28variable%29).
-
-OS X users can install **youtube-dl** with [Homebrew](http://brew.sh/).
-
-    brew install youtube-dl
-
-You can also use pip:
-
-    sudo pip install youtube-dl
-
-Alternatively, refer to the developer instructions below for how to check out and work with the git repository. For further options, including PGP signatures, see https://rg3.github.io/youtube-dl/download.html .
+**Still under development** but if you want to try it right away 
+refer to the developer instructions below for how to check out and work with the git repository. 
 
 # DESCRIPTION
-**youtube-dl** is a small command-line program to download videos from
-YouTube.com and a few more sites. It requires the Python interpreter, version
+**Ananse** is a download manager in every sense of the word allowing you to download videos 
+and files from multiple sites including Youtube.com. It requires the Python interpreter, version
 2.6, 2.7, or 3.2+, and it is not platform specific. It should work on
 your Unix box, on Windows or on Mac OS X. It is released to the public domain,
 which means you can modify it, redistribute it or use it however you like.
+It is build on [youtube-dl](http://rg3.github.io/youtube-dl), Although it was been restructured
+to provide the features below it is still compatible with youtube-dl
 
-    youtube-dl [OPTIONS] URL [URL...]
+# FEATURES
+
+1.  **GUI Support (not implemented)** 
+See all your downloads and set downloading options for all downloads without typing a single thing at the command line
+2.  **Command Line Usage** 
+Use Ananse from the command line as you will use any other command line application
+3.  **Browser Integration (not implemented)**
+Integrates into any internet application to take over downloads using easily understood and implemented APIs
+4.  **Video Grabber (not implemented)** 
+Easily downloads streaming videos with only one click
+5.  **Support Many types of Protocols and Proxy Servers**
+Provide support for many types of protocols and proxy server like ftp, http/https, rtmp etc
+6.  **Download Categorization (not implemented)** 
+Automatically organize all your downloads using defined downloads categories to make locating downloaded files easy
+7.  **Download Acceleration (not implemented)** 
+Speeds up downloading by up to  5 time due to intelligent dynamic file segmentation technology
+8.  **Download Resume**
+internet Download Manager will resume unfinished download from the place where they left off. 
+Comprehensive error recovery and resume capability will restart broken or interrupted downloads 
+due to lost or dropped connections, network problems, computer shutdowns, or unexpected power outages.
+
+For any feature not included open an issues and label it as a feature request
 
 # OPTIONS
+
+Since we are restructuring the application not all options will work as expected for now
+
     -h, --help                       print this help text and exit
     --version                        print program version and exit
     -U, --update                     update this program to latest version. Make
@@ -326,11 +334,11 @@ which means you can modify it, redistribute it or use it however you like.
 
 # CONFIGURATION
 
-You can configure youtube-dl by placing default arguments (such as `--extract-audio --no-mtime` to always extract the audio and not copy the mtime) into `/etc/youtube-dl.conf` and/or `~/.config/youtube-dl/config`. On Windows, the configuration file locations are `%APPDATA%\youtube-dl\config.txt` and `C:\Users\<Yourname>\youtube-dl.conf`.
+You can configure Ananse by placing default arguments (such as `--extract-audio --no-mtime` to always extract the audio and not copy the mtime) into `/etc/ananse.conf` and/or `~/.config/ananse/config`. On Windows, the configuration file locations are `%APPDATA%\ananse\config.txt` and `C:\Users\<Yourname>\ananse.conf`.
 
 # OUTPUT TEMPLATE
 
-The `-o` option allows users to indicate a template for the output file names. The basic usage is not to set any template arguments when downloading a single file, like in `youtube-dl -o funny_video.flv "http://some/video"`. However, it may contain special sequences that will be replaced when downloading each video. The special sequences have the format `%(NAME)s`. To clarify, that is a percent symbol followed by a name in parenthesis, followed by a lowercase S. Allowed names are:
+The `-o` option allows users to indicate a template for the output file names. The basic usage is not to set any template arguments when downloading a single file, like in `ananse -o funny_video.flv "http://some/video"`. However, it may contain special sequences that will be replaced when downloading each video. The special sequences have the format `%(NAME)s`. To clarify, that is a percent symbol followed by a name in parenthesis, followed by a lowercase S. Allowed names are:
 
  - `id`: The sequence will be replaced by the video identifier.
  - `url`: The sequence will be replaced by the video URL.
@@ -348,10 +356,13 @@ The current default template is `%(title)s-%(id)s.%(ext)s`.
 In some cases, you don't want special characters such as 中, spaces, or &, such as when transferring the downloaded filename to a Windows system or the filename through an 8bit-unsafe channel. In these cases, add the `--restrict-filenames` flag to get a shorter title:
 
 ```bash
-$ youtube-dl --get-filename -o "%(title)s.%(ext)s" BaW_jenozKc
-youtube-dl test video ''_ä↭𝕐.mp4    # All kinds of weird characters
-$ youtube-dl --get-filename -o "%(title)s.%(ext)s" BaW_jenozKc --restrict-filenames
-youtube-dl_test_video_.mp4          # A simple file name
+$ ananse --get-filename -o "%(title)s.%(ext)s" BaW_jenozKc
+ananse test video ''_ä↭𝕐.mp4    # All kinds of weird characters
+```
+
+```bash
+$ ananse --get-filename -o "%(title)s.%(ext)s" BaW_jenozKc --restrict-filenames
+ananse_test_video_.mp4          # A simple file name
 ```
 
 # VIDEO SELECTION
@@ -363,66 +374,40 @@ Videos can be filtered by their upload date using the options `--date`, `--dateb
  
 Examples:
 
+####Download only the videos uploaded in the last 6 months
+`$ ananse --dateafter now-6months`
+#### Download only the videos uploaded on January 1, 1970
 ```bash
-# Download only the videos uploaded in the last 6 months
-$ youtube-dl --dateafter now-6months
-
-# Download only the videos uploaded on January 1, 1970
-$ youtube-dl --date 19700101
-
+$ ananse --date 19700101
 $ # will only download the videos uploaded in the 200x decade
-$ youtube-dl --dateafter 20000101 --datebefore 20091231
+$ ananse --dateafter 20000101 --datebefore 20091231`
 ```
 
 # FAQ
 
-### How do I update youtube-dl?
+### How do I update Ananse?
 
-If you've followed [our manual installation instructions](http://rg3.github.io/youtube-dl/download.html), you can simply run `youtube-dl -U` (or, on Linux, `sudo youtube-dl -U`).
-
-If you have used pip, a simple `sudo pip install -U youtube-dl` is sufficient to update.
-
-If you have installed youtube-dl using a package manager like *apt-get* or *yum*, use the standard system update mechanism to update. Note that distribution packages are often outdated. As a rule of thumb, youtube-dl releases at least once a month, and often weekly or even daily. Simply go to http://yt-dl.org/ to find out the current version. Unfortunately, there is nothing we youtube-dl developers can do if your distributions serves a really outdated version. You can (and should) complain to your distribution in their bugtracker or support forum.
-
-As a last resort, you can also uninstall the version installed by your package manager and follow our manual installation instructions. For that, remove the distribution's package, with a line like
-
-    sudo apt-get remove -y youtube-dl
-
-Afterwards, simply follow [our manual installation instructions](http://rg3.github.io/youtube-dl/download.html):
-
-```
-sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
-sudo chmod a+x /usr/local/bin/youtube-dl
-hash -r
-```
-
-Again, from then on you'll be able to update with `sudo youtube-dl -U`.
+Still under development
 
 ### I'm getting an error `Unable to extract OpenGraph title` on YouTube playlists
 
-YouTube changed their playlist format in March 2014 and later on, so you'll need at least youtube-dl 2014.07.25 to download all YouTube videos.
-
-If you have installed youtube-dl with a package manager, pip, setup.py or a tarball, please use that to update. Note that Ubuntu packages do not seem to get updated anymore. Since we are not affiliated with Ubuntu, there is little we can do. Feel free to [report bugs](https://bugs.launchpad.net/ubuntu/+source/youtube-dl/+filebug) to the [Ubuntu packaging guys](mailto:ubuntu-motu@lists.ubuntu.com?subject=outdated%20version%20of%20youtube-dl) - all they have to do is update the package to a somewhat recent version. See above for a way to update.
-
-### Do I always have to pass in `--max-quality FORMAT`, or `-citw`?
-
-By default, youtube-dl intends to have the best options (incidentally, if you have a convincing case that these should be different, [please file an issue where you explain that](https://yt-dl.org/bug)). Therefore, it is unnecessary and sometimes harmful to copy long option strings from webpages. In particular, `--max-quality` *limits* the video quality (so if you want the best quality, do NOT pass it in), and the only option out of `-citw` that is regularly useful is `-i`.
+YouTube changed their playlist format in March 2014 and later on, so you'll need at least ananse 2014.07.25 to download all YouTube videos.
 
 ### Can you please put the -b option back?
 
-Most people asking this question are not aware that youtube-dl now defaults to downloading the highest available quality as reported by YouTube, which will be 1080p or 720p in some cases, so you no longer need the `-b` option. For some specific videos, maybe YouTube does not report them to be available in a specific high quality format you're interested in. In that case, simply request it with the `-f` option and youtube-dl will try to download it.
+Most people asking this question are not aware that ananse now defaults to downloading the highest available quality as reported by YouTube, which will be 1080p or 720p in some cases, so you no longer need the `-b` option. For some specific videos, maybe YouTube does not report them to be available in a specific high quality format you're interested in. In that case, simply request it with the `-f` option and youtube-dl will try to download it.
 
 ### I get HTTP error 402 when trying to download a video. What's this?
 
-Apparently YouTube requires you to pass a CAPTCHA test if you download too much. We're [considering to provide a way to let you solve the CAPTCHA](https://github.com/rg3/youtube-dl/issues/154), but at the moment, your best course of action is pointing a webbrowser to the youtube URL, solving the CAPTCHA, and restart youtube-dl.
+Apparently YouTube requires you to pass a CAPTCHA test if you download too much. We're considering a way to solve this problem, but at the moment, your best course of action is pointing a web browser to the youtube URL, solving the CAPTCHA, and restart ananse.
 
 ### I have downloaded a video but how can I play it?
 
 Once the video is fully downloaded, use any video player, such as [vlc](http://www.videolan.org) or [mplayer](http://www.mplayerhq.hu/).
 
-### The links provided by youtube-dl -g are not working anymore
+### The links provided by ananse -g are not working anymore
 
-The URLs youtube-dl outputs require the downloader to have the correct cookies. Use the `--cookies` option to write the required cookies into a file, and advise your downloader to read cookies from that file. Some sites also require a common user agent to be used, use `--dump-user-agent` to see the one in use by youtube-dl.
+The URLs ananse outputs require the downloader to have the correct cookies. Use the `--cookies` option to write the required cookies into a file, and advise your downloader to read cookies from that file. Some sites also require a common user agent to be used, use `--dump-user-agent` to see the one in use by ananse.
 
 ### ERROR: no fmt_url_map or conn information found in video info
 
@@ -463,7 +448,7 @@ To run the test, simply invoke your favorite test runner, or execute a test file
     python test/test_download.py
     nosetests
 
-If you want to create a build of youtube-dl yourself, you'll need
+If you want to create a build of ananse yourself, you'll need
 
 * python
 * make
@@ -473,117 +458,8 @@ If you want to create a build of youtube-dl yourself, you'll need
 
 ### Adding support for a new site
 
-If you want to add support for a new site, you can follow this quick list (assuming your service is called `yourextractor`):
-
-1. [Fork this repository](https://github.com/rg3/youtube-dl/fork)
-2. Check out the source code with `git clone git@github.com:YOUR_GITHUB_USERNAME/youtube-dl.git`
-3. Start a new git branch with `cd youtube-dl; git checkout -b yourextractor`
-4. Start with this simple template and save it to `youtube_dl/extractor/yourextractor.py`:
-    ```python
-    # coding: utf-8
-    from __future__ import unicode_literals
-
-    from .common import InfoExtractor
-
-
-    class YourExtractorIE(InfoExtractor):
-        _VALID_URL = r'https?://(?:www\.)?yourextractor\.com/watch/(?P<id>[0-9]+)'
-        _TEST = {
-            'url': 'http://yourextractor.com/watch/42',
-            'md5': 'TODO: md5 sum of the first 10241 bytes of the video file (use --test)',
-            'info_dict': {
-                'id': '42',
-                'ext': 'mp4',
-                'title': 'Video title goes here',
-                'thumbnail': 're:^https?://.*\.jpg$',
-                # TODO more properties, either as:
-                # * A value
-                # * MD5 checksum; start the string with md5:
-                # * A regular expression; start the string with re:
-                # * Any Python type (for example int or float)
-            }
-        }
-
-        def _real_extract(self, url):
-            video_id = self._match_id(url)
-            webpage = self._download_webpage(url, video_id)
-
-            # TODO more code goes here, for example ...
-            title = self._html_search_regex(r'<h1>(.*?)</h1>', webpage, 'title')
-
-            return {
-                'id': video_id,
-                'title': title,
-                'description': self._og_search_description(webpage),
-                # TODO more properties (see youtube_dl/extractor/common.py)
-            }
-    ```
-5. Add an import in [`youtube_dl/extractor/__init__.py`](https://github.com/rg3/youtube-dl/blob/master/youtube_dl/extractor/__init__.py).
-6. Run `python test/test_download.py TestDownload.test_YourExtractor`. This *should fail* at first, but you can continually re-run it until you're done. If you decide to add more than one test, then rename ``_TEST`` to ``_TESTS`` and make it into a list of dictionaries. The tests will be then be named `TestDownload.test_YourExtractor`, `TestDownload.test_YourExtractor_1`, `TestDownload.test_YourExtractor_2`, etc.
-7. Have a look at [`youtube_dl/common/extractor/common.py`](https://github.com/rg3/youtube-dl/blob/master/youtube_dl/extractor/common.py) for possible helper methods and a [detailed description of what your extractor should return](https://github.com/rg3/youtube-dl/blob/master/youtube_dl/extractor/common.py#L38). Add tests and code for as many as you want.
-8. If you can, check the code with [pyflakes](https://pypi.python.org/pypi/pyflakes) (a good idea) and [pep8](https://pypi.python.org/pypi/pep8) (optional, ignore E501).
-9. When the tests pass, [add](http://git-scm.com/docs/git-add) the new files and [commit](http://git-scm.com/docs/git-commit) them and [push](http://git-scm.com/docs/git-push) the result, like this:
-
-        $ git add youtube_dl/extractor/__init__.py
-        $ git add youtube_dl/extractor/yourextractor.py
-        $ git commit -m '[yourextractor] Add new extractor'
-        $ git push origin yourextractor
-
-10. Finally, [create a pull request](https://help.github.com/articles/creating-a-pull-request). We'll then review and merge it.
-
-In any case, thank you very much for your contributions!
-
-# EMBEDDING YOUTUBE-DL
-
-youtube-dl makes the best effort to be a good command-line program, and thus should be callable from any programming language. If you encounter any problems parsing its output, feel free to [create a report](https://github.com/rg3/youtube-dl/issues/new).
-
-From a Python program, you can embed youtube-dl in a more powerful fashion, like this:
-
-```python
-import youtube_dl
-
-ydl_opts = {}
-with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-    ydl.download(['http://www.youtube.com/watch?v=BaW_jenozKc'])
-```
-
-Most likely, you'll want to use various options. For a list of what can be done, have a look at [youtube_dl/YoutubeDL.py](https://github.com/rg3/youtube-dl/blob/master/youtube_dl/YoutubeDL.py#L69). For a start, if you want to intercept youtube-dl's output, set a `logger` object.
-
-Here's a more complete example of a program that outputs only errors (and a short message after the download is finished), and downloads/converts the video to an mp3 file:
-
-```python
-import youtube_dl
-
-
-class MyLogger(object):
-    def debug(self, msg):
-        pass
-
-    def warning(self, msg):
-        pass
-
-    def error(self, msg):
-        print(msg)
-
-
-def my_hook(d):
-    if d['status'] == 'finished':
-        print('Done downloading, now converting ...')
-
-
-ydl_opts = {
-    'format': 'bestaudio/best',
-    'postprocessors': [{
-        'key': 'FFmpegExtractAudio',
-        'preferredcodec': 'mp3',
-        'preferredquality': '192',
-    }],
-    'logger': MyLogger(),
-    'progress_hooks': [my_hook],
-}
-with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-    ydl.download(['http://www.youtube.com/watch?v=BaW_jenozKc'])
-```
+**Coming soon.** 
+But any extractor that works in youtube-dl will work here
 
 # BUGS
 
