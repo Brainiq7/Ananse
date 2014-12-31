@@ -74,10 +74,10 @@ class VimeoIE(VimeoBaseInfoExtractor, SubtitlesInfoExtractor):
                 'id': '56015672',
                 'ext': 'mp4',
                 "upload_date": "20121220",
-                "description": "This is a test case for youtube-dl.\nFor more information, see github.com/rg3/youtube-dl\nTest chars: \u2605 \" ' \u5e78 / \\ \u00e4 \u21ad \U0001d550",
+                "description": "This is a test case for ananse.\nFor more information, see github.com/rg3/ananse\nTest chars: \u2605 \" ' \u5e78 / \\ \u00e4 \u21ad \U0001d550",
                 "uploader_id": "user7108434",
                 "uploader": "Filippo Valsorda",
-                "title": "youtube-dl test video - \u2605 \" ' \u5e78 / \\ \u00e4 \u21ad \U0001d550",
+                "title": "ananse test video - \u2605 \" ' \u5e78 / \\ \u00e4 \u21ad \U0001d550",
                 "duration": 10,
             },
         },
@@ -116,15 +116,15 @@ class VimeoIE(VimeoBaseInfoExtractor, SubtitlesInfoExtractor):
             'info_dict': {
                 'id': '68375962',
                 'ext': 'mp4',
-                'title': 'youtube-dl password protected test video',
+                'title': 'ananse password protected test video',
                 'upload_date': '20130614',
                 'uploader_id': 'user18948128',
                 'uploader': 'Jaime Marquínez Ferrándiz',
                 'duration': 10,
-                'description': 'This is "youtube-dl password protected test video" by Jaime Marquínez Ferrándiz on Vimeo, the home for high quality videos and the people who love them.',
+                'description': 'This is "ananse password protected test video" by Jaime Marquínez Ferrándiz on Vimeo, the home for high quality videos and the people who love them.',
             },
             'params': {
-                'videopassword': 'youtube-dl',
+                'videopassword': 'ananse',
             },
         },
         {
@@ -234,7 +234,7 @@ class VimeoIE(VimeoBaseInfoExtractor, SubtitlesInfoExtractor):
                 if b'Because of its privacy settings, this video cannot be played here' in errmsg:
                     raise ExtractorError(
                         'Cannot download embed-only video without embedding '
-                        'URL. Please call youtube-dl with the URL of the page '
+                        'URL. Please call ananse with the URL of the page '
                         'that embeds this video.',
                         expected=True)
             raise

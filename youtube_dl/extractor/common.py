@@ -145,7 +145,7 @@ class InfoExtractor(object):
     dislike_count:  Number of negative ratings of the video
     comment_count:  Number of comments on the video
     age_limit:      Age restriction for the video, as an integer (years)
-    webpage_url:    The url to the video webpage, if given to youtube-dl it
+    webpage_url:    The url to the video webpage, if given to ananse it
                     should allow to get the same result again. (It will be set
                     by YoutubeDL if it's missing)
     categories:     A list of categories that the video falls in, for example

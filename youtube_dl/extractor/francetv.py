@@ -52,7 +52,7 @@ class FranceTVBaseInfoExtractor(InfoExtractor):
             format_id = video['format']
             if video_url.endswith('.f4m'):
                 if georestricted:
-                    # See https://github.com/rg3/youtube-dl/issues/3963
+                    # See https://github.com/rg3/ananse/issues/3963
                     # m3u8 urls work fine
                     continue
                 video_url_parsed = compat_urllib_parse_urlparse(video_url)

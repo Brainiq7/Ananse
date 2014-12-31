@@ -434,7 +434,7 @@ class ExtractorError(Exception):
 
     def __init__(self, msg, tb=None, expected=False, cause=None, video_id=None):
         """ tb, if given, is the original traceback (so that it can be printed out).
-        If expected is set, this is a normal error message and most likely not a bug in youtube-dl.
+        If expected is set, this is a normal error message and most likely not a bug in ananse.
         """
 
         if sys.exc_info()[0] in (compat_urllib_error.URLError, socket.timeout, UnavailableVideoError):
@@ -445,12 +445,12 @@ class ExtractorError(Exception):
             msg += ' (caused by %r)' % cause
         if not expected:
             if ytdl_is_updateable():
-                update_cmd = 'type  youtube-dl -U  to update'
+                update_cmd = 'type  ananse -U  to update'
             else:
                 update_cmd = 'see  https://yt-dl.org/update  on how to update'
             msg += '; please report this issue on https://yt-dl.org/bug .'
             msg += ' Make sure you are using the latest version; %s.' % update_cmd
-            msg += ' Be sure to call youtube-dl with the --verbose flag and include its complete output.'
+            msg += ' Be sure to call ananse with the --verbose flag and include its complete output.'
         super(ExtractorError, self).__init__(msg)
 
         self.traceback = tb
@@ -1534,7 +1534,7 @@ def is_outdated_version(version, limit, assume_new=True):
 
 
 def ytdl_is_updateable():
-    """ Returns if youtube-dl can be updated with -U """
+    """ Returns if ananse can be updated with -U """
     from zipimport import zipimporter
 
     return isinstance(globals().get('__loader__'), zipimporter) or hasattr(sys, 'frozen')

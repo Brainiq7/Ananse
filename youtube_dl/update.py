@@ -49,13 +49,13 @@ def rsa_verify(message, signature, key):
 def update_self(to_screen, verbose):
     """Update the program file with the latest version from the repository"""
 
-    UPDATE_URL = "http://rg3.github.io/youtube-dl/update/"
+    UPDATE_URL = "http://rg3.github.io/ananse/update/"
     VERSION_URL = UPDATE_URL + 'LATEST_VERSION'
     JSON_URL = UPDATE_URL + 'versions.json'
     UPDATES_RSA_KEY = (0x9d60ee4d8f805312fdb15a62f87b95bd66177b91df176765d13514a0f1754bcd2057295c5b6f1d35daa6742c3ffc9a82d3e118861c207995a8031e151d863c9927e304576bc80692bc8e094896fcf11b66f3e29e04e3a71e9a11558558acea1840aec37fc396fb6b65dc81a1c4144e03bd1c011de62e3f1357b327d08426fe93, 65537)
 
     if not isinstance(globals().get('__loader__'), zipimporter) and not hasattr(sys, "frozen"):
-        to_screen('It looks like you installed youtube-dl with a package manager, pip, setup.py or a tarball. Please use that to update.')
+        to_screen('It looks like you installed ananse with a package manager, pip, setup.py or a tarball. Please use that to update.')
         return
 
     # Check if there is a new version
@@ -67,7 +67,7 @@ def update_self(to_screen, verbose):
         to_screen('ERROR: can\'t find the current version. Please try again later.')
         return
     if newversion == __version__:
-        to_screen('youtube-dl is up-to-date (' + __version__ + ')')
+        to_screen('ananse is up-to-date (' + __version__ + ')')
         return
 
     # Download and check versions info
@@ -93,7 +93,7 @@ def update_self(to_screen, verbose):
     def version_tuple(version_str):
         return tuple(map(int, version_str.split('.')))
     if version_tuple(__version__) >= version_tuple(version_id):
-        to_screen('youtube-dl is up to date (%s)' % __version__)
+        to_screen('ananse is up to date (%s)' % __version__)
         return
 
     to_screen('Updating to version ' + version_id + ' ...')
@@ -144,14 +144,14 @@ def update_self(to_screen, verbose):
             return
 
         try:
-            bat = os.path.join(directory, 'youtube-dl-updater.bat')
+            bat = os.path.join(directory, 'ananse-updater.bat')
             with io.open(bat, 'w') as batfile:
                 batfile.write('''
 @echo off
 echo Waiting for file handle to be closed ...
 ping 127.0.0.1 -n 5 -w 1000 > NUL
 move /Y "%s.new" "%s" > NUL
-echo Updated youtube-dl to version %s.
+echo Updated ananse to version %s.
 start /b "" cmd /c del "%%~f0"&exit /b"
                 \n''' % (exe, exe, version_id))
 
@@ -189,7 +189,7 @@ start /b "" cmd /c del "%%~f0"&exit /b"
             to_screen('ERROR: unable to overwrite current version')
             return
 
-    to_screen('Updated youtube-dl. Restart youtube-dl to use the new version.')
+    to_screen('Updated ananse. Restart ananse to use the new version.')
 
 
 def get_notes(versions, fromVersion):

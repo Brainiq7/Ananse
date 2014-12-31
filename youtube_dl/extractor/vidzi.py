@@ -12,7 +12,7 @@ class VidziIE(InfoExtractor):
         'info_dict': {
             'id': 'cghql9yq6emu',
             'ext': 'mp4',
-            'title': 'youtube-dl test video  1\\\\2\'3/4<5\\\\6ä7↭',
+            'title': 'ananse test video  1\\\\2\'3/4<5\\\\6ä7↭',
         },
     }
 

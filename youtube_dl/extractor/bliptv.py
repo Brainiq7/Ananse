@@ -38,7 +38,7 @@ class BlipTVIE(SubtitlesInfoExtractor):
             }
         },
         {
-            # https://github.com/rg3/youtube-dl/pull/2274
+            # https://github.com/rg3/ananse/pull/2274
             'note': 'Video with subtitles',
             'url': 'http://blip.tv/play/h6Uag5OEVgI.html',
             'md5': '309f9d25b820b086ca163ffac8031806',
@@ -84,7 +84,7 @@ class BlipTVIE(SubtitlesInfoExtractor):
             }
         },
         {
-            # https://github.com/rg3/youtube-dl/pull/4404
+            # https://github.com/rg3/ananse/pull/4404
             'note': 'Audio only',
             'url': 'http://blip.tv/hilarios-productions/weekly-manga-recap-kingdom-7119982',
             'md5': '76c0a56f24e769ceaab21fbb6416a351',
@@ -107,8 +107,8 @@ class BlipTVIE(SubtitlesInfoExtractor):
         mobj = re.match(self._VALID_URL, url)
         lookup_id = mobj.group('lookup_id')
 
-        # See https://github.com/rg3/youtube-dl/issues/857 and
-        # https://github.com/rg3/youtube-dl/issues/4197
+        # See https://github.com/rg3/ananse/issues/857 and
+        # https://github.com/rg3/ananse/issues/4197
         if lookup_id:
             urlh = self._request_webpage(
                 'http://blip.tv/play/%s' % lookup_id, lookup_id, 'Resolving lookup id')
@@ -199,7 +199,7 @@ class BlipTVIE(SubtitlesInfoExtractor):
         # For some weird reason, blip.tv serves a video instead of subtitles
         # when we request with a common UA
         req = compat_urllib_request.Request(url)
-        req.add_header('Youtubedl-user-agent', 'youtube-dl')
+        req.add_header('Youtubedl-user-agent', 'ananse')
         return self._download_webpage(req, None, note=False)
 
 

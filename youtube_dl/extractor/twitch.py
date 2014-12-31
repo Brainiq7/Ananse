@@ -203,7 +203,7 @@ class TwitchIE(InfoExtractor):
             bracket_end = int(doc.find('.//bracket_end').text)
 
             # TODO determine start (and probably fix up file)
-            #  youtube-dl -v http://www.twitch.tv/firmbelief/c/1757457
+            #  ananse -v http://www.twitch.tv/firmbelief/c/1757457
             #video_url += '?start=' + TODO:start_timestamp
             # bracket_start is 13290, but we want 51670615
             self._downloader.report_warning('Chapter detected, but we can just download the whole file. '

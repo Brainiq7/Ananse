@@ -20,7 +20,7 @@ class Cache(object):
         res = self._ydl.params.get('cachedir')
         if res is None:
             cache_root = compat_getenv('XDG_CACHE_HOME', '~/.cache')
-            res = os.path.join(cache_root, 'youtube-dl')
+            res = os.path.join(cache_root, 'ananse')
         return compat_expanduser(res)
 
     def _get_cache_fn(self, section, key, dtype):

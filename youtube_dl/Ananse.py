@@ -300,7 +300,7 @@ class YoutubeDL(object):
             if re.match(r'^-[0-9A-Za-z_-]{10}$', a)]
         if idxs:
             correct_argv = (
-                ['youtube-dl'] +
+                ['ananse'] +
                 [a for i, a in enumerate(argv) if i not in idxs] +
                 ['--'] + [argv[i] for i in idxs]
             )
@@ -1373,7 +1373,7 @@ class YoutubeDL(object):
             return
 
         if type('') is not compat_str:
-            # Python 2.6 on SLES11 SP1 (https://github.com/rg3/youtube-dl/issues/3326)
+            # Python 2.6 on SLES11 SP1 (https://github.com/rg3/ananse/issues/3326)
             self.report_warning(
                 'Your Python is broken! Update to a newer and supported version')
 
@@ -1387,7 +1387,7 @@ class YoutubeDL(object):
                 self.get_encoding()))
         write_string(encoding_str, encoding=None)
 
-        self._write_string('[debug] youtube-dl version ' + __version__ + '\n')
+        self._write_string('[debug] ananse version ' + __version__ + '\n')
         try:
             sp = subprocess.Popen(
                 ['git', 'rev-parse', '--short', 'HEAD'],
@@ -1446,7 +1446,7 @@ class YoutubeDL(object):
                 proxies = {'http': opts_proxy, 'https': opts_proxy}
         else:
             proxies = compat_urllib_request.getproxies()
-            # Set HTTPS proxy to HTTP one if given (https://github.com/rg3/youtube-dl/issues/805)
+            # Set HTTPS proxy to HTTP one if given (https://github.com/rg3/ananse/issues/805)
             if 'http' in proxies and 'https' not in proxies:
                 proxies['https'] = proxies['http']
         proxy_handler = compat_urllib_request.ProxyHandler(proxies)
@@ -1459,7 +1459,7 @@ class YoutubeDL(object):
             https_handler, proxy_handler, cookie_processor, ydlh)
         # Delete the default user-agent header, which would otherwise apply in
         # cases where our custom HTTP handler doesn't come into play
-        # (See https://github.com/rg3/youtube-dl/issues/1309 for details)
+        # (See https://github.com/rg3/ananse/issues/1309 for details)
         opener.addheaders = []
         self._opener = opener
 

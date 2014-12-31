@@ -24,7 +24,7 @@ import io
 import json
 import socket
 
-import youtube_dl.YoutubeDL
+import youtube_dl.Ananse
 from youtube_dl.compat import (
     compat_http_client,
     compat_urllib_error,

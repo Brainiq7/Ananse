@@ -1,14 +1,13 @@
-Ananse - A true cross platform downloader base on youtube-dl
+Ananse - A true cross platform downloader base on [youtube-dl](https://github.com/rg3/youtube-dl)
 
 - [INSTALLATION](#installation)
 - [DESCRIPTION](#description)
 - [FEATURES](#features)
 - [OPTIONS](#options)
-- [CONFIGURATION](#configuration)
 - [OUTPUT TEMPLATE](#output-template)
 - [VIDEO SELECTION](#video-selection)
-- [FAQ](#faq)
 - [DEVELOPER INSTRUCTIONS](#developer-instructions)
+- [CONTRIBUTING]()
 - [BUGS](#bugs)
 - [COPYRIGHT](#copyright)
 
@@ -23,8 +22,8 @@ and files from multiple sites including Youtube.com. It requires the Python inte
 2.6, 2.7, or 3.2+, and it is not platform specific. It should work on
 your Unix box, on Windows or on Mac OS X. It is released to the public domain,
 which means you can modify it, redistribute it or use it however you like.
-It is build on [youtube-dl](http://rg3.github.io/youtube-dl), Although it was been restructured
-to provide the features below it is still compatible with youtube-dl
+It is build on [youtube-dl](http://rg3.github.io/youtube-dl), Although it has been restructured
+to provide the features below, it is still compatible with youtube-dl
 
 # FEATURES
 
@@ -39,11 +38,11 @@ Easily downloads streaming videos with only one click
 5.  **Support Many types of Protocols and Proxy Servers**
 Provide support for many types of protocols and proxy server like ftp, http/https, rtmp etc
 6.  **Download Categorization (not implemented)** 
-Automatically organize all your downloads using defined downloads categories to make locating downloaded files easy
+Automatically organize all your downloads using defined download categories to make locating downloaded files easy
 7.  **Download Acceleration (not implemented)** 
 Speeds up downloading by up to  5 time due to intelligent dynamic file segmentation technology
 8.  **Download Resume**
-internet Download Manager will resume unfinished download from the place where they left off. 
+Ananse will resume unfinished download from the place where they left off. 
 Comprehensive error recovery and resume capability will restart broken or interrupted downloads 
 due to lost or dropped connections, network problems, computer shutdowns, or unexpected power outages.
 
@@ -332,10 +331,6 @@ Since we are restructuring the application not all options will work as expected
                                      syntax. Example: --exec 'adb push {}
                                      /sdcard/Music/ && rm {}'
 
-# CONFIGURATION
-
-You can configure Ananse by placing default arguments (such as `--extract-audio --no-mtime` to always extract the audio and not copy the mtime) into `/etc/ananse.conf` and/or `~/.config/ananse/config`. On Windows, the configuration file locations are `%APPDATA%\ananse\config.txt` and `C:\Users\<Yourname>\ananse.conf`.
-
 # OUTPUT TEMPLATE
 
 The `-o` option allows users to indicate a template for the output file names. The basic usage is not to set any template arguments when downloading a single file, like in `ananse -o funny_video.flv "http://some/video"`. However, it may contain special sequences that will be replaced when downloading each video. The special sequences have the format `%(NAME)s`. To clarify, that is a percent symbol followed by a name in parenthesis, followed by a lowercase S. Allowed names are:
@@ -383,70 +378,17 @@ $ # will only download the videos uploaded in the 200x decade
 $ ananse --dateafter 20000101 --datebefore 20091231`
 ```
 
-# FAQ
-
-### How do I update Ananse?
-
-Still under development
-
-### I'm getting an error `Unable to extract OpenGraph title` on YouTube playlists
-
-YouTube changed their playlist format in March 2014 and later on, so you'll need at least ananse 2014.07.25 to download all YouTube videos.
-
-### Can you please put the -b option back?
-
-Most people asking this question are not aware that ananse now defaults to downloading the highest available quality as reported by YouTube, which will be 1080p or 720p in some cases, so you no longer need the `-b` option. For some specific videos, maybe YouTube does not report them to be available in a specific high quality format you're interested in. In that case, simply request it with the `-f` option and youtube-dl will try to download it.
-
-### I get HTTP error 402 when trying to download a video. What's this?
-
-Apparently YouTube requires you to pass a CAPTCHA test if you download too much. We're considering a way to solve this problem, but at the moment, your best course of action is pointing a web browser to the youtube URL, solving the CAPTCHA, and restart ananse.
-
-### I have downloaded a video but how can I play it?
-
-Once the video is fully downloaded, use any video player, such as [vlc](http://www.videolan.org) or [mplayer](http://www.mplayerhq.hu/).
-
-### The links provided by ananse -g are not working anymore
-
-The URLs ananse outputs require the downloader to have the correct cookies. Use the `--cookies` option to write the required cookies into a file, and advise your downloader to read cookies from that file. Some sites also require a common user agent to be used, use `--dump-user-agent` to see the one in use by ananse.
-
-### ERROR: no fmt_url_map or conn information found in video info
-
-youtube has switched to a new video info format in July 2011 which is not supported by old versions of youtube-dl. You can update youtube-dl with `sudo youtube-dl --update`.
-
-### ERROR: unable to download video ###
-
-youtube requires an additional signature since September 2012 which is not supported by old versions of youtube-dl. You can update youtube-dl with `sudo youtube-dl --update`.
-
-### SyntaxError: Non-ASCII character ###
-
-The error
-
-    File "youtube-dl", line 2
-    SyntaxError: Non-ASCII character '\x93' ...
-
-means you're using an outdated version of Python. Please update to Python 2.6 or 2.7.
-
-### What is this binary file? Where has the code gone?
-
-Since June 2012 (#342) youtube-dl is packed as an executable zipfile, simply unzip it (might need renaming to `youtube-dl.zip` first on some systems) or clone the git repository, as laid out above. If you modify the code, you can run it by executing the `__main__.py` file. To recompile the executable, run `make youtube-dl`.
-
-### The exe throws a *Runtime error from Visual C++*
-
-To run the exe you need to install first the [Microsoft Visual C++ 2008 Redistributable Package](http://www.microsoft.com/en-us/download/details.aspx?id=29).
-
 # DEVELOPER INSTRUCTIONS
 
-Most users do not need to build youtube-dl and can [download the builds](http://rg3.github.io/youtube-dl/download.html) or get them from their distribution.
+To run Ananse as a developer, you don't need to build anything either. Simply execute
 
-To run youtube-dl as a developer, you don't need to build anything either. Simply execute
-
-    python -m youtube_dl
+    python -m ananse
 
 To run the test, simply invoke your favorite test runner, or execute a test file directly; any of the following work:
 
     python -m unittest discover
     python test/test_download.py
-    nosetests
+    nosetests --verbose
 
 If you want to create a build of ananse yourself, you'll need
 
@@ -459,66 +401,16 @@ If you want to create a build of ananse yourself, you'll need
 ### Adding support for a new site
 
 **Coming soon.** 
-But any extractor that works in youtube-dl will work here
+But any extractor that works in [youtube-dl](https://github.com/rg3/youtube-dl/) will work here
 
+# CONTRIBUTING
+
+See the [CONTRIBUTING file]()
 # BUGS
 
-Bugs and suggestions should be reported at: <https://github.com/rg3/youtube-dl/issues> . Unless you were prompted so or there is another pertinent reason (e.g. GitHub fails to accept the bug report), please do not send bug reports via personal email. For discussions, join us in the irc channel #youtube-dl on freenode.
-
-Please include the full output of the command when run with `--verbose`. The output (including the first lines) contain important debugging information. Issues without the full output are often not reproducible and therefore do not get solved in short order, if ever.
-
-Please re-read your issue once again to avoid a couple of common mistakes (you can and should use this as a checklist):
-
-### Is the description of the issue itself sufficient?
-
-We often get issue reports that we cannot really decipher. While in most cases we eventually get the required information after asking back multiple times, this poses an unnecessary drain on our resources. Many contributors, including myself, are also not native speakers, so we may misread some parts.
-
-So please elaborate on what feature you are requesting, or what bug you want to be fixed. Make sure that it's obvious
-
-- What the problem is
-- How it could be fixed
-- How your proposed solution would look like
-
-If your report is shorter than two lines, it is almost certainly missing some of these, which makes it hard for us to respond to it. We're often too polite to close the issue outright, but the missing info makes misinterpretation likely. As a commiter myself, I often get frustrated by these issues, since the only possible way for me to move forward on them is to ask for clarification over and over.
-
-For bug reports, this means that your report should contain the *complete* output of youtube-dl when called with the -v flag. The error message you get for (most) bugs even says so, but you would not believe how many of our bug reports do not contain this information.
-
-Site support requests **must contain an example URL**. An example URL is a URL you might want to download, like http://www.youtube.com/watch?v=BaW_jenozKc . There should be an obvious video present. Except under very special circumstances, the main page of a video service (e.g. http://www.youtube.com/ ) is *not* an example URL.
-
-###  Are you using the latest version?
-
-Before reporting any issue, type youtube-dl -U. This should report that you're up-to-date. About 20% of the reports we receive are already fixed, but people are using outdated versions. This goes for feature requests as well.
-
-###  Is the issue already documented?
-
-Make sure that someone has not already opened the issue you're trying to open. Search at the top of the window or at https://github.com/rg3/youtube-dl/search?type=Issues . If there is an issue, feel free to write something along the lines of "This affects me as well, with version 2015.01.01. Here is some more information on the issue: ...". While some issues may be old, a new post into them often spurs rapid activity.
-
-###  Why are existing options not enough?
-
-Before requesting a new feature, please have a quick peek at [the list of supported options](https://github.com/rg3/youtube-dl/blob/master/README.md#synopsis). Many feature requests are for features that actually exist already! Please, absolutely do show off your work in the issue report and detail how the existing similar options do *not* solve your problem.
-
-###  Is there enough context in your bug report?
-
-People want to solve problems, and often think they do us a favor by breaking down their larger problems (e.g. wanting to skip already downloaded files) to a specific request (e.g. requesting us to look whether the file exists before downloading the info page). However, what often happens is that they break down the problem into two steps: One simple, and one impossible (or extremely complicated one).
-
-We are then presented with a very complicated request when the original problem could be solved far easier, e.g. by recording the downloaded video IDs in a separate file. To avoid this, you must include the greater context where it is non-obvious. In particular, every feature request that does not consist of adding support for a new site should contain a use case scenario that explains in what situation the missing feature would be useful.
-
-###  Does the issue involve one problem, and one problem only?
-
-Some of our users seem to think there is a limit of issues they can or should open. There is no limit of issues they can or should open. While it may seem appealing to be able to dump all your issues into one ticket, that means that someone who solves one of your issues cannot mark the issue as closed. Typically, reporting a bunch of issues leads to the ticket lingering since nobody wants to attack that behemoth, until someone mercifully splits the issue into multiple ones.
-
-In particular, every site support request issue should only pertain to services at one site (generally under a common domain, but always using the same backend technology). Do not request support for vimeo user videos, Whitehouse podcasts, and Google Plus pages in the same issue. Also, make sure that you don't post bug reports alongside feature requests. As a rule of thumb, a feature request does not include outputs of youtube-dl that are not immediately related to the feature at hand. Do not post reports of a network error alongside the request for a new video service.
-
-###  Is anyone going to need the feature?
-
-Only post features that you (or an incapicated friend you can personally talk to) require. Do not post features because they seem like a good idea. If they are really useful, they will be requested by someone who requires them.
-
-###  Is your question about youtube-dl?
-
-It may sound strange, but some bug reports we receive are completely unrelated to youtube-dl and relate to a different or even the reporter's own application. Please make sure that you are actually using youtube-dl. If you are using a UI for youtube-dl, report the bug to the maintainer of the actual application providing the UI. On the other hand, if your UI for youtube-dl fails in some way you believe is related to youtube-dl, by all means, go ahead and report the bug.
-
+See [CONTRIBUTING]()
 # COPYRIGHT
 
-youtube-dl is released into the public domain by the copyright holders.
+Ananse is released into the public domain by the copyright holders.
 
-This README file was originally written by Daniel Bolton (<https://github.com/dbbolton>) and is likewise released into the public domain.
+**This README file is adapted from [youtube-dl](https://github.com/rg3/youtube-dl)**

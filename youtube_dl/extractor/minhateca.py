@@ -16,11 +16,11 @@ from ..utils import (
 class MinhatecaIE(InfoExtractor):
     _VALID_URL = r'https?://minhateca\.com\.br/[^?#]+,(?P<id>[0-9]+)\.'
     _TEST = {
-        'url': 'http://minhateca.com.br/pereba/misc/youtube-dl+test+video,125848331.mp4(video)',
+        'url': 'http://minhateca.com.br/pereba/misc/ananse+test+video,125848331.mp4(video)',
         'info_dict': {
             'id': '125848331',
             'ext': 'mp4',
-            'title': 'youtube-dl test video',
+            'title': 'ananse test video',
             'thumbnail': 're:^https?://.*\.jpg$',
             'filesize_approx': 1530000,
             'duration': 9,

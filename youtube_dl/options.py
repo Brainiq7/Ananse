@@ -34,33 +34,33 @@ def parseOpts(overrideArguments=None):
     def _readUserConf():
         xdg_config_home = compat_getenv('XDG_CONFIG_HOME')
         if xdg_config_home:
-            userConfFile = os.path.join(xdg_config_home, 'youtube-dl', 'config')
+            userConfFile = os.path.join(xdg_config_home, 'ananse', 'config')
             if not os.path.isfile(userConfFile):
-                userConfFile = os.path.join(xdg_config_home, 'youtube-dl.conf')
+                userConfFile = os.path.join(xdg_config_home, 'ananse.conf')
         else:
-            userConfFile = os.path.join(compat_expanduser('~'), '.config', 'youtube-dl', 'config')
+            userConfFile = os.path.join(compat_expanduser('~'), '.config', 'ananse', 'config')
             if not os.path.isfile(userConfFile):
-                userConfFile = os.path.join(compat_expanduser('~'), '.config', 'youtube-dl.conf')
+                userConfFile = os.path.join(compat_expanduser('~'), '.config', 'ananse.conf')
         userConf = _readOptions(userConfFile, None)
 
         if userConf is None:
             appdata_dir = compat_getenv('appdata')
             if appdata_dir:
                 userConf = _readOptions(
-                    os.path.join(appdata_dir, 'youtube-dl', 'config'),
+                    os.path.join(appdata_dir, 'ananse', 'config'),
                     default=None)
                 if userConf is None:
                     userConf = _readOptions(
-                        os.path.join(appdata_dir, 'youtube-dl', 'config.txt'),
+                        os.path.join(appdata_dir, 'ananse', 'config.txt'),
                         default=None)
 
         if userConf is None:
             userConf = _readOptions(
-                os.path.join(compat_expanduser('~'), 'youtube-dl.conf'),
+                os.path.join(compat_expanduser('~'), 'ananse.conf'),
                 default=None)
         if userConf is None:
             userConf = _readOptions(
-                os.path.join(compat_expanduser('~'), 'youtube-dl.conf.txt'),
+                os.path.join(compat_expanduser('~'), 'ananse.conf.txt'),
                 default=None)
 
         if userConf is None:
@@ -159,14 +159,14 @@ def parseOpts(overrideArguments=None):
     general.add_option(
         '--default-search',
         dest='default_search', metavar='PREFIX',
-        help='Use this prefix for unqualified URLs. For example "gvsearch2:" downloads two videos from google videos for  youtube-dl "large apple". Use the value "auto" to let youtube-dl guess ("auto_warning" to emit a warning when guessing). "error" just throws an error. The default value "fixup_error" repairs broken URLs, but emits an error if this is not possible instead of searching.')
+        help='Use this prefix for unqualified URLs. For example "gvsearch2:" downloads two videos from google videos for  ananse "large apple". Use the value "auto" to let ananse guess ("auto_warning" to emit a warning when guessing). "error" just throws an error. The default value "fixup_error" repairs broken URLs, but emits an error if this is not possible instead of searching.')
     general.add_option(
         '--ignore-config',
         action='store_true',
         help='Do not read configuration files. '
-        'When given in the global configuration file /etc/youtube-dl.conf: '
-        'Do not read the user configuration in ~/.config/youtube-dl/config '
-        '(%APPDATA%/youtube-dl/config.txt on Windows)')
+        'When given in the global configuration file /etc/ananse.conf: '
+        'Do not read the user configuration in ~/.config/ananse/config '
+        '(%APPDATA%/ananse/config.txt on Windows)')
     general.add_option(
         '--flat-playlist',
         action='store_const', dest='extract_flat', const='in_playlist',
@@ -270,7 +270,7 @@ def parseOpts(overrideArguments=None):
             ' slashes: -f 22/17/18 .  -f mp4 , -f m4a and  -f flv  are also'
             ' supported. You can also use the special names "best",'
             ' "bestvideo", "bestaudio", "worst", "worstvideo" and'
-            ' "worstaudio". By default, youtube-dl will pick the best quality.'
+            ' "worstaudio". By default, ananse will pick the best quality.'
             ' Use commas to download multiple audio formats, such as'
             ' -f  136/137/mp4/bestvideo,140/m4a/bestaudio.'
             ' You can merge the video and audio of two formats into a single'
@@ -530,7 +530,7 @@ def parseOpts(overrideArguments=None):
     filesystem.add_option(
         '-c', '--continue',
         action='store_true', dest='continue_dl', default=True,
-        help='force resume of partially downloaded files. By default, youtube-dl will resume downloads if possible.')
+        help='force resume of partially downloaded files. By default, ananse will resume downloads if possible.')
     filesystem.add_option(
         '--no-continue',
         action='store_false', dest='continue_dl',
@@ -569,7 +569,7 @@ def parseOpts(overrideArguments=None):
         help='file to read cookies from and dump cookie jar in')
     filesystem.add_option(
         '--cache-dir', dest='cachedir', default=None, metavar='DIR',
-        help='Location in the filesystem where youtube-dl can store some downloaded information permanently. By default $XDG_CACHE_HOME/youtube-dl or ~/.cache/youtube-dl . At the moment, only YouTube player files (for videos with obfuscated signatures) are cached, but that may change.')
+        help='Location in the filesystem where ananse can store some downloaded information permanently. By default $XDG_CACHE_HOME/ananse or ~/.cache/ananse . At the moment, only YouTube player files (for videos with obfuscated signatures) are cached, but that may change.')
     filesystem.add_option(
         '--no-cache-dir', action='store_const', const=False, dest='cachedir',
         help='Disable filesystem caching')
@@ -652,7 +652,7 @@ def parseOpts(overrideArguments=None):
             systemConf = []
             userConf = []
         else:
-            systemConf = _readOptions('/etc/youtube-dl.conf')
+            systemConf = _readOptions('/etc/ananse.conf')
             if '--ignore-config' in systemConf:
                 userConf = []
             else:

@@ -12,9 +12,9 @@ class KeekIE(InfoExtractor):
         'info_dict': {
             'id': 'NODfbab',
             'ext': 'mp4',
-            'uploader': 'youtube-dl project',
+            'uploader': 'ananse project',
             'uploader_id': 'ytdl',
-            'title': 'test chars: "\'/\\\u00e4<>This is a test video for youtube-dl.For more information, contact phihag@phihag.de .',
+            'title': 'test chars: "\'/\\\u00e4<>This is a test video for ananse.For more information, contact phihag@phihag.de .',
         },
     }
 

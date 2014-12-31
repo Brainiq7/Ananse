@@ -33,7 +33,7 @@ py2exe_options = {
 
 py2exe_console = [{
     "script": "./youtube_dl/__main__.py",
-    "dest_base": "youtube-dl",
+    "dest_base": "ananse",
 }]
 
 py2exe_params = {
@@ -46,10 +46,10 @@ if len(sys.argv) >= 2 and sys.argv[1] == 'py2exe':
     params = py2exe_params
 else:
     files_spec = [
-        ('etc/bash_completion.d', ['youtube-dl.bash-completion']),
-        ('etc/fish/completions', ['youtube-dl.fish']),
+        ('etc/bash_completion.d', ['ananse.bash-completion']),
+        ('etc/fish/completions', ['ananse.fish']),
         ('share/doc/youtube_dl', ['README.txt']),
-        ('share/man/man1', ['youtube-dl.1'])
+        ('share/man/man1', ['ananse.1'])
     ]
     root = os.path.dirname(os.path.abspath(__file__))
     data_files = []
@@ -66,9 +66,9 @@ else:
         'data_files': data_files,
     }
     if setuptools_available:
-        params['entry_points'] = {'console_scripts': ['youtube-dl = youtube_dl:main']}
+        params['entry_points'] = {'console_scripts': ['ananse = youtube_dl:main']}
     else:
-        params['scripts'] = ['bin/youtube-dl']
+        params['scripts'] = ['bin/ananse']
 
 # Get the version from youtube_dl/version.py without importing the package
 exec(compile(open('youtube_dl/version.py').read(),
@@ -80,7 +80,7 @@ setup(
     description='YouTube video downloader',
     long_description='Small command-line program to download videos from'
     ' YouTube.com and other video sites.',
-    url='https://github.com/rg3/youtube-dl',
+    url='https://github.com/rg3/ananse',
     author='Ricardo Garcia',
     author_email='ytdl@yt-dl.org',
     maintainer='Philipp Hagemeister',

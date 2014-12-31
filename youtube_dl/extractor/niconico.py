@@ -37,7 +37,7 @@ class NiconicoIE(InfoExtractor):
         },
         'params': {
             'username': 'ydl.niconico@gmail.com',
-            'password': 'youtube-dl',
+            'password': 'ananse',
         },
     }
 

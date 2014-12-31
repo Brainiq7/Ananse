@@ -15,7 +15,7 @@ import io
 
 import xml.etree.ElementTree
 
-import youtube_dl.YoutubeDL
+import youtube_dl.Ananse
 import youtube_dl.extractor
 
 

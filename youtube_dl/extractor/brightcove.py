@@ -107,10 +107,10 @@ class BrightcoveIE(InfoExtractor):
         <object class="BrightcoveExperience">{params}</object>
         """
 
-        # Fix up some stupid HTML, see https://github.com/rg3/youtube-dl/issues/1553
+        # Fix up some stupid HTML, see https://github.com/rg3/ananse/issues/1553
         object_str = re.sub(r'(<param name="[^"]+" value="[^"]+")>',
                             lambda m: m.group(1) + '/>', object_str)
-        # Fix up some stupid XML, see https://github.com/rg3/youtube-dl/issues/1608
+        # Fix up some stupid XML, see https://github.com/rg3/ananse/issues/1608
         object_str = object_str.replace('<--', '<!--')
         # remove namespace to simplify extraction
         object_str = re.sub(r'(<object[^>]*)(xmlns=".*?")', r'\1', object_str)

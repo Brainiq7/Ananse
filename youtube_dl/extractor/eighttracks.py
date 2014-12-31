@@ -16,12 +16,12 @@ class EightTracksIE(InfoExtractor):
     _VALID_URL = r'https?://8tracks\.com/(?P<user>[^/]+)/(?P<id>[^/#]+)(?:#.*)?$'
     _TEST = {
         "name": "EightTracks",
-        "url": "http://8tracks.com/ytdl/youtube-dl-test-tracks-a",
+        "url": "http://8tracks.com/ytdl/ananse-test-tracks-a",
         "info_dict": {
             'id': '1336550',
-            'display_id': 'youtube-dl-test-tracks-a',
+            'display_id': 'ananse-test-tracks-a',
             "description": "test chars:  \"'/\\ä↭",
-            "title": "youtube-dl test tracks \"'/\\ä↭<>",
+            "title": "ananse test tracks \"'/\\ä↭<>",
         },
         "playlist": [
             {
@@ -29,7 +29,7 @@ class EightTracksIE(InfoExtractor):
                 "info_dict": {
                     "id": "11885610",
                     "ext": "m4a",
-                    "title": "youtue-dl project<>\"' - youtube-dl test track 1 \"'/\\\u00e4\u21ad",
+                    "title": "youtue-dl project<>\"' - ananse test track 1 \"'/\\\u00e4\u21ad",
                     "uploader_id": "ytdl"
                 }
             },
@@ -38,7 +38,7 @@ class EightTracksIE(InfoExtractor):
                 "info_dict": {
                     "id": "11885608",
                     "ext": "m4a",
-                    "title": "youtube-dl project - youtube-dl test track 2 \"'/\\\u00e4\u21ad",
+                    "title": "ananse project - ananse test track 2 \"'/\\\u00e4\u21ad",
                     "uploader_id": "ytdl"
                 }
             },
@@ -47,7 +47,7 @@ class EightTracksIE(InfoExtractor):
                 "info_dict": {
                     "id": "11885679",
                     "ext": "m4a",
-                    "title": "youtube-dl project as well - youtube-dl test track 3 \"'/\\\u00e4\u21ad",
+                    "title": "ananse project as well - ananse test track 3 \"'/\\\u00e4\u21ad",
                     "uploader_id": "ytdl"
                 }
             },
@@ -56,7 +56,7 @@ class EightTracksIE(InfoExtractor):
                 "info_dict": {
                     "id": "11885680",
                     "ext": "m4a",
-                    "title": "youtube-dl project as well - youtube-dl test track 4 \"'/\\\u00e4\u21ad",
+                    "title": "ananse project as well - ananse test track 4 \"'/\\\u00e4\u21ad",
                     "uploader_id": "ytdl"
                 }
             },
@@ -65,7 +65,7 @@ class EightTracksIE(InfoExtractor):
                 "info_dict": {
                     "id": "11885682",
                     "ext": "m4a",
-                    "title": "PH - youtube-dl test track 5 \"'/\\\u00e4\u21ad",
+                    "title": "PH - ananse test track 5 \"'/\\\u00e4\u21ad",
                     "uploader_id": "ytdl"
                 }
             },
@@ -74,7 +74,7 @@ class EightTracksIE(InfoExtractor):
                 "info_dict": {
                     "id": "11885683",
                     "ext": "m4a",
-                    "title": "PH - youtube-dl test track 6 \"'/\\\u00e4\u21ad",
+                    "title": "PH - ananse test track 6 \"'/\\\u00e4\u21ad",
                     "uploader_id": "ytdl"
                 }
             },
@@ -83,7 +83,7 @@ class EightTracksIE(InfoExtractor):
                 "info_dict": {
                     "id": "11885684",
                     "ext": "m4a",
-                    "title": "phihag - youtube-dl test track 7 \"'/\\\u00e4\u21ad",
+                    "title": "phihag - ananse test track 7 \"'/\\\u00e4\u21ad",
                     "uploader_id": "ytdl"
                 }
             },
@@ -92,7 +92,7 @@ class EightTracksIE(InfoExtractor):
                 "info_dict": {
                     "id": "11885685",
                     "ext": "m4a",
-                    "title": "phihag - youtube-dl test track 8 \"'/\\\u00e4\u21ad",
+                    "title": "phihag - ananse test track 8 \"'/\\\u00e4\u21ad",
                     "uploader_id": "ytdl"
                 }
             }

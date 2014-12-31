@@ -309,11 +309,11 @@ class YoutubeIE(YoutubeBaseInfoExtractor, SubtitlesInfoExtractor):
             'info_dict': {
                 'id': 'BaW_jenozKc',
                 'ext': 'mp4',
-                'title': 'youtube-dl test video "\'/\\ä↭𝕐',
+                'title': 'ananse test video "\'/\\ä↭𝕐',
                 'uploader': 'Philipp Hagemeister',
                 'uploader_id': 'phihag',
                 'upload_date': '20121002',
-                'description': 'test chars:  "\'/\\ä↭𝕐\ntest URL: https://github.com/rg3/youtube-dl/issues/1892\n\nThis is a test video for youtube-dl.\n\nFor more information, contact phihag@phihag.de .',
+                'description': 'test chars:  "\'/\\ä↭𝕐\ntest URL: https://github.com/rg3/ananse/issues/1892\n\nThis is a test video for ananse.\n\nFor more information, contact phihag@phihag.de .',
                 'categories': ['Science & Technology'],
                 'like_count': int,
                 'dislike_count': int,
@@ -418,7 +418,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor, SubtitlesInfoExtractor):
                 'upload_date': '20140605',
             },
         },
-        # video_info is None (https://github.com/rg3/youtube-dl/issues/4421)
+        # video_info is None (https://github.com/rg3/ananse/issues/4421)
         {
             'url': '__2ABJjxzNo',
             'info_dict': {
@@ -434,7 +434,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor, SubtitlesInfoExtractor):
                 'DASH manifest missing',
             ]
         },
-        # Olympics (https://github.com/rg3/youtube-dl/issues/4431)
+        # Olympics (https://github.com/rg3/ananse/issues/4431)
         {
             'url': 'lqQg6PlCWgI',
             'info_dict': {
@@ -954,7 +954,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor, SubtitlesInfoExtractor):
         elif len(video_info.get('url_encoded_fmt_stream_map', [''])[0]) >= 1 or len(video_info.get('adaptive_fmts', [''])[0]) >= 1:
             encoded_url_map = video_info.get('url_encoded_fmt_stream_map', [''])[0] + ',' + video_info.get('adaptive_fmts', [''])[0]
             if 'rtmpe%3Dyes' in encoded_url_map:
-                raise ExtractorError('rtmpe downloads are not supported, see https://github.com/rg3/youtube-dl/issues/343 for more information.', expected=True)
+                raise ExtractorError('rtmpe downloads are not supported, see https://github.com/rg3/ananse/issues/343 for more information.', expected=True)
             url_map = {}
             for url_data_str in encoded_url_map.split(','):
                 url_data = compat_parse_qs(url_data_str)
@@ -1187,7 +1187,7 @@ class YoutubePlaylistIE(YoutubeBaseInfoExtractor):
             return self._extract_mix(playlist_id)
         if playlist_id.startswith('TL'):
             raise ExtractorError('For downloading YouTube.com top lists, use '
-                                 'the "yttoplist" keyword, for example "youtube-dl \'yttoplist:music:Top Tracks\'"', expected=True)
+                                 'the "yttoplist" keyword, for example "ananse \'yttoplist:music:Top Tracks\'"', expected=True)
 
         url = self._TEMPLATE_URL % playlist_id
         page = self._download_webpage(url, playlist_id)
@@ -1464,10 +1464,10 @@ class YoutubeSearchURLIE(InfoExtractor):
     IE_NAME = 'youtube:search_url'
     _VALID_URL = r'https?://(?:www\.)?youtube\.com/results\?(.*?&)?search_query=(?P<query>[^&]+)(?:[&]|$)'
     _TESTS = [{
-        'url': 'https://www.youtube.com/results?baz=bar&search_query=youtube-dl+test+video&filters=video&lclk=video',
+        'url': 'https://www.youtube.com/results?baz=bar&search_query=ananse+test+video&filters=video&lclk=video',
         'playlist_mincount': 5,
         'info_dict': {
-            'title': 'youtube-dl test video',
+            'title': 'ananse test video',
         }
     }]
 
@@ -1683,7 +1683,7 @@ class YoutubeTruncatedURLIE(InfoExtractor):
         raise ExtractorError(
             'Did you forget to quote the URL? Remember that & is a meta '
             'character in most shells, so you want to put the URL in quotes, '
-            'like  youtube-dl '
+            'like  ananse '
             '"http://www.youtube.com/watch?feature=foo&v=BaW_jenozKc" '
-            ' or simply  youtube-dl BaW_jenozKc  .',
+            ' or simply  ananse BaW_jenozKc  .',
             expected=True)

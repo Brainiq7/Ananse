@@ -77,7 +77,7 @@ class GenericIE(InfoExtractor):
             },
         },
         {
-            # https://github.com/rg3/youtube-dl/issues/2253
+            # https://github.com/rg3/ananse/issues/2253
             'url': 'http://bcove.me/i6nfkrc3',
             'md5': '0ba9446db037002366bab3b3eb30c88c',
             'info_dict': {
@@ -101,7 +101,7 @@ class GenericIE(InfoExtractor):
             },
         },
         {
-            # https://github.com/rg3/youtube-dl/issues/3541
+            # https://github.com/rg3/ananse/issues/3541
             'add_ie': ['Brightcove'],
             'url': 'http://www.kijk.nl/sbs6/leermijvrouwenkennen/videos/jqMiXKAYan2S/aflevering-1',
             'info_dict': {
@@ -347,16 +347,16 @@ class GenericIE(InfoExtractor):
         },
         # RSS feed
         {
-            'url': 'http://phihag.de/2014/youtube-dl/rss2.xml',
+            'url': 'http://phihag.de/2014/ananse/rss2.xml',
             'info_dict': {
-                'id': 'http://phihag.de/2014/youtube-dl/rss2.xml',
+                'id': 'http://phihag.de/2014/ananse/rss2.xml',
                 'title': 'Zero Punctuation',
                 'description': 're:'
             },
             'playlist_mincount': 11,
         },
         # Multiple brightcove videos
-        # https://github.com/rg3/youtube-dl/issues/2283
+        # https://github.com/rg3/ananse/issues/2283
         {
             'url': 'http://www.newyorker.com/online/blogs/newsdesk/2014/01/always-never-nuclear-command-and-control.html',
             'info_dict': {
@@ -561,7 +561,7 @@ class GenericIE(InfoExtractor):
                     if default_search == 'auto_warning':
                         if re.match(r'^(?:url|URL)$', url):
                             raise ExtractorError(
-                                'Invalid URL:  %r . Call youtube-dl like this:  youtube-dl -v "https://www.youtube.com/watch?v=BaW_jenozKc"  ' % url,
+                                'Invalid URL:  %r . Call ananse like this:  ananse -v "https://www.youtube.com/watch?v=BaW_jenozKc"  ' % url,
                                 expected=True)
                         else:
                             self._downloader.report_warning(
@@ -571,7 +571,7 @@ class GenericIE(InfoExtractor):
             if default_search in ('error', 'fixup_error'):
                 raise ExtractorError(
                     '%r is not a valid URL. '
-                    'Set --default-search "ytsearch" (or run  youtube-dl "ytsearch:%s" ) to search YouTube'
+                    'Set --default-search "ytsearch" (or run  ananse "ytsearch:%s" ) to search YouTube'
                     % (url, url), expected=True)
             else:
                 if ':' not in default_search:
@@ -669,7 +669,7 @@ class GenericIE(InfoExtractor):
             return camtasia_res
 
         # Sometimes embedded video player is hidden behind percent encoding
-        # (e.g. https://github.com/rg3/youtube-dl/issues/2448)
+        # (e.g. https://github.com/rg3/ananse/issues/2448)
         # Unescaping the whole page allows to handle those cases in a generic way
         webpage = compat_urllib_parse.unquote(webpage)
 

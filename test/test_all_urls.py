@@ -70,7 +70,7 @@ class TestAllURLsMatching(unittest.TestCase):
 
     def test_youtube_search_matching(self):
         self.assertMatch('http://www.youtube.com/results?search_query=making+mustard', ['youtube:search_url'])
-        self.assertMatch('https://www.youtube.com/results?baz=bar&search_query=youtube-dl+test+video&filters=video&lclk=video', ['youtube:search_url'])
+        self.assertMatch('https://www.youtube.com/results?baz=bar&search_query=ananse+test+video&filters=video&lclk=video', ['youtube:search_url'])
 
     def test_twitch_channelid_matching(self):
         self.assertTrue(TwitchIE.suitable('twitch.tv/vanillatv'))
@@ -126,7 +126,7 @@ class TestAllURLsMatching(unittest.TestCase):
         self.assertMatch('http://vimeo.com/user7108434/videos', ['vimeo:user'])
         self.assertMatch('https://vimeo.com/user21297594/review/75524534/3c257a1b5d', ['vimeo:review'])
 
-    # https://github.com/rg3/youtube-dl/issues/1930
+    # https://github.com/rg3/ananse/issues/1930
     def test_soundcloud_not_matching_sets(self):
         self.assertMatch('http://soundcloud.com/floex/sets/gone-ep', ['soundcloud:set'])
 
@@ -135,12 +135,12 @@ class TestAllURLsMatching(unittest.TestCase):
         self.assertMatch('http://tatianamaslanydaily.tumblr.com/post/54196191430', ['Tumblr'])
 
     def test_pbs(self):
-        # https://github.com/rg3/youtube-dl/issues/2350
+        # https://github.com/rg3/ananse/issues/2350
         self.assertMatch('http://video.pbs.org/viralplayer/2365173446/', ['PBS'])
         self.assertMatch('http://video.pbs.org/widget/partnerplayer/980042464/', ['PBS'])
 
     def test_yahoo_https(self):
-        # https://github.com/rg3/youtube-dl/issues/2701
+        # https://github.com/rg3/ananse/issues/2701
         self.assertMatch(
             'https://screen.yahoo.com/smartwatches-latest-wearable-gadgets-163745379-cbs.html',
             ['Yahoo'])

@@ -32,7 +32,7 @@ class MyVideoIE(InfoExtractor):
 
     # Original Code from: https://github.com/dersphere/plugin.video.myvideo_de.git
     # Released into the Public Domain by Tristan Fischer on 2013-05-19
-    # https://github.com/rg3/youtube-dl/pull/842
+    # https://github.com/rg3/ananse/pull/842
     def __rc4crypt(self, data, key):
         x = 0
         box = list(range(256))

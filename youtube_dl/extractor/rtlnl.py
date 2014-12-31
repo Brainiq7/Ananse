@@ -38,7 +38,7 @@ class RtlXlIE(InfoExtractor):
         progname = info['abstracts'][0]['name']
         subtitle = material['title'] or info['episodes'][0]['name']
 
-        # Use unencrypted m3u8 streams (See https://github.com/rg3/youtube-dl/issues/4118)
+        # Use unencrypted m3u8 streams (See https://github.com/rg3/ananse/issues/4118)
         videopath = material['videopath'].replace('.f4m', '.m3u8')
         m3u8_url = 'http://manifest.us.rtl.nl' + videopath
 

@@ -307,7 +307,7 @@ else:
     compat_kwargs = lambda kwargs: kwargs
 
 
-# Fix https://github.com/rg3/youtube-dl/issues/4223
+# Fix https://github.com/rg3/ananse/issues/4223
 # See http://bugs.python.org/issue9161 for what is broken
 def workaround_optparse_bug9161():
     op = optparse.OptionParser()

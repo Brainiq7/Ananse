@@ -222,7 +222,7 @@ class FileDownloader(object):
             else:
                 clear_line = ('\r\x1b[K' if sys.stderr.isatty() else '\r')
             self.to_screen(clear_line + fullmsg, skip_eol=not is_last_line)
-        self.to_console_title('youtube-dl ' + msg)
+        self.to_console_title('ananse ' + msg)
 
     def report_progress(self, percent, data_len_str, speed, eta):
         """Report download progress."""

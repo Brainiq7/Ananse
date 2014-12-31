@@ -16,12 +16,12 @@ from ..utils import (
 class BandcampIE(InfoExtractor):
     _VALID_URL = r'https?://.*?\.bandcamp\.com/track/(?P<title>.*)'
     _TESTS = [{
-        'url': 'http://youtube-dl.bandcamp.com/track/youtube-dl-test-song',
+        'url': 'http://ananse.bandcamp.com/track/ananse-test-song',
         'md5': 'c557841d5e50261777a6585648adf439',
         'info_dict': {
             'id': '1812978515',
             'ext': 'mp3',
-            'title': "youtube-dl  \"'/\\\u00e4\u21ad - youtube-dl test song \"'/\\\u00e4\u21ad",
+            'title': "ananse  \"'/\\\u00e4\u21ad - ananse test song \"'/\\\u00e4\u21ad",
             'duration': 9.8485,
         },
         '_skip': 'There is a limit of 200 free downloads / month for the test song'

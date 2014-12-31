@@ -29,7 +29,7 @@ class YoukuIE(InfoExtractor):
         'info_dict': {
             'id': 'XNDgyMDQ2NTQw_part00',
             'ext': 'flv',
-            'title': 'youtube-dl test video "\'/\\ä↭𝕐'
+            'title': 'ananse test video "\'/\\ä↭𝕐'
         }
     }
 
