@@ -405,10 +405,10 @@ But any extractor that works in [youtube-dl](https://github.com/rg3/youtube-dl/)
 
 # CONTRIBUTING
 
-See the [CONTRIBUTING file]()
+See the [CONTRIBUTING file](https://github.com/Oteng/Ananse/blob/master/CONTRIBUTING.md)
 # BUGS
 
-See [CONTRIBUTING]()
+See [CONTRIBUTING](https://github.com/Oteng/Ananse/blob/master/CONTRIBUTING.md)
 # COPYRIGHT
 
 Ananse is released into the public domain by the copyright holders.
