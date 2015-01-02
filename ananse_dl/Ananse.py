@@ -76,7 +76,7 @@ from .postprocessor import (
 from .version import __version__
 
 
-class YoutubeDL(object):
+class AnanseDl(object):
     """YoutubeDL class.
 
     YoutubeDL objects are the ones responsible of downloading the

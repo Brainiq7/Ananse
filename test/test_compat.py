@@ -10,8 +10,8 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-from youtube_dl.utils import get_filesystem_encoding
-from youtube_dl.compat import (
+from ananse_dl.utils import get_filesystem_encoding
+from ananse_dl.compat import (
     compat_getenv,
     compat_expanduser,
 )
@@ -35,11 +35,11 @@ class TestCompat(unittest.TestCase):
         os.environ['HOME'] = old_home
 
     def test_all_present(self):
-        import youtube_dl.compat
-        all_names = youtube_dl.compat.__all__
+        import ananse_dl.compat
+        all_names = ananse_dl.compat.__all__
         present_names = set(filter(
             lambda c: '_' in c and not c.startswith('_'),
-            dir(youtube_dl.compat))) - set(['unicode_literals'])
+            dir(ananse_dl.compat))) - set(['unicode_literals'])
         self.assertEqual(all_names, sorted(present_names))
 
 if __name__ == '__main__':

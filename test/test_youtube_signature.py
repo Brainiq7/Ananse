@@ -13,8 +13,8 @@ import io
 import re
 import string
 
-from youtube_dl.extractor import YoutubeIE
-from youtube_dl.compat import compat_str, compat_urlretrieve
+from ananse_dl.extractor import YoutubeIE
+from ananse_dl.compat import compat_str, compat_urlretrieve
 
 _TESTS = [
     (

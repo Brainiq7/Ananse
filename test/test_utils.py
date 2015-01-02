@@ -15,7 +15,7 @@ import io
 import json
 import xml.etree.ElementTree
 
-from youtube_dl.utils import (
+from ananse_dl.utils import (
     args_to_str,
     clean_html,
     DateRange,

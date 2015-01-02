@@ -15,13 +15,13 @@ import io
 
 import xml.etree.ElementTree
 
-import youtube_dl.Ananse
-import youtube_dl.extractor
+import ananse_dl.Ananse
+import ananse_dl.extractor
 
 
-class YoutubeDL(youtube_dl.YoutubeDL):
+class AnanseDl(ananse_dl.AnanseDl):
     def __init__(self, *args, **kwargs):
-        super(YoutubeDL, self).__init__(*args, **kwargs)
+        super(AnanseDl, self).__init__(*args, **kwargs)
         self.to_stderr = self.to_screen
 
 params = get_params({
@@ -44,8 +44,8 @@ class TestAnnotations(unittest.TestCase):
 
     def test_info_json(self):
         expected = list(EXPECTED_ANNOTATIONS)  # Two annotations could have the same text.
-        ie = youtube_dl.extractor.YoutubeIE()
-        ydl = YoutubeDL(params)
+        ie = ananse_dl.extractor.YoutubeIE()
+        ydl = AnanseDl(params)
         ydl.add_info_extractor(ie)
         ydl.download([TEST_ID])
         self.assertTrue(os.path.exists(ANNOTATIONS_FILE))

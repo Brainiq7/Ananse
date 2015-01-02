@@ -18,14 +18,14 @@ except AttributeError:
 
 class TestExecution(unittest.TestCase):
     def test_import(self):
-        subprocess.check_call([sys.executable, '-c', 'import youtube_dl'], cwd=rootDir)
+        subprocess.check_call([sys.executable, '-c', 'import ananse_dl'], cwd=rootDir)
 
     def test_module_exec(self):
         if sys.version_info >= (2, 7):  # Python 2.6 doesn't support package execution
-            subprocess.check_call([sys.executable, '-m', 'youtube_dl', '--version'], cwd=rootDir, stdout=_DEV_NULL)
+            subprocess.check_call([sys.executable, '-m', 'ananse_dl', '--version'], cwd=rootDir, stdout=_DEV_NULL)
 
     def test_main_exec(self):
-        subprocess.check_call([sys.executable, 'youtube_dl/__main__.py', '--version'], cwd=rootDir, stdout=_DEV_NULL)
+        subprocess.check_call([sys.executable, 'ananse_dl/__main__.py', '--version'], cwd=rootDir, stdout=_DEV_NULL)
 
 if __name__ == '__main__':
     unittest.main()

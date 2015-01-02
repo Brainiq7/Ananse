@@ -24,28 +24,28 @@ import io
 import json
 import socket
 
-import youtube_dl.Ananse
-from youtube_dl.compat import (
+import ananse_dl.Ananse
+from ananse_dl.compat import (
     compat_http_client,
     compat_urllib_error,
     compat_HTTPError,
 )
-from youtube_dl.utils import (
+from ananse_dl.utils import (
     DownloadError,
     ExtractorError,
     format_bytes,
     UnavailableVideoError,
 )
-from youtube_dl.extractor import get_info_extractor
+from ananse_dl.extractor import get_info_extractor
 
 RETRIES = 3
 
 
-class YoutubeDL(youtube_dl.YoutubeDL):
+class AnanseDl(ananse_dl.AnanseDl):
     def __init__(self, *args, **kwargs):
         self.to_stderr = self.to_screen
         self.processed_info_dicts = []
-        super(YoutubeDL, self).__init__(*args, **kwargs)
+        super(AnanseDl, self).__init__(*args, **kwargs)
 
     def report_warning(self, message):
         # Don't accept warnings during tests
@@ -53,7 +53,7 @@ class YoutubeDL(youtube_dl.YoutubeDL):
 
     def process_info(self, info_dict):
         self.processed_info_dicts.append(info_dict)
-        return super(YoutubeDL, self).process_info(info_dict)
+        return super(AnanseDl, self).process_info(info_dict)
 
 
 def _file_md5(fn):
@@ -75,7 +75,7 @@ class TestDownload(unittest.TestCase):
 def generator(test_case):
 
     def test_template(self):
-        ie = youtube_dl.extractor.get_info_extractor(test_case['name'])
+        ie = ananse_dl.extractor.get_info_extractor(test_case['name'])
         other_ies = [get_info_extractor(ie_key) for ie_key in test_case.get('add_ie', [])]
         is_playlist = any(k.startswith('playlist') for k in test_case)
         test_cases = test_case.get(
@@ -105,7 +105,7 @@ def generator(test_case):
             params.setdefault('extract_flat', True)
             params.setdefault('skip_download', True)
 
-        ydl = YoutubeDL(params, auto_init=False)
+        ydl = AnanseDl(params, auto_init=False)
         ydl.add_default_info_extractors()
         finished_hook_called = set()
 

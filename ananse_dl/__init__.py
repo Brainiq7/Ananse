@@ -39,13 +39,13 @@ from .downloader import (
     FileDownloader,
 )
 from .extractor import gen_extractors
-from .Ananse import YoutubeDL
+from .Ananse import AnanseDl
 
 
 def _real_main(argv=None):
     # Compatibility fixes for Windows
     if sys.platform == 'win32':
-        # https://github.com/rg3/ananse/issues/820
+        # https://github.com/rg3/youtube-dl/issues/820
         codecs.register(lambda name: codecs.lookup('utf-8') if name == 'cp65001' else None)
 
     workaround_optparse_bug9161()
@@ -239,7 +239,7 @@ def _real_main(argv=None):
             'exec_cmd': opts.exec_cmd,
         })
 
-    ydl_opts = {
+    adl_opts = {
         'usenetrc': opts.usenetrc,
         'username': opts.username,
         'password': opts.password,
@@ -327,30 +327,30 @@ def _real_main(argv=None):
         'postprocessors': postprocessors,
     }
 
-    with YoutubeDL(ydl_opts) as ydl:
+    with AnanseDl(adl_opts) as adl:
         # Update version
         if opts.update_self:
-            update_self(ydl.to_screen, opts.verbose)
+            update_self(adl.to_screen, opts.verbose)
 
         # Remove cache dir
         if opts.rm_cachedir:
-            ydl.cache.remove()
+            adl.cache.remove()
 
         # Maybe do nothing
         if (len(all_urls) < 1) and (opts.load_info_filename is None):
             if opts.update_self or opts.rm_cachedir:
                 sys.exit()
 
-            ydl.warn_if_short_id(sys.argv[1:] if argv is None else argv)
+            adl.warn_if_short_id(sys.argv[1:] if argv is None else argv)
             parser.error('you must provide at least one URL')
 
         try:
             if opts.load_info_filename is not None:
-                retcode = ydl.download_with_info_file(opts.load_info_filename)
+                retcode = adl.download_with_info_file(opts.load_info_filename)
             else:
-                retcode = ydl.download(all_urls)
+                retcode = adl.download(all_urls)
         except MaxDownloadsReached:
-            ydl.to_screen('--max-download limit reached, aborting.')
+            adl.to_screen('--max-download limit reached, aborting.')
             retcode = 101
 
     sys.exit(retcode)

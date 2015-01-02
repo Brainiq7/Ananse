@@ -9,8 +9,8 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from test.helper import FakeYDL
-from youtube_dl.extractor.common import InfoExtractor
-from youtube_dl.extractor import YoutubeIE, get_info_extractor
+from ananse_dl.extractor.common import InfoExtractor
+from ananse_dl.extractor import YoutubeIE, get_info_extractor
 
 
 class TestIE(InfoExtractor):
