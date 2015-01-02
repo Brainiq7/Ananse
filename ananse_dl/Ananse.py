@@ -183,7 +183,7 @@ class YoutubeDL(object):
                        playlist items.
     postprocessors:    A list of dictionaries, each with an entry
                        * key:  The name of the postprocessor. See
-                               youtube_dl/postprocessor/__init__.py for a list.
+                               ananse_dl/postprocessor/__init__.py for a list.
                        as well as any further keyword arguments for the
                        postprocessor.
     progress_hooks:    A list of functions that get called on download

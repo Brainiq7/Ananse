@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 # Execute with
-# $ python youtube_dl/__main__.py (2.6+)
-# $ python -m youtube_dl          (2.7+)
+# $ python ananse_dl/__main__.py (2.6+)
+# $ python -m ananse_dl          (2.7+)
 
 import sys
 
@@ -13,7 +13,7 @@ if __package__ is None and not hasattr(sys, "frozen"):
     path = os.path.realpath(os.path.abspath(__file__))
     sys.path.append(os.path.dirname(os.path.dirname(path)))
 
-import youtube_dl
+import ananse_dl
 
 if __name__ == '__main__':
-    youtube_dl.main()
+    ananse_dl.main()
