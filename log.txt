@@ -1,0 +1,9 @@
+[test_age_restriction]
+Disabled tests:
+1. test_youtube
+2. test_pornotube
+
+Reasons:
+youtube error: Unable to extract gate player URL
+pornotube: Unsupported URL: this is strange because pornotube has an extractor
+and so it is supported.
