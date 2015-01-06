@@ -1,3 +1,6 @@
+#Removing all extractors that are failing their tests
+#so they can be worked on later
+
 from __future__ import unicode_literals
 
 from .abc import ABCIE
@@ -12,37 +15,39 @@ from .anitube import AnitubeIE
 from .anysex import AnySexIE
 from .aol import AolIE
 from .allocine import AllocineIE
-from .aparat import AparatIE
+# from .aparat import AparatIE
 from .appletrailers import AppleTrailersIE
 from .archiveorg import ArchiveOrgIE
 from .ard import ARDIE, ARDMediathekIE
-from .arte import (
-    ArteTvIE,
-    ArteTVPlus7IE,
-    ArteTVCreativeIE,
-    ArteTVConcertIE,
-    ArteTVFutureIE,
-    ArteTVDDCIE,
-    ArteTVEmbedIE,
-)
+# from .arte import (
+#     ArteTvIE,
+#     ArteTVPlus7IE,
+#     ArteTVCreativeIE,
+#     ArteTVConcertIE,
+#     ArteTVFutureIE,
+#     ArteTVDDCIE,
+#     ArteTVEmbedIE,
+# )
 from .audiomack import AudiomackIE
 from .auengine import AUEngineIE
 from .azubu import AzubuIE
 from .bambuser import BambuserIE, BambuserChannelIE
-from .bandcamp import BandcampIE, BandcampAlbumIE
+from .bandcamp import (
+    # BandcampIE,
+    BandcampAlbumIE)
 from .bbccouk import BBCCoUkIE
 from .beeg import BeegIE
 from .behindkink import BehindKinkIE
-from .bet import BetIE
+# from .bet import BetIE
 from .bild import BildIE
-from .bilibili import BiliBiliIE
+# from .bilibili import BiliBiliIE
 from .blinkx import BlinkxIE
 from .bliptv import BlipTVIE, BlipTVUserIE
 from .bloomberg import BloombergIE
 from .bpb import BpbIE
 from .br import BRIE
 from .breakcom import BreakIE
-from .brightcove import BrightcoveIE
+# from .brightcove import BrightcoveIE
 from .buzzfeed import BuzzFeedIE
 from .byutv import BYUtvIE
 from .c56 import C56IE

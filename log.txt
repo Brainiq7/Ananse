@@ -2,8 +2,46 @@
 Disabled tests:
 1. test_youtube
 2. test_pornotube
-
 Reasons:
 youtube error: Unable to extract gate player URL
 pornotube: Unsupported URL: this is strange because pornotube has an extractor
 and so it is supported.
+
+[test_Aparat]
+Disable extractor it self
+Reasons:
+Extractor not working well
+Error: ExtractorError: No working video URLs found
+
+[test_ArteTv]
+Disable extractor it self
+Reasons:
+test_ArteTVConcert: unable to download video data: HTTP Error 404: Not Found
+and the rest
+
+[test_Bandcamp]
+Disable extractor it self
+Reasons:
+test_bandcamp: Unable to download webpage: HTTP Error 404: Not Found
+
+[test_Bet]
+Disable extractor it self
+Reasons:
+test_Bet: Missing info file 417cd61c-c793-4e8e-b006-e445ecc45add.info.json
+
+[test_BiliBili]
+Disable extractor
+Reasons:
+test_BiliBili:  Unable to extract video code
+
+[test_BlipTV]
+Disable extractor
+Reasons:
+test_BlipTV: unable to download video data: HTTP Error 404: Not Found
+
+[test_Brightcover_4]
+Disable extractor
+Reasons: video_info['_youtubedl_adServerURL'] = info.get('adServerURL')
+TypeError: 'NoneType' object does not support item assignment
+
+
