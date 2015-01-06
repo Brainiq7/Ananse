@@ -1,4 +1,5 @@
-Ananse - A true cross platform downloader base on [youtube-dl](https://github.com/rg3/youtube-dl)
+#Ananse [![Build Status](https://travis-ci.org/Oteng/Ananse.svg?branch=master)](https://travis-ci.org/Oteng/Ananse)
+A true cross platform downloader base on [youtube-dl](https://github.com/rg3/youtube-dl)
 
 - [INSTALLATION](#installation)
 - [DESCRIPTION](#description)
