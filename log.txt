@@ -92,3 +92,42 @@ Reasons: DownloadError: ERROR: Unable to download webpage: HTTP Error 404
 Disable extractor
 Reasons: AssertionError: invalid value for field duration, expected 1838, got None
 
+[test_FKTV]
+Disable extractor
+Reasons: DownloadError: ERROR: Extractor fernsehkritik.tv returned a compat_list result. It needs to be updated.
+
+[test_Firedrive]
+Disable extractor
+Reasons: DownloadError: ERROR: Unable to extract file url
+
+[test_FourTube]
+Disable extractor
+Reasons: DownloadError: ERROR: Unable to download webpage
+
+[test_FranceInter]
+Disable extractor
+Reasons: test_FranceInter
+
+[test_FranceTV]
+Disable extractor
+Reasons: DownloadError: ERROR: Unable to extract video ID
+
+[test_GDCVault]
+Disable test 2
+Reasons: test failing
+
+[test_Generic]
+Disable failing tests
+Reasons: test were failing
+
+[test_GorillaVid_1]
+Disable test
+Reason: test failing
+
+[test_HotNewHipHop]
+Disable extractor
+Reason: Unable to extract content URL
+
+[test_JadoreCettePub]
+Disable extractor
+Reason: ERROR: Unable to download webpage

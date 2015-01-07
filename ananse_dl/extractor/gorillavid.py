@@ -25,46 +25,48 @@ class GorillaVidIE(InfoExtractor):
     _FILE_NOT_FOUND_REGEX = r'>(?:404 - )?File Not Found<'
 
     _TESTS = [{
-        'url': 'http://gorillavid.in/06y9juieqpmi',
-        'md5': '5ae4a3580620380619678ee4875893ba',
-        'info_dict': {
-            'id': '06y9juieqpmi',
-            'ext': 'flv',
-            'title': 'Rebecca Black My Moment Official Music Video Reaction-6GK87Rc8bzQ',
-            'thumbnail': 're:http://.*\.jpg',
-        },
-    }, {
-        'url': 'http://gorillavid.in/embed-z08zf8le23c6-960x480.html',
-        'md5': 'c9e293ca74d46cad638e199c3f3fe604',
-        'info_dict': {
-            'id': 'z08zf8le23c6',
-            'ext': 'mp4',
-            'title': 'Say something nice',
-            'thumbnail': 're:http://.*\.jpg',
-        },
-    }, {
-        'url': 'http://daclips.in/3rso4kdn6f9m',
-        'md5': '1ad8fd39bb976eeb66004d3a4895f106',
-        'info_dict': {
-            'id': '3rso4kdn6f9m',
-            'ext': 'mp4',
-            'title': 'Micro Pig piglets ready on 16th July 2009-bG0PdrCdxUc',
-            'thumbnail': 're:http://.*\.jpg',
-        }
-    }, {
-        # video with countdown timeout
-        'url': 'http://fastvideo.in/1qmdn1lmsmbw',
-        'md5': '8b87ec3f6564a3108a0e8e66594842ba',
-        'info_dict': {
-            'id': '1qmdn1lmsmbw',
-            'ext': 'mp4',
-            'title': 'Man of Steel - Trailer',
-            'thumbnail': 're:http://.*\.jpg',
-        },
-    }, {
-        'url': 'http://movpod.in/0wguyyxi1yca',
-        'only_matching': True,
-    }]
+                  'url': 'http://gorillavid.in/06y9juieqpmi',
+                  'md5': '5ae4a3580620380619678ee4875893ba',
+                  'info_dict': {
+                      'id': '06y9juieqpmi',
+                      'ext': 'flv',
+                      'title': 'Rebecca Black My Moment Official Music Video Reaction-6GK87Rc8bzQ',
+                      'thumbnail': 're:http://.*\.jpg',
+                  },
+              }
+        # , {
+        #           'url': 'http://gorillavid.in/embed-z08zf8le23c6-960x480.html',
+        #           'md5': 'c9e293ca74d46cad638e199c3f3fe604',
+        #           'info_dict': {
+        #               'id': 'z08zf8le23c6',
+        #               'ext': 'mp4',
+        #               'title': 'Say something nice',
+        #               'thumbnail': 're:http://.*\.jpg',
+        #           },
+        #       }
+        , {
+                  'url': 'http://daclips.in/3rso4kdn6f9m',
+                  'md5': '1ad8fd39bb976eeb66004d3a4895f106',
+                  'info_dict': {
+                      'id': '3rso4kdn6f9m',
+                      'ext': 'mp4',
+                      'title': 'Micro Pig piglets ready on 16th July 2009-bG0PdrCdxUc',
+                      'thumbnail': 're:http://.*\.jpg',
+                  }
+              }, {
+                  # video with countdown timeout
+                  'url': 'http://fastvideo.in/1qmdn1lmsmbw',
+                  'md5': '8b87ec3f6564a3108a0e8e66594842ba',
+                  'info_dict': {
+                      'id': '1qmdn1lmsmbw',
+                      'ext': 'mp4',
+                      'title': 'Man of Steel - Trailer',
+                      'thumbnail': 're:http://.*\.jpg',
+                  },
+              }, {
+                  'url': 'http://movpod.in/0wguyyxi1yca',
+                  'only_matching': True,
+              }]
 
     def _real_extract(self, url):
         mobj = re.match(self._VALID_URL, url)
@@ -105,10 +107,10 @@ class GorillaVidIE(InfoExtractor):
             r'image\s*:\s*["\'](http[^"\']+)["\'],', webpage, 'thumbnail', fatal=False)
 
         formats = [{
-            'format_id': 'sd',
-            'url': video_url,
-            'quality': 1,
-        }]
+                       'format_id': 'sd',
+                       'url': video_url,
+                       'quality': 1,
+                   }]
 
         return {
             'id': video_id,

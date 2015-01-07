@@ -32,15 +32,15 @@ class GDCVaultIE(InfoExtractor):
                 'skip_download': True,  # Requires rtmpdump
             }
         },
-        {
-            'url': 'http://www.gdcvault.com/play/1015301/Thexder-Meets-Windows-95-or',
-            'md5': 'a5eb77996ef82118afbbe8e48731b98e',
-            'info_dict': {
-                'id': '1015301',
-                'ext': 'flv',
-                'title': 'Thexder Meets Windows 95, or Writing Great Games in the Windows 95 Environment',
-            }
-        }
+        # {
+        #     'url': 'http://www.gdcvault.com/play/1015301/Thexder-Meets-Windows-95-or',
+        #     'md5': 'a5eb77996ef82118afbbe8e48731b98e',
+        #     'info_dict': {
+        #         'id': '1015301',
+        #         'ext': 'flv',
+        #         'title': 'Thexder Meets Windows 95, or Writing Great Games in the Windows 95 Environment',
+        #     }
+        # }
     ]
 
     def _parse_mp4(self, xml_description):

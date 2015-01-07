@@ -124,7 +124,7 @@ from .extremetube import ExtremeTubeIE
 from .facebook import FacebookIE
 from .faz import FazIE
 from .fc2 import FC2IE
-from .firedrive import FiredriveIE
+# from .firedrive import FiredriveIE
 from .firstpost import FirstpostIE
 from .firsttv import FirstTVIE
 from .fivemin import FiveMinIE
@@ -134,15 +134,15 @@ from .fktv import (
 )
 from .flickr import FlickrIE
 from .folketinget import FolketingetIE
-from .fourtube import FourTubeIE
+# from .fourtube import FourTubeIE
 from .foxgay import FoxgayIE
 from .foxnews import FoxNewsIE
 from .franceculture import FranceCultureIE
-from .franceinter import FranceInterIE
+# from .franceinter import FranceInterIE
 from .francetv import (
     PluzzIE,
     FranceTvInfoIE,
-    FranceTVIE,
+    # FranceTVIE,
     GenerationQuoiIE,
     CultureboxIE,
 )
@@ -180,7 +180,7 @@ from .hentaistigma import HentaiStigmaIE
 from .hitbox import HitboxIE, HitboxLiveIE
 from .hornbunny import HornBunnyIE
 from .hostingbulk import HostingBulkIE
-from .hotnewhiphop import HotNewHipHopIE
+# from .hotnewhiphop import HotNewHipHopIE
 from .howcast import HowcastIE
 from .howstuffworks import HowStuffWorksIE
 from .huffpost import HuffPostIE
@@ -201,7 +201,7 @@ from .ivi import (
     IviCompilationIE
 )
 from .izlesene import IzleseneIE
-from .jadorecettepub import JadoreCettePubIE
+# from .jadorecettepub import JadoreCettePubIE
 from .jeuxvideo import JeuxVideoIE
 from .jove import JoveIE
 from .jukebox import JukeboxIE

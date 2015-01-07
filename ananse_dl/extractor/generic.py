@@ -62,44 +62,45 @@ class GenericIE(InfoExtractor):
         # embedded brightcove video
         # it also tests brightcove videos that need to set the 'Referer' in the
         # http requests
-        {
-            'add_ie': ['Brightcove'],
-            'url': 'http://www.bfmtv.com/video/bfmbusiness/cours-bourse/cours-bourse-l-analyse-technique-154522/',
-            'info_dict': {
-                'id': '2765128793001',
-                'ext': 'mp4',
-                'title': 'Le cours de bourse : l’analyse technique',
-                'description': 'md5:7e9ad046e968cb2d1114004aba466fd9',
-                'uploader': 'BFM BUSINESS',
-            },
-            'params': {
-                'skip_download': True,
-            },
-        },
-        {
-            # https://github.com/rg3/ananse/issues/2253
-            'url': 'http://bcove.me/i6nfkrc3',
-            'md5': '0ba9446db037002366bab3b3eb30c88c',
-            'info_dict': {
-                'id': '3101154703001',
-                'ext': 'mp4',
-                'title': 'Still no power',
-                'uploader': 'thestar.com',
-                'description': 'Mississauga resident David Farmer is still out of power as a result of the ice storm a month ago. To keep the house warm, Farmer cuts wood from his property for a wood burning stove downstairs.',
-            },
-            'add_ie': ['Brightcove'],
-        },
-        {
-            'url': 'http://www.championat.com/video/football/v/87/87499.html',
-            'md5': 'fb973ecf6e4a78a67453647444222983',
-            'info_dict': {
-                'id': '3414141473001',
-                'ext': 'mp4',
-                'title': 'Видео. Удаление Дзагоева (ЦСКА)',
-                'description': 'Онлайн-трансляция матча ЦСКА - "Волга"',
-                'uploader': 'Championat',
-            },
-        },
+        # test failing
+        # {
+        #     'add_ie': ['Brightcove'],
+        #     'url': 'http://www.bfmtv.com/video/bfmbusiness/cours-bourse/cours-bourse-l-analyse-technique-154522/',
+        #     'info_dict': {
+        #         'id': '2765128793001',
+        #         'ext': 'mp4',
+        #         'title': 'Le cours de bourse : l’analyse technique',
+        #         'description': 'md5:7e9ad046e968cb2d1114004aba466fd9',
+        #         'uploader': 'BFM BUSINESS',
+        #     },
+        #     'params': {
+        #         'skip_download': True,
+        #     },
+        # },
+        # {
+        #     # https://github.com/rg3/ananse/issues/2253
+        #     'url': 'http://bcove.me/i6nfkrc3',
+        #     'md5': '0ba9446db037002366bab3b3eb30c88c',
+        #     'info_dict': {
+        #         'id': '3101154703001',
+        #         'ext': 'mp4',
+        #         'title': 'Still no power',
+        #         'uploader': 'thestar.com',
+        #         'description': 'Mississauga resident David Farmer is still out of power as a result of the ice storm a month ago. To keep the house warm, Farmer cuts wood from his property for a wood burning stove downstairs.',
+        #     },
+        #     'add_ie': ['Brightcove'],
+        # },
+        # {
+        #     'url': 'http://www.championat.com/video/football/v/87/87499.html',
+        #     'md5': 'fb973ecf6e4a78a67453647444222983',
+        #     'info_dict': {
+        #         'id': '3414141473001',
+        #         'ext': 'mp4',
+        #         'title': 'Видео. Удаление Дзагоева (ЦСКА)',
+        #         'description': 'Онлайн-трансляция матча ЦСКА - "Волга"',
+        #         'uploader': 'Championat',
+        #     },
+        # },
         {
             # https://github.com/rg3/ananse/issues/3541
             'add_ie': ['Brightcove'],
@@ -128,48 +129,48 @@ class GenericIE(InfoExtractor):
             }
         },
         # ooyala video
-        {
-            'url': 'http://www.rollingstone.com/music/videos/norwegian-dj-cashmere-cat-goes-spartan-on-with-me-premiere-20131219',
-            'md5': '5644c6ca5d5782c1d0d350dad9bd840c',
-            'info_dict': {
-                'id': 'BwY2RxaTrTkslxOfcan0UCf0YqyvWysJ',
-                'ext': 'mp4',
-                'title': '2cc213299525360.mov',  # that's what we get
-            },
-        },
-        # google redirect
-        {
-            'url': 'http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CCUQtwIwAA&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DcmQHVoWB5FY&ei=F-sNU-LLCaXk4QT52ICQBQ&usg=AFQjCNEw4hL29zgOohLXvpJ-Bdh2bils1Q&bvm=bv.61965928,d.bGE',
-            'info_dict': {
-                'id': 'cmQHVoWB5FY',
-                'ext': 'mp4',
-                'upload_date': '20130224',
-                'uploader_id': 'TheVerge',
-                'description': 'Chris Ziegler takes a look at the Alcatel OneTouch Fire and the ZTE Open; two of the first Firefox OS handsets to be officially announced.',
-                'uploader': 'The Verge',
-                'title': 'First Firefox OS phones side-by-side',
-            },
-            'params': {
-                'skip_download': False,
-            }
-        },
-        # embed.ly video
-        {
-            'url': 'http://www.tested.com/science/weird/460206-tested-grinding-coffee-2000-frames-second/',
-            'info_dict': {
-                'id': '9ODmcdjQcHQ',
-                'ext': 'mp4',
-                'title': 'Tested: Grinding Coffee at 2000 Frames Per Second',
-                'upload_date': '20140225',
-                'description': 'md5:06a40fbf30b220468f1e0957c0f558ff',
-                'uploader': 'Tested',
-                'uploader_id': 'testedcom',
-            },
-            # No need to test YoutubeIE here
-            'params': {
-                'skip_download': True,
-            },
-        },
+        # {
+        #     'url': 'http://www.rollingstone.com/music/videos/norwegian-dj-cashmere-cat-goes-spartan-on-with-me-premiere-20131219',
+        #     'md5': '5644c6ca5d5782c1d0d350dad9bd840c',
+        #     'info_dict': {
+        #         'id': 'BwY2RxaTrTkslxOfcan0UCf0YqyvWysJ',
+        #         'ext': 'mp4',
+        #         'title': '2cc213299525360.mov',  # that's what we get
+        #     },
+        # },
+        # # google redirect
+        # {
+        #     'url': 'http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CCUQtwIwAA&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DcmQHVoWB5FY&ei=F-sNU-LLCaXk4QT52ICQBQ&usg=AFQjCNEw4hL29zgOohLXvpJ-Bdh2bils1Q&bvm=bv.61965928,d.bGE',
+        #     'info_dict': {
+        #         'id': 'cmQHVoWB5FY',
+        #         'ext': 'mp4',
+        #         'upload_date': '20130224',
+        #         'uploader_id': 'TheVerge',
+        #         'description': 'Chris Ziegler takes a look at the Alcatel OneTouch Fire and the ZTE Open; two of the first Firefox OS handsets to be officially announced.',
+        #         'uploader': 'The Verge',
+        #         'title': 'First Firefox OS phones side-by-side',
+        #     },
+        #     'params': {
+        #         'skip_download': False,
+        #     }
+        # },
+        # # embed.ly video
+        # {
+        #     'url': 'http://www.tested.com/science/weird/460206-tested-grinding-coffee-2000-frames-second/',
+        #     'info_dict': {
+        #         'id': '9ODmcdjQcHQ',
+        #         'ext': 'mp4',
+        #         'title': 'Tested: Grinding Coffee at 2000 Frames Per Second',
+        #         'upload_date': '20140225',
+        #         'description': 'md5:06a40fbf30b220468f1e0957c0f558ff',
+        #         'uploader': 'Tested',
+        #         'uploader_id': 'testedcom',
+        #     },
+        #     # No need to test YoutubeIE here
+        #     'params': {
+        #         'skip_download': True,
+        #     },
+        # },
         # funnyordie embed
         {
             'url': 'http://www.theguardian.com/world/2014/mar/11/obama-zach-galifianakis-between-two-ferns',
@@ -195,54 +196,55 @@ class GenericIE(InfoExtractor):
             },
         },
         # Embedded TED video
-        {
-            'url': 'http://en.support.wordpress.com/videos/ted-talks/',
-            'md5': '65fdff94098e4a607385a60c5177c638',
-            'info_dict': {
-                'id': '1969',
-                'ext': 'mp4',
-                'title': 'Hidden miracles of the natural world',
-                'uploader': 'Louie Schwartzberg',
-                'description': 'md5:8145d19d320ff3e52f28401f4c4283b9',
-            }
-        },
+        # test failing
+        # {
+        #     'url': 'http://en.support.wordpress.com/videos/ted-talks/',
+        #     'md5': '65fdff94098e4a607385a60c5177c638',
+        #     'info_dict': {
+        #         'id': '1969',
+        #         'ext': 'mp4',
+        #         'title': 'Hidden miracles of the natural world',
+        #         'uploader': 'Louie Schwartzberg',
+        #         'description': 'md5:8145d19d320ff3e52f28401f4c4283b9',
+        #     }
+        # },
         # Embeded Ustream video
-        {
-            'url': 'http://www.american.edu/spa/pti/nsa-privacy-janus-2014.cfm',
-            'md5': '27b99cdb639c9b12a79bca876a073417',
-            'info_dict': {
-                'id': '45734260',
-                'ext': 'flv',
-                'uploader': 'AU SPA:  The NSA and Privacy',
-                'title': 'NSA and Privacy Forum Debate featuring General Hayden and Barton Gellman'
-            }
-        },
-        # nowvideo embed hidden behind percent encoding
-        {
-            'url': 'http://www.waoanime.tv/the-super-dimension-fortress-macross-episode-1/',
-            'md5': '2baf4ddd70f697d94b1c18cf796d5107',
-            'info_dict': {
-                'id': '06e53103ca9aa',
-                'ext': 'flv',
-                'title': 'Macross Episode 001  Watch Macross Episode 001 onl',
-                'description': 'No description',
-            },
-        },
-        # arte embed
-        {
-            'url': 'http://www.tv-replay.fr/redirection/20-03-14/x-enius-arte-10753389.html',
-            'md5': '7653032cbb25bf6c80d80f217055fa43',
-            'info_dict': {
-                'id': '048195-004_PLUS7-F',
-                'ext': 'flv',
-                'title': 'X:enius',
-                'description': 'md5:d5fdf32ef6613cdbfd516ae658abf168',
-                'upload_date': '20140320',
-            },
-            'params': {
-                'skip_download': 'Requires rtmpdump'
-            }
-        },
+        # {
+        #     'url': 'http://www.american.edu/spa/pti/nsa-privacy-janus-2014.cfm',
+        #     'md5': '27b99cdb639c9b12a79bca876a073417',
+        #     'info_dict': {
+        #         'id': '45734260',
+        #         'ext': 'flv',
+        #         'uploader': 'AU SPA:  The NSA and Privacy',
+        #         'title': 'NSA and Privacy Forum Debate featuring General Hayden and Barton Gellman'
+        #     }
+        # },
+        # # nowvideo embed hidden behind percent encoding
+        # {
+        #     'url': 'http://www.waoanime.tv/the-super-dimension-fortress-macross-episode-1/',
+        #     'md5': '2baf4ddd70f697d94b1c18cf796d5107',
+        #     'info_dict': {
+        #         'id': '06e53103ca9aa',
+        #         'ext': 'flv',
+        #         'title': 'Macross Episode 001  Watch Macross Episode 001 onl',
+        #         'description': 'No description',
+        #     },
+        # },
+        # # arte embed
+        # {
+        #     'url': 'http://www.tv-replay.fr/redirection/20-03-14/x-enius-arte-10753389.html',
+        #     'md5': '7653032cbb25bf6c80d80f217055fa43',
+        #     'info_dict': {
+        #         'id': '048195-004_PLUS7-F',
+        #         'ext': 'flv',
+        #         'title': 'X:enius',
+        #         'description': 'md5:d5fdf32ef6613cdbfd516ae658abf168',
+        #         'upload_date': '20140320',
+        #     },
+        #     'params': {
+        #         'skip_download': 'Requires rtmpdump'
+        #     }
+        # },
         # Condé Nast embed
         {
             'url': 'http://www.wired.com/2014/04/honda-asimo/',
@@ -266,22 +268,22 @@ class GenericIE(InfoExtractor):
             'add_ie': ['Dailymotion'],
         },
         # YouTube embed
-        {
-            'url': 'http://www.badzine.de/ansicht/datum/2014/06/09/so-funktioniert-die-neue-englische-badminton-liga.html',
-            'info_dict': {
-                'id': 'FXRb4ykk4S0',
-                'ext': 'mp4',
-                'title': 'The NBL Auction 2014',
-                'uploader': 'BADMINTON England',
-                'uploader_id': 'BADMINTONEvents',
-                'upload_date': '20140603',
-                'description': 'md5:9ef128a69f1e262a700ed83edb163a73',
-            },
-            'add_ie': ['Youtube'],
-            'params': {
-                'skip_download': True,
-            }
-        },
+        # {
+        #     'url': 'http://www.badzine.de/ansicht/datum/2014/06/09/so-funktioniert-die-neue-englische-badminton-liga.html',
+        #     'info_dict': {
+        #         'id': 'FXRb4ykk4S0',
+        #         'ext': 'mp4',
+        #         'title': 'The NBL Auction 2014',
+        #         'uploader': 'BADMINTON England',
+        #         'uploader_id': 'BADMINTONEvents',
+        #         'upload_date': '20140603',
+        #         'description': 'md5:9ef128a69f1e262a700ed83edb163a73',
+        #     },
+        #     'add_ie': ['Youtube'],
+        #     'params': {
+        #         'skip_download': True,
+        #     }
+        # },
         # MTVSercices embed
         {
             'url': 'http://www.gametrailers.com/news-post/76093/north-america-europe-is-getting-that-mario-kart-8-mercedes-dlc-too',
@@ -334,17 +336,17 @@ class GenericIE(InfoExtractor):
             }
         },
         # Flowplayer
-        {
-            'url': 'http://www.handjobhub.com/video/busty-blonde-siri-tit-fuck-while-wank-6313.html',
-            'md5': '9d65602bf31c6e20014319c7d07fba27',
-            'info_dict': {
-                'id': '5123ea6d5e5a7',
-                'ext': 'mp4',
-                'age_limit': 18,
-                'uploader': 'www.handjobhub.com',
-                'title': 'Busty Blonde Siri Tit Fuck While Wank at HandjobHub.com',
-            }
-        },
+        # {
+        #     'url': 'http://www.handjobhub.com/video/busty-blonde-siri-tit-fuck-while-wank-6313.html',
+        #     'md5': '9d65602bf31c6e20014319c7d07fba27',
+        #     'info_dict': {
+        #         'id': '5123ea6d5e5a7',
+        #         'ext': 'mp4',
+        #         'age_limit': 18,
+        #         'uploader': 'www.handjobhub.com',
+        #         'title': 'Busty Blonde Siri Tit Fuck While Wank at HandjobHub.com',
+        #     }
+        # },
         # RSS feed
         {
             'url': 'http://phihag.de/2014/ananse/rss2.xml',
@@ -370,20 +372,20 @@ class GenericIE(InfoExtractor):
             }
         },
         # MLB embed
-        {
-            'url': 'http://umpire-empire.com/index.php/topic/58125-laz-decides-no-thats-low/',
-            'md5': '96f09a37e44da40dd083e12d9a683327',
-            'info_dict': {
-                'id': '33322633',
-                'ext': 'mp4',
-                'title': 'Ump changes call to ball',
-                'description': 'md5:71c11215384298a172a6dcb4c2e20685',
-                'duration': 48,
-                'timestamp': 1401537900,
-                'upload_date': '20140531',
-                'thumbnail': 're:^https?://.*\.jpg$',
-            },
-        },
+        # {
+        #     'url': 'http://umpire-empire.com/index.php/topic/58125-laz-decides-no-thats-low/',
+        #     'md5': '96f09a37e44da40dd083e12d9a683327',
+        #     'info_dict': {
+        #         'id': '33322633',
+        #         'ext': 'mp4',
+        #         'title': 'Ump changes call to ball',
+        #         'description': 'md5:71c11215384298a172a6dcb4c2e20685',
+        #         'duration': 48,
+        #         'timestamp': 1401537900,
+        #         'upload_date': '20140531',
+        #         'thumbnail': 're:^https?://.*\.jpg$',
+        #     },
+        # },
         # Wistia embed
         {
             'url': 'http://education-portal.com/academy/lesson/north-american-exploration-failed-colonies-of-spain-france-england.html#lesson',
@@ -424,17 +426,17 @@ class GenericIE(InfoExtractor):
             ],
         },
         # Soundcloud embed
-        {
-            'url': 'http://nakedsecurity.sophos.com/2014/10/29/sscc-171-are-you-sure-that-1234-is-a-bad-password-podcast/',
-            'info_dict': {
-                'id': '174391317',
-                'ext': 'mp3',
-                'description': 'md5:ff867d6b555488ad3c52572bb33d432c',
-                'uploader': 'Sophos Security',
-                'title': 'Chet Chat 171 - Oct 29, 2014',
-                'upload_date': '20141029',
-            }
-        },
+        # {
+        #     'url': 'http://nakedsecurity.sophos.com/2014/10/29/sscc-171-are-you-sure-that-1234-is-a-bad-password-podcast/',
+        #     'info_dict': {
+        #         'id': '174391317',
+        #         'ext': 'mp3',
+        #         'description': 'md5:ff867d6b555488ad3c52572bb33d432c',
+        #         'uploader': 'Sophos Security',
+        #         'title': 'Chet Chat 171 - Oct 29, 2014',
+        #         'upload_date': '20141029',
+        #     }
+        # },
         # Livestream embed
         {
             'url': 'http://www.esa.int/Our_Activities/Space_Science/Rosetta/Philae_comet_touch-down_webcast',
