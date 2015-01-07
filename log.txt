@@ -44,4 +44,6 @@ Disable extractor
 Reasons: video_info['_youtubedl_adServerURL'] = info.get('adServerURL')
 TypeError: 'NoneType' object does not support item assignment
 
+[test_CMT ]
+Disable extractor
 
