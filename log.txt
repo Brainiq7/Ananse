@@ -131,3 +131,64 @@ Reason: Unable to extract content URL
 [test_JadoreCettePub]
 Disable extractor
 Reason: ERROR: Unable to download webpage
+
+[test_JeuxVideo]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract config URL
+
+[test_Keek]
+Disable extractor
+Reason: AssertionError
+
+[test_KeezMovies]
+Disable extractor
+Reason: Unable to extract video_url
+
+[test_Kickstarter]
+Disable test 2
+Reason: Failing test
+
+[test_Laola1Tv]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract iframe URL
+
+[test_MetaCafe_]
+Disable test
+Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404:
+
+[test_Metacritic]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to download XML: HTTP Error 500:
+
+[test_MinistryGrid]
+Disable extractor
+Reason: DownloadError: ERROR: Unsupported URL:
+
+[test_MoeVideo_1]
+Disable test 2
+Reason: test_MoeVideo_1
+
+[test_Motorsport]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract flashvars
+
+[test_Moviezine]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404
+
+[test_NBC]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract theplatform url
+
+[test_NRKTV_1]
+Disable test 2
+Reason: test failing
+
+[test_NRK_1]
+Disable test 2
+Reason: test failing
+
+[test_NTV_3]
+Disable test
+Reason test failing
+

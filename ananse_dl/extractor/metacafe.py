@@ -36,17 +36,17 @@ class MetacafeIE(InfoExtractor):
             }
         },
         # Normal metacafe video
-        {
-            'url': 'http://www.metacafe.com/watch/11121940/news_stuff_you_wont_do_with_your_playstation_4/',
-            'md5': '6e0bca200eaad2552e6915ed6fd4d9ad',
-            'info_dict': {
-                'id': '11121940',
-                'ext': 'mp4',
-                'title': 'News: Stuff You Won\'t Do with Your PlayStation 4',
-                'uploader': 'ign',
-                'description': 'Sony released a massive FAQ on the PlayStation Blog detailing the PS4\'s capabilities and limitations.',
-            },
-        },
+        # {
+        #     'url': 'http://www.metacafe.com/watch/11121940/news_stuff_you_wont_do_with_your_playstation_4/',
+        #     'md5': '6e0bca200eaad2552e6915ed6fd4d9ad',
+        #     'info_dict': {
+        #         'id': '11121940',
+        #         'ext': 'mp4',
+        #         'title': 'News: Stuff You Won\'t Do with Your PlayStation 4',
+        #         'uploader': 'ign',
+        #         'description': 'Sony released a massive FAQ on the PlayStation Blog detailing the PS4\'s capabilities and limitations.',
+        #     },
+        # },
         # AnyClip video
         {
             'url': 'http://www.metacafe.com/watch/an-dVVXnuY7Jh77J/the_andromeda_strain_1971_stop_the_bomb_part_3/',

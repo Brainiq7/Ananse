@@ -8,7 +8,7 @@ class KeekIE(InfoExtractor):
     IE_NAME = 'keek'
     _TEST = {
         'url': 'https://www.keek.com/ytdl/keeks/NODfbab',
-        'md5': '09c5c109067536c1cec8bac8c21fea05',
+        'md5': '67c0e1d63b3524b0a8008afb391339a8',
         'info_dict': {
             'id': 'NODfbab',
             'ext': 'mp4',

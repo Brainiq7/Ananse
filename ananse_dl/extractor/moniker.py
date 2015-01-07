@@ -21,7 +21,7 @@ class MonikerIE(InfoExtractor):
         'info_dict': {
             'id': 'jih3nce3x6wn',
             'ext': 'mp4',
-            'title': 'ananse test video',
+            'title': 'youtube-dl test video',
         },
     }, {
         'url': 'http://vidspot.net/l2ngsmhs8ci5',
@@ -29,7 +29,7 @@ class MonikerIE(InfoExtractor):
         'info_dict': {
             'id': 'l2ngsmhs8ci5',
             'ext': 'mp4',
-            'title': 'ananse test video',
+            'title': 'youtube-dl test video',
         },
     }, {
         'url': 'https://www.vidspot.net/l2ngsmhs8ci5',

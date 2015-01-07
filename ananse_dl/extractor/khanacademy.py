@@ -23,6 +23,7 @@ class KhanAcademyIE(InfoExtractor):
             'duration': 176,
             'uploader': 'Brit Cruise',
             'upload_date': '20120411',
+            'uploader_id': 'khanacademy'
         }
     }, {
         'url': 'https://www.khanacademy.org/math/applied-math/cryptography',

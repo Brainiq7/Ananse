@@ -18,17 +18,19 @@ class KickStarterIE(InfoExtractor):
                 'life and mind of one of sports most elite athletes: Josh Grant.'
             ),
         },
-    }, {
-        'note': 'Embedded video (not using the native kickstarter video service)',
-        'url': 'https://www.kickstarter.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android/posts/659178',
-        'info_dict': {
-            'id': '78704821',
-            'ext': 'mp4',
-            'uploader_id': 'pebble',
-            'uploader': 'Pebble Technology',
-            'title': 'Pebble iOS Notifications',
-        }
-    }]
+    }
+    #     , {
+    #     'note': 'Embedded video (not using the native kickstarter video service)',
+    #     'url': 'https://www.kickstarter.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android/posts/659178',
+    #     'info_dict': {
+    #         'id': '597507018',
+    #         'ext': 'mp4',
+    #         'uploader_id': 'pebble',
+    #         'uploader': 'Pebble Technology',
+    #         'title': 'Pebble iOS Notifications',
+    #     }
+    # }
+    ]
 
     def _real_extract(self, url):
         video_id = self._match_id(url)

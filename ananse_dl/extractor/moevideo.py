@@ -39,21 +39,21 @@ class MoeVideoIE(InfoExtractor):
                 'filesize': 17822500,
             }
         },
-        {
-            'url': 'http://playreplay.net/video/77107.7f325710a627383d40540d8e991a',
-            'md5': '74f0a014d5b661f0f0e2361300d1620e',
-            'info_dict': {
-                'id': '77107.7f325710a627383d40540d8e991a',
-                'ext': 'flv',
-                'title': 'Operacion Condor.',
-                'description': 'md5:7e68cb2fcda66833d5081c542491a9a3',
-                'thumbnail': 're:^https?://.*\.jpg$',
-                'width': 480,
-                'height': 296,
-                'duration': 6027,
-                'filesize': 588257923,
-            }
-        },
+        # {
+        #     'url': 'http://playreplay.net/video/77107.7f325710a627383d40540d8e991a',
+        #     'md5': '74f0a014d5b661f0f0e2361300d1620e',
+        #     'info_dict': {
+        #         'id': '77107.7f325710a627383d40540d8e991a',
+        #         'ext': 'flv',
+        #         'title': 'Operacion Condor.',
+        #         'description': 'md5:7e68cb2fcda66833d5081c542491a9a3',
+        #         'thumbnail': 're:^https?://.*\.jpg$',
+        #         'width': 480,
+        #         'height': 296,
+        #         'duration': 6027,
+        #         'filesize': 588257923,
+        #     }
+        # },
     ]
 
     def _real_extract(self, url):

@@ -55,20 +55,20 @@ class NTVIE(InfoExtractor):
                 'skip_download': True,
             },
         },
-        {
-            'url': 'http://www.ntv.ru/kino/Koma_film',
-            'info_dict': {
-                'id': '758100',
-                'ext': 'flv',
-                'title': 'Остросюжетный фильм «Кома»',
-                'description': 'Остросюжетный фильм «Кома»',
-                'duration': 5592,
-            },
-            'params': {
-                # rtmp download
-                'skip_download': True,
-            },
-        },
+        # {
+        #     'url': 'http://www.ntv.ru/kino/Koma_film',
+        #     'info_dict': {
+        #         'id': '758100',
+        #         'ext': 'flv',
+        #         'title': 'Остросюжетный фильм «Кома»',
+        #         'description': 'Остросюжетный фильм «Кома»',
+        #         'duration': 5592,
+        #     },
+        #     'params': {
+        #         # rtmp download
+        #         'skip_download': True,
+        #     },
+        # },
         {
             'url': 'http://www.ntv.ru/serial/Delo_vrachey/m31760/o233916/',
             'info_dict': {

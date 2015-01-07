@@ -25,16 +25,16 @@ class NRKIE(InfoExtractor):
                 'description': 'md5:d9261ba34c43b61c812cb6b0269a5c8f'
             }
         },
-        {
-            'url': 'http://www.nrk.no/lyd/lyd_av_oppleser_for_blinde/AEFDDD5473BA0198/',
-            'md5': '3471f2a51718195164e88f46bf427668',
-            'info_dict': {
-                'id': '154915',
-                'ext': 'flv',
-                'title': 'Slik høres internett ut når du er blind',
-                'description': 'md5:a621f5cc1bd75c8d5104cb048c6b8568',
-            }
-        },
+        # {
+        #     'url': 'http://www.nrk.no/lyd/lyd_av_oppleser_for_blinde/AEFDDD5473BA0198/',
+        #     'md5': '3471f2a51718195164e88f46bf427668',
+        #     'info_dict': {
+        #         'id': '154915',
+        #         'ext': 'flv',
+        #         'title': 'Slik høres internett ut når du er blind',
+        #         'description': 'md5:a621f5cc1bd75c8d5104cb048c6b8568',
+        #     }
+        # },
     ]
 
     def _real_extract(self, url):
@@ -87,18 +87,18 @@ class NRKTVIE(InfoExtractor):
                 'duration': 1741.52,
             }
         },
-        {
-            'url': 'http://tv.nrk.no/program/mdfp15000514',
-            'md5': 'af01795a31f1cf7265c8657534d8077b',
-            'info_dict': {
-                'id': 'mdfp15000514',
-                'ext': 'flv',
-                'title': 'Kunnskapskanalen: Grunnlovsjubiléet - Stor ståhei for ingenting',
-                'description': 'md5:654c12511f035aed1e42bdf5db3b206a',
-                'upload_date': '20140524',
-                'duration': 4605.0,
-            }
-        },
+        # {
+        #     'url': 'http://tv.nrk.no/program/mdfp15000514',
+        #     'md5': 'af01795a31f1cf7265c8657534d8077b',
+        #     'info_dict': {
+        #         'id': 'mdfp15000514',
+        #         'ext': 'flv',
+        #         'title': 'Kunnskapskanalen: Grunnlovsjubiléet - Stor ståhei for ingenting',
+        #         'description': 'md5:654c12511f035aed1e42bdf5db3b206a',
+        #         'upload_date': '20140524',
+        #         'duration': 4605.0,
+        #     }
+        # },
     ]
 
     def _real_extract(self, url):

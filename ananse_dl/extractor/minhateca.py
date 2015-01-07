@@ -20,7 +20,7 @@ class MinhatecaIE(InfoExtractor):
         'info_dict': {
             'id': '125848331',
             'ext': 'mp4',
-            'title': 'ananse test video',
+            'title': 'youtube-dl test video',
             'thumbnail': 're:^https?://.*\.jpg$',
             'filesize_approx': 1530000,
             'duration': 9,

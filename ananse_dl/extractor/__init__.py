@@ -202,7 +202,7 @@ from .ivi import (
 )
 from .izlesene import IzleseneIE
 # from .jadorecettepub import JadoreCettePubIE
-from .jeuxvideo import JeuxVideoIE
+# from .jeuxvideo import JeuxVideoIE
 from .jove import JoveIE
 from .jukebox import JukeboxIE
 from .jpopsukitv import JpopsukiIE
@@ -210,7 +210,7 @@ from .kankan import KankanIE
 from .keezmovies import KeezMoviesIE
 from .khanacademy import KhanAcademyIE
 from .kickstarter import KickStarterIE
-from .keek import KeekIE
+# from .keek import KeekIE
 from .kontrtube import KontrTubeIE
 from .krasview import KrasViewIE
 from .ku6 import Ku6IE
@@ -234,10 +234,10 @@ from .mailru import MailRuIE
 from .malemotion import MalemotionIE
 from .mdr import MDRIE
 from .metacafe import MetacafeIE
-from .metacritic import MetacriticIE
+# from .metacritic import MetacriticIE
 from .mgoon import MgoonIE
 from .minhateca import MinhatecaIE
-from .ministrygrid import MinistryGridIE
+# from .ministrygrid import MinistryGridIE
 from .mit import TechTVMITIE, MITIE, OCWMITIE
 from .mitele import MiTeleIE
 from .mixcloud import MixcloudIE
@@ -250,9 +250,9 @@ from .moniker import MonikerIE
 from .mooshare import MooshareIE
 from .morningstar import MorningstarIE
 from .motherless import MotherlessIE
-from .motorsport import MotorsportIE
+# from .motorsport import MotorsportIE
 from .movieclips import MovieClipsIE
-from .moviezine import MoviezineIE
+# from .moviezine import MoviezineIE
 from .movshare import MovShareIE
 from .mtv import (
     MTVIE,
@@ -270,7 +270,7 @@ from .myvidster import MyVidsterIE
 from .naver import NaverIE
 from .nba import NBAIE
 from .nbc import (
-    NBCIE,
+    # NBCIE,
     NBCNewsIE,
 )
 from .ndr import NDRIE
