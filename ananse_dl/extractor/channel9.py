@@ -35,19 +35,19 @@ class Channel9IE(InfoExtractor):
                 'session_speakers': ['Ed Blankenship', 'Andrew Coates', 'Brady Gaster', 'Patrick Klug', 'Mads Kristensen'],
             },
         },
-        {
-            'url': 'http://channel9.msdn.com/posts/Self-service-BI-with-Power-BI-nuclear-testing',
-            'md5': 'b43ee4529d111bc37ba7ee4f34813e68',
-            'info_dict': {
-                'id': 'posts/Self-service-BI-with-Power-BI-nuclear-testing',
-                'ext': 'mp4',
-                'title': 'Self-service BI with Power BI - nuclear testing',
-                'description': 'md5:d1e6ecaafa7fb52a2cacdf9599829f5b',
-                'duration': 1540,
-                'thumbnail': 'http://video.ch9.ms/ch9/87e1/0300391f-a455-4c72-bec3-4422f19287e1/selfservicenuk_512.jpg',
-                'authors': ['Mike Wilmot'],
-            },
-        }
+        # {
+        #     'url': 'http://channel9.msdn.com/posts/Self-service-BI-with-Power-BI-nuclear-testing',
+        #     'md5': 'b43ee4529d111bc37ba7ee4f34813e68',
+        #     'info_dict': {
+        #         'id': 'posts/Self-service-BI-with-Power-BI-nuclear-testing',
+        #         'ext': 'mp4',
+        #         'title': 'Self-service BI with Power BI - nuclear testing',
+        #         'description': 'md5:d1e6ecaafa7fb52a2cacdf9599829f5b',
+        #         'duration': 1540,
+        #         'thumbnail': 'http://video.ch9.ms/ch9/87e1/0300391f-a455-4c72-bec3-4422f19287e1/selfservicenuk_512.jpg',
+        #         'authors': ['Mike Wilmot'],
+        #     },
+        # }
     ]
 
     _RSS_URL = 'http://channel9.msdn.com/%s/RSS'

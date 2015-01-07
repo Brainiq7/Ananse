@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 import re
 import time
+import json
 
 from .common import InfoExtractor
 
@@ -27,6 +28,7 @@ class DotsubIE(InfoExtractor):
         video_id = mobj.group('id')
         info_url = "https://dotsub.com/api/media/%s/metadata" % video_id
         info = self._download_json(info_url, video_id)
+
         date = time.gmtime(info['dateCreated'] / 1000)  # The timestamp is in miliseconds
 
         return {

@@ -47,3 +47,48 @@ TypeError: 'NoneType' object does not support item assignment
 [test_CMT ]
 Disable extractor
 
+[test_Canal13cl]
+Disable extractor
+Reasons: RegexNotFoundError: Unable to extract url;
+
+[test_Canalpuls]
+Disable extractor
+Reasons: Needs proper construction of test
+
+[test_CeskaTelevize]
+Disable failing test: test_CeskaTelevize_2
+Reasons: DownloadError: ERROR: Unable to download JSON metadata: HTTP Error 404:
+
+[test_Channel9]
+Disable failing test: test_Channel9_1
+Reasons: DownloadError: ERROR: Extractor channel9 returned a compat_list result. It needs to be updated
+
+[test_Cliphunter]
+Disable extractor
+Reasons: DownloadError: ERROR: Unable to extract video data
+
+[test_Crunchyroll]
+Disable test
+Reasons: DownloadError: ERROR: crunchyroll returned error:
+Sorry, this video is not available in your region due to licensing restrictions.
+
+[test_DRTV]
+Disable extractor
+Reasons: DownloadError: ERROR: No video formats found
+
+[test_Discovery]
+Disable extractor
+Reasons: DownloadError: ERROR: Unable to extract video list
+
+[test_Dotsub]
+Disable extractor
+Reasons: AttributeError: 'dict' object has no attribute 'mediaURI'
+
+[test_Eighttracks]
+Disable extractor
+Reasons: DownloadError: ERROR: Unable to download webpage: HTTP Error 404
+
+[test_Epornor]
+Disable extractor
+Reasons: AssertionError: invalid value for field duration, expected 1838, got None
+

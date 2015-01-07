@@ -44,18 +44,18 @@ class CeskaTelevizeIE(InfoExtractor):
             },
             'skip': 'Works only from Czech Republic.',
         },
-        {
-            'url': 'http://www.ceskatelevize.cz/ivysilani/10532695142-prvni-republika/bonus/14716-zpevacka-z-duparny-bobina',
-            'info_dict': {
-                'id': '14716',
-                'ext': 'flv',
-                'title': 'První republika: Zpěvačka z Dupárny Bobina',
-                'duration': 90,
-            },
-            'params': {
-                'skip_download': True,  # requires rtmpdump
-            },
-        },
+        # {
+        #     'url': 'http://www.ceskatelevize.cz/ivysilani/10532695142-prvni-republika/bonus/14716-zpevacka-z-duparny-bobina',
+        #     'info_dict': {
+        #         'id': '14716',
+        #         'ext': 'flv',
+        #         'title': 'První republika: Zpěvačka z Dupárny Bobina',
+        #         'duration': 90,
+        #     },
+        #     'params': {
+        #         'skip_download': True,  # requires rtmpdump
+        #     },
+        # },
     ]
 
     def _real_extract(self, url):

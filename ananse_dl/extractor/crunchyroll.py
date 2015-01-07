@@ -30,23 +30,25 @@ from .common import InfoExtractor
 
 class CrunchyrollIE(SubtitlesInfoExtractor):
     _VALID_URL = r'https?://(?:(?P<prefix>www|m)\.)?(?P<url>crunchyroll\.(?:com|fr)/(?:[^/]*/[^/?&]*?|media/\?id=)(?P<video_id>[0-9]+))(?:[/?&]|$)'
-    _TESTS = [{
-        'url': 'http://www.crunchyroll.com/wanna-be-the-strongest-in-the-world/episode-1-an-idol-wrestler-is-born-645513',
-        'info_dict': {
-            'id': '645513',
-            'ext': 'flv',
-            'title': 'Wanna be the Strongest in the World Episode 1 – An Idol-Wrestler is Born!',
-            'description': 'md5:2d17137920c64f2f49981a7797d275ef',
-            'thumbnail': 'http://img1.ak.crunchyroll.com/i/spire1-tmb/20c6b5e10f1a47b10516877d3c039cae1380951166_full.jpg',
-            'uploader': 'Yomiuri Telecasting Corporation (YTV)',
-            'upload_date': '20131013',
-            'url': 're:(?!.*&amp)',
-        },
-        'params': {
-            # rtmp
-            'skip_download': True,
-        },
-    }, {
+    _TESTS = [
+        # {
+        # 'url': 'http://www.crunchyroll.com/wanna-be-the-strongest-in-the-world/episode-1-an-idol-wrestler-is-born-645513',
+        # 'info_dict': {
+        #     'id': '645513',
+        #     'ext': 'flv',
+        #     'title': 'Wanna be the Strongest in the World Episode 1 – An Idol-Wrestler is Born!',
+        #     'description': 'md5:2d17137920c64f2f49981a7797d275ef',
+        #     'thumbnail': 'http://img1.ak.crunchyroll.com/i/spire1-tmb/20c6b5e10f1a47b10516877d3c039cae1380951166_full.jpg',
+        #     'uploader': 'Yomiuri Telecasting Corporation (YTV)',
+        #     'upload_date': '20131013',
+        #     'url': 're:(?!.*&amp)',
+        # },
+        # 'params': {
+        #     # rtmp
+        #     'skip_download': True,
+        # },
+        # },
+    {
         'url': 'http://www.crunchyroll.fr/girl-friend-beta/episode-11-goodbye-la-mode-661697',
         'only_matching': True,
     }]

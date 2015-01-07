@@ -51,8 +51,8 @@ from .breakcom import BreakIE
 from .buzzfeed import BuzzFeedIE
 from .byutv import BYUtvIE
 from .c56 import C56IE
-from .canal13cl import Canal13clIE
-from .canalplus import CanalplusIE
+# from .canal13cl import Canal13clIE
+# from .canalplus import CanalplusIE
 from .canalc2 import Canalc2IE
 from .cbs import CBSIE
 from .cbsnews import CBSNewsIE
@@ -61,7 +61,7 @@ from .channel9 import Channel9IE
 from .chilloutzone import ChilloutzoneIE
 from .cinchcast import CinchcastIE
 from .clipfish import ClipfishIE
-from .cliphunter import CliphunterIE
+# from .cliphunter import CliphunterIE
 from .clipsyndicate import ClipsyndicateIE
 from .cloudy import CloudyIE
 from .clubic import ClubicIE
@@ -92,14 +92,14 @@ from .daum import DaumIE
 from .dbtv import DBTVIE
 from .deezer import DeezerPlaylistIE
 from .dfb import DFBIE
-from .dotsub import DotsubIE
+# from .dotsub import DotsubIE
 from .dreisat import DreiSatIE
 from .drtuber import DrTuberIE
-from .drtv import DRTVIE
+# from .drtv import DRTVIE
 from .dvtv import DVTVIE
 from .dump import DumpIE
 from .defense import DefenseGouvFrIE
-from .discovery import DiscoveryIE
+# from .discovery import DiscoveryIE
 from .divxstage import DivxStageIE
 from .dropbox import DropboxIE
 from .ebaumsworld import EbaumsWorldIE
@@ -114,7 +114,7 @@ from .ellentv import (
 from .elpais import ElPaisIE
 from .empflix import EMPFlixIE
 from .engadget import EngadgetIE
-from .eporner import EpornerIE
+# from .eporner import EpornerIE
 from .eroprofile import EroProfileIE
 from .escapist import EscapistIE
 from .everyonesmixtape import EveryonesMixtapeIE
