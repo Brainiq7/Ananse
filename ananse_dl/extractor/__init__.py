@@ -281,13 +281,16 @@ from .newstube import NewstubeIE
 from .nfb import NFBIE
 from .nfl import NFLIE
 from .nhl import NHLIE, NHLVideocenterIE
-from .niconico import NiconicoIE, NiconicoPlaylistIE
+from .niconico import (
+    NiconicoIE,
+    NiconicoPlaylistIE
+)
 from .ninegag import NineGagIE
 from .noco import NocoIE
-from .normalboots import NormalbootsIE
-from .nosvideo import NosVideoIE
+# from .normalboots import NormalbootsIE
+# from .nosvideo import NosVideoIE
 from .novamov import NovaMovIE
-from .nowness import NownessIE
+# from .nowness import NownessIE
 from .nowvideo import NowVideoIE
 from .npo import (
     NPOIE,
@@ -313,7 +316,7 @@ from .pbs import PBSIE
 from .phoenix import PhoenixIE
 from .photobucket import PhotobucketIE
 from .planetaplay import PlanetaPlayIE
-from .played import PlayedIE
+# from .played import PlayedIE
 from .playfm import PlayFMIE
 from .playvid import PlayvidIE
 from .podomatic import PodomaticIE
@@ -326,7 +329,7 @@ from .prosiebensat1 import ProSiebenSat1IE
 from .pyvideo import PyvideoIE
 from .quickvid import QuickVidIE
 from .radiode import RadioDeIE
-from .radiofrance import RadioFranceIE
+# from .radiofrance import RadioFranceIE
 from .rai import RaiIE
 from .rbmaradio import RBMARadioIE
 from .redtube import RedTubeIE
@@ -341,7 +344,7 @@ from .rtlnl import RtlXlIE
 from .rtlnow import RTLnowIE
 from .rtp import RTPIE
 from .rts import RTSIE
-from .rtve import RTVEALaCartaIE, RTVELiveIE
+# from .rtve import RTVEALaCartaIE, RTVELiveIE
 from .ruhd import RUHDIE
 from .rutube import (
     RutubeIE,
@@ -363,7 +366,7 @@ from .sexykarma import SexyKarmaIE
 from .shared import SharedIE
 from .sharesix import ShareSixIE
 from .sina import SinaIE
-from .slideshare import SlideshareIE
+# from .slideshare import SlideshareIE
 from .slutload import SlutloadIE
 from .smotri import (
     SmotriIE,

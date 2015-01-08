@@ -38,21 +38,22 @@ class SWRMediathekIE(InfoExtractor):
             'uploader': 'SWR Fernsehen',
             'uploader_id': '990030',
         },
-    }, {
-        'url': 'http://swrmediathek.de/player.htm?show=bba23e10-cb93-11e3-bf7f-0026b975f2e6',
-        'md5': '4382e4ef2c9d7ce6852535fa867a0dd3',
-        'info_dict': {
-            'id': 'bba23e10-cb93-11e3-bf7f-0026b975f2e6',
-            'ext': 'mp3',
-            'title': 'Saša Stanišic: Vor dem Fest',
-            'description': 'md5:5b792387dc3fbb171eb709060654e8c9',
-            'thumbnail': 're:http://.*\.jpg',
-            'duration': 3366,
-            'upload_date': '20140520',
-            'uploader': 'SWR 2',
-            'uploader_id': '284670',
-        }
-    }]
+    }#, {
+        # 'url': 'http://swrmediathek.de/player.htm?show=bba23e10-cb93-11e3-bf7f-0026b975f2e6',
+        # 'md5': '4382e4ef2c9d7ce6852535fa867a0dd3',
+        # 'info_dict': {
+        #     'id': 'bba23e10-cb93-11e3-bf7f-0026b975f2e6',
+        #     'ext': 'mp3',
+        #     'title': 'Saša Stanišic: Vor dem Fest',
+        #     'description': 'md5:5b792387dc3fbb171eb709060654e8c9',
+        #     'thumbnail': 're:http://.*\.jpg',
+        #     'duration': 3366,
+        #     'upload_date': '20140520',
+        #     'uploader': 'SWR 2',
+        #     'uploader_id': '284670',
+        # }
+        # }
+    ]
 
     def _real_extract(self, url):
         mobj = re.match(self._VALID_URL, url)

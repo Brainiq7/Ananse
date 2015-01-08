@@ -24,7 +24,7 @@ class SexyKarmaIE(InfoExtractor):
             'title': 'Taking a quick pee.',
             'thumbnail': 're:^https?://.*\.jpg$',
             'uploader': 'wildginger7',
-            'upload_date': '20141007',
+            'upload_date': '20141008',
             'duration': 22,
             'view_count': int,
             'comment_count': int,

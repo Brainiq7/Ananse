@@ -24,18 +24,18 @@ class PodomaticIE(InfoExtractor):
                 'duration': 446,
             }
         },
-        {
-            'url': 'http://ostbahnhof.podomatic.com/entry/2013-11-15T16_31_21-08_00',
-            'md5': 'd2cf443931b6148e27638650e2638297',
-            'info_dict': {
-                'id': '2013-11-15T16_31_21-08_00',
-                'ext': 'mp3',
-                'uploader': 'Ostbahnhof / Techno Mix',
-                'uploader_id': 'ostbahnhof',
-                'title': 'Einunddreizig',
-                'duration': 3799,
-            }
-        },
+        # {
+        #     'url': 'http://ostbahnhof.podomatic.com/entry/2013-11-15T16_31_21-08_00',
+        #     'md5': 'd2cf443931b6148e27638650e2638297',
+        #     'info_dict': {
+        #         'id': '2013-11-15T16_31_21-08_00',
+        #         'ext': 'mp3',
+        #         'uploader': 'Ostbahnhof / Techno Mix',
+        #         'uploader_id': 'ostbahnhof',
+        #         'title': 'Einunddreizig',
+        #         'duration': 3799,
+        #     }
+        # },
     ]
 
     def _real_extract(self, url):

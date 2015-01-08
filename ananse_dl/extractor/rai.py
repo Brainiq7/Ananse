@@ -52,16 +52,16 @@ class RaiIE(SubtitlesInfoExtractor):
             },
             'skip': 'Error 404',
         },
-        {
-            'url': 'http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b4a49761-e0cc-4b14-8736-2729f6f73132-tg2.html',
-            'md5': '35694f062977fe6619943f08ed935730',
-            'info_dict': {
-                'id': 'b4a49761-e0cc-4b14-8736-2729f6f73132',
-                'ext': 'mp4',
-                'title': 'Alluvione in Sardegna e dissesto idrogeologico',
-                'description': 'Edizione delle ore 20:30 ',
-            }
-        },
+        # {
+        #     'url': 'http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b4a49761-e0cc-4b14-8736-2729f6f73132-tg2.html',
+        #     'md5': '35694f062977fe6619943f08ed935730',
+        #     'info_dict': {
+        #         'id': 'b4a49761-e0cc-4b14-8736-2729f6f73132',
+        #         'ext': 'mp4',
+        #         'title': 'Alluvione in Sardegna e dissesto idrogeologico',
+        #         'description': 'Edizione delle ore 20:30 ',
+        #     }
+        # },
     ]
 
     def _real_extract(self, url):

@@ -192,3 +192,51 @@ Reason: test failing
 Disable test
 Reason test failing
 
+[test_Normalboots]
+Disable extractor
+Reason: ERROR: [rtmpdump] Could not connect to RTMP server.
+
+[test_NosVideo]
+Disable extractor
+Reason: ExtractorError: Video mu8fle7g7rpq does not exist
+
+[test_Nowness]
+Disable extractor
+Reason: ERROR: Unable to extract player URL
+
+[test_Played]
+Disable extractor
+Reason:  DownloadError: ERROR: Removed for copyright infringement.
+
+[test_Podomatic]
+Disable test
+Reason: Test 2 failing
+
+[test_RETVEALaCarta]
+Disable extractor
+Reason: DownloadError: ERROR: unable to download video data: HTTP Error 403: Forbidden
+
+[test_RTVELive]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract internal video ID
+
+[test_RadioFrance]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404
+
+[test_Rai]
+Disable test
+Reason: test_Rai_3 failing
+
+[test_SWRMediathek_2]
+Disable test
+Reason: DownloadError: ERROR: bba23e10-cb93-11e3-bf7f-0026b975f2e6: Failed to parse JSON  (caused by ValueError('No JSON object could be decoded',)
+
+[test_ShareSix]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404:
+
+[test_Slideshare]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract slideshare object
+

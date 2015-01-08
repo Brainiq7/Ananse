@@ -84,7 +84,7 @@ class RTLnowIE(InfoExtractor):
                 'description': 're:^Im Therapiezentrum \'Sonnalm\' kommen durch eine Unachtsamkeit die für die B.handlung mit Phobikern gehaltenen Voglespinnen frei\. Eine Ausreißerin',
                 'thumbnail': 'http://autoimg.static-fra.de/superrtlnow/287529/1500x1500/image2.jpg',
                 'upload_date': '20080928',
-                'duration': 2691,
+                'duration': 3025,
             },
             'params': {
                 'skip_download': True,
