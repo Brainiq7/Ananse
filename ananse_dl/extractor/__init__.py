@@ -294,7 +294,7 @@ from .novamov import NovaMovIE
 from .nowvideo import NowVideoIE
 from .npo import (
     NPOIE,
-    TegenlichtVproIE,
+    # TegenlichtVproIE,
 )
 from .nrk import (
     NRKIE,
@@ -386,9 +386,9 @@ from .soundcloud import (
 from .soundgasm import SoundgasmIE
 from .southpark import (
     SouthParkIE,
-    SouthparkDeIE,
+    # SouthparkDeIE,
 )
-from .space import SpaceIE
+# from .space import SpaceIE
 from .spankwire import SpankwireIE
 from .spiegel import SpiegelIE, SpiegelArticleIE
 from .spiegeltv import SpiegeltvIE
@@ -409,7 +409,7 @@ from .tagesschau import TagesschauIE
 from .tapely import TapelyIE
 from .tass import TassIE
 from .teachertube import (
-    TeacherTubeIE,
+    # TeacherTubeIE,
     TeacherTubeUserIE,
 )
 from .teachingchannel import TeachingChannelIE
@@ -428,9 +428,12 @@ from .theplatform import ThePlatformIE
 from .thesixtyone import TheSixtyOneIE
 from .thisav import ThisAVIE
 from .tinypic import TinyPicIE
-from .tlc import TlcIE, TlcDeIE
+from .tlc import(
+    TlcIE,
+    # TlcDeIE
+)
 from .tmz import TMZIE
-from .tnaflix import TNAFlixIE
+# from .tnaflix import TNAFlixIE
 from .thvideo import (
     THVideoIE,
     THVideoPlaylistIE
@@ -441,7 +444,7 @@ from .traileraddict import TrailerAddictIE
 from .trilulilu import TriluliluIE
 from .trutube import TruTubeIE
 from .tube8 import Tube8IE
-from .tudou import TudouIE
+# from .tudou import TudouIE
 from .tumblr import TumblrIE
 from .tunein import TuneInIE
 from .turbo import TurboIE

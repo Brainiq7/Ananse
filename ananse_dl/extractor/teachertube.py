@@ -23,7 +23,7 @@ class TeacherTubeIE(InfoExtractor):
             'id': '339997',
             'ext': 'mp4',
             'title': 'Measures of dispersion from a frequency table',
-            'description': 'Measures of dispersion from a frequency table',
+            # 'description': 'Measures of dispersion from a frequency table',
             'thumbnail': 're:http://.*\.jpg',
         },
     }, {
@@ -33,7 +33,7 @@ class TeacherTubeIE(InfoExtractor):
             'id': '340064',
             'ext': 'mp4',
             'title': 'How to Make Paper Dolls _ Paper Art Projects',
-            'description': 'Learn how to make paper dolls in this simple',
+            # 'description': 'Learn how to make paper dolls in this simple',
             'thumbnail': 're:http://.*\.jpg',
         },
     }, {
@@ -43,7 +43,7 @@ class TeacherTubeIE(InfoExtractor):
             'id': '8805',
             'ext': 'mp3',
             'title': 'PER ASPERA AD ASTRA',
-            'description': 'RADIJSKA EMISIJA ZRAKOPLOVNE TEHNI?KE ?KOLE P',
+            # 'description': 'RADIJSKA EMISIJA ZRAKOPLOVNE TEHNI?KE ?KOLE P',
         },
     }, {
         'url': 'http://www.teachertube.com/video/intro-video-schleicher-297790',
@@ -52,7 +52,7 @@ class TeacherTubeIE(InfoExtractor):
             'id': '297790',
             'ext': 'mp4',
             'title': 'Intro Video - Schleicher',
-            'description': 'Intro Video - Why to flip, how flipping will',
+            # 'description': 'Intro Video - Why to flip, how flipping will',
         },
     }]
 

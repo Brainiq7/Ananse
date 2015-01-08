@@ -240,3 +240,35 @@ Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404:
 Disable extractor
 Reason: DownloadError: ERROR: Unable to extract slideshare object
 
+[test_SouthparkDe]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404
+
+[test_space]
+Disable extractor
+Reason: the extractor has syntax error
+
+[test_Steam]
+Disable test 1
+Reason: KeyError: u'n_entries'
+
+[test_TNAFlix]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract OpenGraph title
+
+[test_TeacherTube]
+Disable extractor
+Reason: All test failing
+
+[test_TegenlichtVpro]
+Disable extractor
+Reason: DownloadError: ERROR: unable to extract mediaurn
+
+[test_TlcDe]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract iframe url
+
+[test_Tudou]
+Disable extractor
+Reason: DownloadError: ERROR: Extractor Tudou returned a compat_list result. It needs to be updated
+

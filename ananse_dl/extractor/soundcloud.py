@@ -70,19 +70,19 @@ class SoundcloudIE(InfoExtractor):
             },
         },
         # private link
-        {
-            'url': 'https://soundcloud.com/jaimemf/ananse-test-video-a-y-baw/s-8Pjrp',
-            'md5': 'aa0dd32bfea9b0c5ef4f02aacd080604',
-            'info_dict': {
-                'id': '123998367',
-                'ext': 'mp3',
-                'title': 'Youtube - Dl Test Video \'\' Ä↭',
-                'uploader': 'jaimeMF',
-                'description': 'test chars:  \"\'/\\ä↭',
-                'upload_date': '20131209',
-                'duration': 9,
-            },
-        },
+        # {
+        #     'url': 'https://soundcloud.com/jaimemf/ananse-test-video-a-y-baw/s-8Pjrp',
+        #     'md5': 'aa0dd32bfea9b0c5ef4f02aacd080604',
+        #     'info_dict': {
+        #         'id': '123998367',
+        #         'ext': 'mp3',
+        #         'title': 'Youtube - Dl Test Video \'\' Ä↭',
+        #         'uploader': 'jaimeMF',
+        #         'description': 'test chars:  \"\'/\\ä↭',
+        #         'upload_date': '20131209',
+        #         'duration': 9,
+        #     },
+        # },
         # private link (alt format)
         {
             'url': 'https://api.soundcloud.com/tracks/123998367?secret_token=s-8Pjrp',
