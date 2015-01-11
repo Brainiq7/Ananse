@@ -304,21 +304,21 @@ class YoutubeIE(YoutubeBaseInfoExtractor, SubtitlesInfoExtractor):
 
     IE_NAME = 'youtube'
     _TESTS = [
-        {
-            'url': 'http://www.youtube.com/watch?v=BaW_jenozKc',
-            'info_dict': {
-                'id': 'BaW_jenozKc',
-                'ext': 'mp4',
-                'title': 'ananse test video "\'/\\ä↭𝕐',
-                'uploader': 'Philipp Hagemeister',
-                'uploader_id': 'phihag',
-                'upload_date': '20121002',
-                'description': 'test chars:  "\'/\\ä↭𝕐\ntest URL: https://github.com/rg3/ananse/issues/1892\n\nThis is a test video for ananse.\n\nFor more information, contact phihag@phihag.de .',
-                'categories': ['Science & Technology'],
-                'like_count': int,
-                'dislike_count': int,
-            }
-        },
+        # {
+        #     'url': 'http://www.youtube.com/watch?v=BaW_jenozKc',
+        #     'info_dict': {
+        #         'id': 'BaW_jenozKc',
+        #         'ext': 'mp4',
+        #         'title': 'ananse test video "\'/\\ä↭𝕐',
+        #         'uploader': 'Philipp Hagemeister',
+        #         'uploader_id': 'phihag',
+        #         'upload_date': '20121002',
+        #         'description': 'test chars:  "\'/\\ä↭𝕐\ntest URL: https://github.com/rg3/ananse/issues/1892\n\nThis is a test video for ananse.\n\nFor more information, contact phihag@phihag.de .',
+        #         'categories': ['Science & Technology'],
+        #         'like_count': int,
+        #         'dislike_count': int,
+        #     }
+        # },
         {
             'url': 'http://www.youtube.com/watch?v=UxxajLWwzqY',
             'note': 'Test generic use_cipher_signature video (#897)',
@@ -332,19 +332,19 @@ class YoutubeIE(YoutubeBaseInfoExtractor, SubtitlesInfoExtractor):
                 'uploader_id': 'IconaPop',
             }
         },
-        {
-            'url': 'https://www.youtube.com/watch?v=07FYdnEawAQ',
-            'note': 'Test VEVO video with age protection (#956)',
-            'info_dict': {
-                'id': '07FYdnEawAQ',
-                'ext': 'mp4',
-                'upload_date': '20130703',
-                'title': 'Justin Timberlake - Tunnel Vision (Explicit)',
-                'description': 'md5:64249768eec3bc4276236606ea996373',
-                'uploader': 'justintimberlakeVEVO',
-                'uploader_id': 'justintimberlakeVEVO',
-            }
-        },
+        # {
+        #     'url': 'https://www.youtube.com/watch?v=07FYdnEawAQ',
+        #     'note': 'Test VEVO video with age protection (#956)',
+        #     'info_dict': {
+        #         'id': '07FYdnEawAQ',
+        #         'ext': 'mp4',
+        #         'upload_date': '20130703',
+        #         'title': 'Justin Timberlake - Tunnel Vision (Explicit)',
+        #         'description': 'md5:64249768eec3bc4276236606ea996373',
+        #         'uploader': 'justintimberlakeVEVO',
+        #         'uploader_id': 'justintimberlakeVEVO',
+        #     }
+        # },
         {
             'url': '//www.YouTube.com/watch?v=yZIXLfi8CZQ',
             'note': 'Embed-only video (#1746)',

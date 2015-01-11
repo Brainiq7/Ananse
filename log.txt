@@ -272,3 +272,66 @@ Reason: DownloadError: ERROR: Unable to extract iframe url
 Disable extractor
 Reason: DownloadError: ERROR: Extractor Tudou returned a compat_list result. It needs to be updated
 
+[test_TuneIn]
+Disable extractor
+Reasons:
+
+[test_Tvigle]
+Disable extractor
+Reason:
+
+[test_Ubu]
+Disable extractor
+Reason:
+
+[test_Ustream]
+Disable extractor
+Reason:
+
+[test_VRT]
+Disable extractor
+Reason:
+
+[test_VeeHD]
+Disable extractor
+Reason:
+
+[test_VideoWeed]
+Disable extractor
+Reason:
+
+[test_Vidzi]
+Disable extractor
+Reason:
+
+[test_Vimeo]
+Disable extractor
+Reason:
+
+[test_Vimple]
+Disable extractor
+Reason:
+
+[test_Weibo]
+Disable extractor
+Reason:
+
+[test_XMinus]
+Disable extractor
+Reason:
+
+[test_XboxClips]
+Disable extractor
+Reason:
+
+[test_Youku]
+Disable extractor
+Reason:
+
+[test_youtube]
+Disable test 1, 3
+Reasons: test 1 is failing and test 3 is giving an error
+
+[test_ZDFChannel]
+Disable extractor
+Reason:

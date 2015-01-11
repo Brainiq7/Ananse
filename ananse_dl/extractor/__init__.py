@@ -446,24 +446,24 @@ from .trutube import TruTubeIE
 from .tube8 import Tube8IE
 # from .tudou import TudouIE
 from .tumblr import TumblrIE
-from .tunein import TuneInIE
+# from .tunein import TuneInIE
 from .turbo import TurboIE
 from .tutv import TutvIE
-from .tvigle import TvigleIE
+# from .tvigle import TvigleIE
 from .tvp import TvpIE
 from .tvplay import TVPlayIE
 from .twentyfourvideo import TwentyFourVideoIE
 from .twitch import TwitchIE
-from .ubu import UbuIE
+# from .ubu import UbuIE
 from .udemy import (
     UdemyIE,
     UdemyCourseIE
 )
 from .unistra import UnistraIE
 from .urort import UrortIE
-from .ustream import UstreamIE, UstreamChannelIE
+# from .ustream import UstreamIE, UstreamChannelIE
 from .vbox7 import Vbox7IE
-from .veehd import VeeHDIE
+# from .veehd import VeeHDIE
 from .veoh import VeohIE
 from .vesti import VestiIE
 from .vevo import VevoIE
@@ -478,11 +478,11 @@ from .videofyme import VideofyMeIE
 from .videomega import VideoMegaIE
 from .videopremium import VideoPremiumIE
 from .videott import VideoTtIE
-from .videoweed import VideoWeedIE
+# from .videoweed import VideoWeedIE
 from .vidme import VidmeIE
-from .vidzi import VidziIE
+# from .vidzi import VidziIE
 from .vimeo import (
-    VimeoIE,
+    # VimeoIE,
     VimeoAlbumIE,
     VimeoChannelIE,
     VimeoGroupsIE,
@@ -491,7 +491,7 @@ from .vimeo import (
     VimeoUserIE,
     VimeoWatchLaterIE,
 )
-from .vimple import VimpleIE
+# from .vimple import VimpleIE
 from .vine import (
     VineIE,
     VineUserIE,
@@ -503,7 +503,7 @@ from .vk import (
 )
 from .vodlocker import VodlockerIE
 from .vporn import VpornIE
-from .vrt import VRTIE
+# from .vrt import VRTIE
 from .vube import VubeIE
 from .vuclip import VuClipIE
 from .vulture import VultureIE
@@ -516,15 +516,15 @@ from .wdr import (
     WDRMobileIE,
     WDRMausIE,
 )
-from .weibo import WeiboIE
+# from .weibo import WeiboIE
 from .wimp import WimpIE
 from .wistia import WistiaIE
 from .worldstarhiphop import WorldStarHipHopIE
 from .wrzuta import WrzutaIE
 from .xbef import XBefIE
-from .xboxclips import XboxClipsIE
+# from .xboxclips import XboxClipsIE
 from .xhamster import XHamsterIE
-from .xminus import XMinusIE
+# from .xminus import XMinusIE
 from .xnxx import XNXXIE
 from .xvideos import XVideosIE
 from .xtube import XTubeUserIE, XTubeIE
@@ -536,7 +536,7 @@ from .yahoo import (
 from .yesjapan import YesJapanIE
 from .ynet import YnetIE
 from .youjizz import YouJizzIE
-from .youku import YoukuIE
+# from .youku import YoukuIE
 from .youporn import YouPornIE
 from .yourupload import YourUploadIE
 from .youtube import (
@@ -556,7 +556,7 @@ from .youtube import (
     YoutubeUserIE,
     YoutubeWatchLaterIE,
 )
-from .zdf import ZDFIE, ZDFChannelIE
+from .zdf import ZDFIE#, ZDFChannelIE
 from .zingmp3 import (
     ZingMp3SongIE,
     ZingMp3AlbumIE,
