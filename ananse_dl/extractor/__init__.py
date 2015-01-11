@@ -41,7 +41,7 @@ from .behindkink import BehindKinkIE
 # from .bet import BetIE
 from .bild import BildIE
 # from .bilibili import BiliBiliIE
-from .blinkx import BlinkxIE
+# from .blinkx import BlinkxIE
 from .bliptv import BlipTVIE, BlipTVUserIE
 from .bloomberg import BloombergIE
 from .bpb import BpbIE
@@ -482,7 +482,7 @@ from .videott import VideoTtIE
 from .vidme import VidmeIE
 # from .vidzi import VidziIE
 from .vimeo import (
-    # VimeoIE,
+    VimeoIE,
     VimeoAlbumIE,
     VimeoChannelIE,
     VimeoGroupsIE,

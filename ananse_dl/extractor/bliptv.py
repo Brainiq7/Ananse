@@ -22,21 +22,21 @@ class BlipTVIE(SubtitlesInfoExtractor):
     _VALID_URL = r'https?://(?:\w+\.)?blip\.tv/(?:(?:.+-|rss/flash/)(?P<id>\d+)|((?:play/|api\.swf#)(?P<lookup_id>[\da-zA-Z+_]+)))'
 
     _TESTS = [
-        {
-            'url': 'http://blip.tv/cbr/cbr-exclusive-gotham-city-imposters-bats-vs-jokerz-short-3-5796352',
-            'md5': 'c6934ad0b6acf2bd920720ec888eb812',
-            'info_dict': {
-                'id': '5779306',
-                'ext': 'mov',
-                'title': 'CBR EXCLUSIVE: "Gotham City Imposters" Bats VS Jokerz Short 3',
-                'description': 'md5:9bc31f227219cde65e47eeec8d2dc596',
-                'timestamp': 1323138843,
-                'upload_date': '20111206',
-                'uploader': 'cbr',
-                'uploader_id': '679425',
-                'duration': 81,
-            }
-        },
+        # {
+        #     'url': 'http://blip.tv/cbr/cbr-exclusive-gotham-city-imposters-bats-vs-jokerz-short-3-5796352',
+        #     'md5': 'c6934ad0b6acf2bd920720ec888eb812',
+        #     'info_dict': {
+        #         'id': '5779306',
+        #         'ext': 'mov',
+        #         'title': 'CBR EXCLUSIVE: "Gotham City Imposters" Bats VS Jokerz Short 3',
+        #         'description': 'md5:9bc31f227219cde65e47eeec8d2dc596',
+        #         'timestamp': 1323138843,
+        #         'upload_date': '20111206',
+        #         'uploader': 'cbr',
+        #         'uploader_id': '679425',
+        #         'duration': 81,
+        #     }
+        # },
         {
             # https://github.com/rg3/ananse/pull/2274
             'note': 'Video with subtitles',

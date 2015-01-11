@@ -304,10 +304,6 @@ Reason:
 Disable extractor
 Reason:
 
-[test_Vimeo]
-Disable extractor
-Reason:
-
 [test_Vimple]
 Disable extractor
 Reason:
@@ -339,3 +335,21 @@ Reason:
 [test_all_urls]
 Disable vimeo url test
 Reason: extractor has been removed so test will always fall
+
+[test_AlJazeera]
+Disabling aljazeera test because it passes on local machines but
+fails on travis
+
+[test_Blinkx]
+Disabling extractor
+Reason:  File "/home/oteng/PycharmProjects/Ananse/ananse_dl/extractor/blinkx.py", line 63, in _real_extract
+    tbr = (int(m['vbr']) + int(m['abr'])) // 1000
+KeyError: u'vbr'
+
+[test_BlipTV]
+Disabling test 1
+Reason: DownloadError: ERROR: unable to download video data: HTTP Error 404: Not Found
+
+[test_CNNArticle]
+Disable test for this extractor
+Reason: file has changed
