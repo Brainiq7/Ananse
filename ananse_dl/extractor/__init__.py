@@ -47,7 +47,7 @@ from .bloomberg import BloombergIE
 from .bpb import BpbIE
 from .br import BRIE
 from .breakcom import BreakIE
-# from .brightcove import BrightcoveIE
+from .brightcove import BrightcoveIE
 from .buzzfeed import BuzzFeedIE
 from .byutv import BYUtvIE
 from .c56 import C56IE

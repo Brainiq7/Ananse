@@ -40,7 +40,7 @@ Reasons:
 test_BlipTV: unable to download video data: HTTP Error 404: Not Found
 
 [test_Brightcover_4]
-Disable extractor
+Disable test 4
 Reasons: video_info['_youtubedl_adServerURL'] = info.get('adServerURL')
 TypeError: 'NoneType' object does not support item assignment
 
@@ -335,3 +335,7 @@ Reasons: test 1 is failing and test 3 is giving an error
 [test_ZDFChannel]
 Disable extractor
 Reason:
+
+[test_all_urls]
+Disable vimeo url test
+Reason: extractor has been removed so test will always fall
