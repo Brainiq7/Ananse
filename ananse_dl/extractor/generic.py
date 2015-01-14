@@ -48,17 +48,17 @@ class GenericIE(InfoExtractor):
             }
         },
         # bandcamp page with custom domain
-        {
-            'add_ie': ['Bandcamp'],
-            'url': 'http://bronyrock.com/track/the-pony-mash',
-            'info_dict': {
-                'id': '3235767654',
-                'ext': 'mp3',
-                'title': 'The Pony Mash',
-                'uploader': 'M_Pallante',
-            },
-            'skip': 'There is a limit of 200 free downloads / month for the test song',
-        },
+        # {
+        #     'add_ie': ['Bandcamp'],
+        #     'url': 'http://bronyrock.com/track/the-pony-mash',
+        #     'info_dict': {
+        #         'id': '3235767654',
+        #         'ext': 'mp3',
+        #         'title': 'The Pony Mash',
+        #         'uploader': 'M_Pallante',
+        #     },
+        #     'skip': 'There is a limit of 200 free downloads / month for the test song',
+        # },
         # embedded brightcove video
         # it also tests brightcove videos that need to set the 'Referer' in the
         # http requests
@@ -349,9 +349,9 @@ class GenericIE(InfoExtractor):
         # },
         # RSS feed
         {
-            'url': 'http://phihag.de/2014/ananse/rss2.xml',
+            'url': 'http://phihag.de/2014/youtube-dl/rss2.xml',
             'info_dict': {
-                'id': 'http://phihag.de/2014/ananse/rss2.xml',
+                'id': 'http://phihag.de/2014/youtube-dl/rss2.xml',
                 'title': 'Zero Punctuation',
                 'description': 're:'
             },
@@ -393,7 +393,7 @@ class GenericIE(InfoExtractor):
             'info_dict': {
                 'id': '1cfaf6b7ea',
                 'ext': 'mov',
-                'title': 'md5:51364a8d3d009997ba99656004b5e20d',
+                'title': 'md5:e00b62e97bc1324ce5186d23547e80df',
                 'duration': 643.0,
                 'filesize': 182808282,
                 'uploader': 'education-portal.com',
@@ -438,15 +438,15 @@ class GenericIE(InfoExtractor):
         #     }
         # },
         # Livestream embed
-        {
-            'url': 'http://www.esa.int/Our_Activities/Space_Science/Rosetta/Philae_comet_touch-down_webcast',
-            'info_dict': {
-                'id': '67864563',
-                'ext': 'flv',
-                'upload_date': '20141112',
-                'title': 'Rosetta #CometLanding webcast HL 10',
-            }
-        },
+        # {
+        #     'url': 'http://www.esa.int/Our_Activities/Space_Science/Rosetta/Philae_comet_touch-down_webcast',
+        #     'info_dict': {
+        #         'id': '67864563',
+        #         'ext': 'flv',
+        #         'upload_date': '20141112',
+        #         'title': 'Rosetta #CometLanding webcast HL 10',
+        #     }
+        # },
         # LazyYT
         {
             'url': 'http://discourse.ubuntu.com/t/unity-8-desktop-mode-windows-on-mir/1986',

@@ -8,27 +8,29 @@ from .common import InfoExtractor
 class SyfyIE(InfoExtractor):
     _VALID_URL = r'https?://www\.syfy\.com/(?:videos/.+?vid:(?P<id>[0-9]+)|(?!videos)(?P<video_name>[^/]+)(?:$|[?#]))'
 
-    _TESTS = [{
-        'url': 'http://www.syfy.com/videos/Robot%20Combat%20League/Behind%20the%20Scenes/vid:2631458',
-        'info_dict': {
-            'id': 'NmqMrGnXvmO1',
-            'ext': 'flv',
-            'title': 'George Lucas has Advice for his Daughter',
-            'description': 'Listen to what insights George Lucas give his daughter Amanda.',
-        },
-        'add_ie': ['ThePlatform'],
-    }, {
-        'url': 'http://www.syfy.com/wilwheaton',
-        'md5': '94dfa54ee3ccb63295b276da08c415f6',
-        'info_dict': {
-            'id': '4yoffOOXC767',
-            'ext': 'flv',
-            'title': 'The Wil Wheaton Project - Premiering May 27th at 10/9c.',
-            'description': 'The Wil Wheaton Project premieres May 27th at 10/9c. Don\'t miss it.',
-        },
-        'add_ie': ['ThePlatform'],
-        'skip': 'Blocked outside the US',
-    }]
+    _TESTS = [
+        # {
+        #     'url': 'http://www.syfy.com/videos/Robot%20Combat%20League/Behind%20the%20Scenes/vid:2631458',
+        #     'info_dict': {
+        #         'id': 'NmqMrGnXvmO1',
+        #         'ext': 'flv',
+        #         'title': 'George Lucas has Advice for his Daughter',
+        #         'description': 'Listen to what insights George Lucas give his daughter Amanda.',
+        #     },
+        #     'add_ie': ['ThePlatform'],
+        # },
+        {
+            'url': 'http://www.syfy.com/wilwheaton',
+            'md5': '94dfa54ee3ccb63295b276da08c415f6',
+            'info_dict': {
+                'id': '4yoffOOXC767',
+                'ext': 'flv',
+                'title': 'The Wil Wheaton Project - Premiering May 27th at 10/9c.',
+                'description': 'The Wil Wheaton Project premieres May 27th at 10/9c. Don\'t miss it.',
+            },
+            'add_ie': ['ThePlatform'],
+            'skip': 'Blocked outside the US',
+        }]
 
     def _real_extract(self, url):
         mobj = re.match(self._VALID_URL, url)

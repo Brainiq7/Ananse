@@ -17,7 +17,7 @@ class WashingtonPostIE(InfoExtractor):
             'title': 'Sinkhole of bureaucracy',
         },
         'playlist': [{
-            'md5': 'c3f4b4922ffa259243f68e928db2db8c',
+            'md5': '79132cc09ec5309fa590ae46e4cc31bc',
             'info_dict': {
                 'id': 'fc433c38-b146-11e3-b8b3-44b1d1cd4c1f',
                 'ext': 'mp4',

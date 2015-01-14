@@ -14,7 +14,7 @@ class KontrTubeIE(InfoExtractor):
 
     _TEST = {
         'url': 'http://www.kontrtube.ru/videos/2678/nad-olimpiyskoy-derevney-v-sochi-podnyat-rossiyskiy-flag/',
-        'md5': '975a991a4926c9a85f383a736a2e6b80',
+        'md5': '023361af07dc0f59f39e2e83431c62df',
         'info_dict': {
             'id': '2678',
             'ext': 'mp4',

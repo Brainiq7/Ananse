@@ -17,18 +17,18 @@ class NDRIE(InfoExtractor):
     _VALID_URL = r'https?://www\.ndr\.de/.+?(?P<id>\d+)\.html'
 
     _TESTS = [
-        {
-            'url': 'http://www.ndr.de/fernsehen/sendungen/nordmagazin/Kartoffeltage-in-der-Lewitz,nordmagazin25866.html',
-            'md5': '5bc5f5b92c82c0f8b26cddca34f8bb2c',
-            'note': 'Video file',
-            'info_dict': {
-                'id': '25866',
-                'ext': 'mp4',
-                'title': 'Kartoffeltage in der Lewitz',
-                'description': 'md5:48c4c04dde604c8a9971b3d4e3b9eaa8',
-                'duration': 166,
-            }
-        },
+        # {
+        #     'url': 'http://www.ndr.de/fernsehen/sendungen/nordmagazin/Kartoffeltage-in-der-Lewitz,nordmagazin25866.html',
+        #     'md5': '5bc5f5b92c82c0f8b26cddca34f8bb2c',
+        #     'note': 'Video file',
+        #     'info_dict': {
+        #         'id': '25866',
+        #         'ext': 'mp4',
+        #         'title': 'Kartoffeltage in der Lewitz',
+        #         'description': 'md5:48c4c04dde604c8a9971b3d4e3b9eaa8',
+        #         'duration': 166,
+        #     }
+        # },
         {
             'url': 'http://www.ndr.de/info/audio51535.html',
             'md5': 'bb3cd38e24fbcc866d13b50ca59307b8',

@@ -14,17 +14,17 @@ from ..utils import (
 class SunPornoIE(InfoExtractor):
     _VALID_URL = r'https?://(?:www\.)?sunporno\.com/videos/(?P<id>\d+)'
     _TEST = {
-        'url': 'http://www.sunporno.com/videos/807778/',
-        'md5': '6457d3c165fd6de062b99ef6c2ff4c86',
-        'info_dict': {
-            'id': '807778',
-            'ext': 'flv',
-            'title': 'md5:0a400058e8105d39e35c35e7c5184164',
-            'description': 'md5:a31241990e1bd3a64e72ae99afb325fb',
-            'thumbnail': 're:^https?://.*\.jpg$',
-            'duration': 302,
-            'age_limit': 18,
-        }
+        # 'url': 'http://www.sunporno.com/videos/807778/',
+        # 'md5': '6457d3c165fd6de062b99ef6c2ff4c86',
+        # 'info_dict': {
+        #     'id': '807778',
+        #     'ext': 'flv',
+        #     'title': 'md5:0a400058e8105d39e35c35e7c5184164',
+        #     'description': 'md5:a31241990e1bd3a64e72ae99afb325fb',
+        #     'thumbnail': 're:^https?://.*\.jpg$',
+        #     'duration': 302,
+        #     'age_limit': 18,
+        # }
     }
 
     def _real_extract(self, url):

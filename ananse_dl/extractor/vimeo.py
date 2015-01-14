@@ -116,7 +116,7 @@ class VimeoIE(VimeoBaseInfoExtractor, SubtitlesInfoExtractor):
             'info_dict': {
                 'id': '68375962',
                 'ext': 'mp4',
-                'title': 'ananse password protected test video',
+                'title': 'youtube-dl password protected test video',
                 'upload_date': '20130614',
                 'uploader_id': 'user18948128',
                 'uploader': 'Jaime Marquínez Ferrándiz',

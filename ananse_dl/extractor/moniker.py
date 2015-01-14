@@ -15,26 +15,26 @@ class MonikerIE(InfoExtractor):
     IE_DESC = 'allmyvideos.net and vidspot.net'
     _VALID_URL = r'https?://(?:www\.)?(?:allmyvideos|vidspot)\.net/(?P<id>[a-zA-Z0-9_-]+)'
 
-    _TESTS = [{
-        'url': 'http://allmyvideos.net/jih3nce3x6wn',
-        'md5': '710883dee1bfc370ecf9fa6a89307c88',
-        'info_dict': {
-            'id': 'jih3nce3x6wn',
-            'ext': 'mp4',
-            'title': 'youtube-dl test video',
-        },
-    }, {
-        'url': 'http://vidspot.net/l2ngsmhs8ci5',
-        'md5': '710883dee1bfc370ecf9fa6a89307c88',
-        'info_dict': {
-            'id': 'l2ngsmhs8ci5',
-            'ext': 'mp4',
-            'title': 'youtube-dl test video',
-        },
-    }, {
-        'url': 'https://www.vidspot.net/l2ngsmhs8ci5',
-        'only_matching': True,
-    }]
+    _TESTS ={}# [{
+    #     'url': 'http://allmyvideos.net/jih3nce3x6wn',
+    #     'md5': '710883dee1bfc370ecf9fa6a89307c88',
+    #     'info_dict': {
+    #         'id': 'jih3nce3x6wn',
+    #         'ext': 'mp4',
+    #         'title': 'youtube-dl test video',
+    #     },
+    # }, {
+    #     'url': 'http://vidspot.net/l2ngsmhs8ci5',
+    #     'md5': '710883dee1bfc370ecf9fa6a89307c88',
+    #     'info_dict': {
+    #         'id': 'l2ngsmhs8ci5',
+    #         'ext': 'mp4',
+    #         'title': 'youtube-dl test video',
+    #     },
+    # }, {
+    #     'url': 'https://www.vidspot.net/l2ngsmhs8ci5',
+    #     'only_matching': True,
+    # }]
 
     def _real_extract(self, url):
         video_id = self._match_id(url)

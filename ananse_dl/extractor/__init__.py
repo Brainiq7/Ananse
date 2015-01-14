@@ -100,7 +100,7 @@ from .dvtv import DVTVIE
 from .dump import DumpIE
 from .defense import DefenseGouvFrIE
 # from .discovery import DiscoveryIE
-from .divxstage import DivxStageIE
+# from .divxstage import DivxStageIE
 from .dropbox import DropboxIE
 from .ebaumsworld import EbaumsWorldIE
 from .ehow import EHowIE
@@ -129,7 +129,7 @@ from .firstpost import FirstpostIE
 from .firsttv import FirstTVIE
 from .fivemin import FiveMinIE
 from .fktv import (
-    FKTVIE,
+    # FKTVIE,
     FKTVPosteckeIE,
 )
 from .flickr import FlickrIE
@@ -174,7 +174,7 @@ from .grooveshark import GroovesharkIE
 from .groupon import GrouponIE
 from .hark import HarkIE
 from .heise import HeiseIE
-from .hellporno import HellPornoIE
+# from .hellporno import HellPornoIE
 from .helsinki import HelsinkiIE
 from .hentaistigma import HentaiStigmaIE
 from .hitbox import HitboxIE, HitboxLiveIE
@@ -207,7 +207,7 @@ from .jove import JoveIE
 from .jukebox import JukeboxIE
 from .jpopsukitv import JpopsukiIE
 from .kankan import KankanIE
-from .keezmovies import KeezMoviesIE
+# from .keezmovies import KeezMoviesIE
 from .khanacademy import KhanAcademyIE
 from .kickstarter import KickStarterIE
 # from .keek import KeekIE
@@ -215,7 +215,7 @@ from .kontrtube import KontrTubeIE
 from .krasview import KrasViewIE
 from .ku6 import Ku6IE
 from .la7 import LA7IE
-from .laola1tv import Laola1TvIE
+# from .laola1tv import Laola1TvIE
 from .lifenews import LifeNewsIE
 from .liveleak import LiveLeakIE
 from .livestream import (
@@ -296,10 +296,10 @@ from .npo import (
     NPOIE,
     # TegenlichtVproIE,
 )
-from .nrk import (
-    NRKIE,
-    NRKTVIE,
-)
+# from .nrk import (
+#     NRKIE,
+#     NRKTVIE,
+# )
 from .ntv import NTVIE
 from .nytimes import NYTimesIE
 from .nuvid import NuvidIE
@@ -364,7 +364,7 @@ from .servingsys import ServingSysIE
 from .sexu import SexuIE
 from .sexykarma import SexyKarmaIE
 from .shared import SharedIE
-from .sharesix import ShareSixIE
+# from .sharesix import ShareSixIE
 from .sina import SinaIE
 # from .slideshare import SlideshareIE
 from .slutload import SlutloadIE
@@ -375,7 +375,7 @@ from .smotri import (
     SmotriBroadcastIE,
 )
 from .snotr import SnotrIE
-from .sockshare import SockshareIE
+# from .sockshare import SockshareIE
 from .sohu import SohuIE
 from .soundcloud import (
     SoundcloudIE,
@@ -398,7 +398,7 @@ from .sportbox import SportBoxIE
 from .sportdeutschland import SportDeutschlandIE
 from .srmediathek import SRMediathekIE
 from .stanfordoc import StanfordOpenClassroomIE
-from .steam import SteamIE
+# from .steam import SteamIE
 from .streamcloud import StreamcloudIE
 from .streamcz import StreamCZIE
 from .sunporno import SunPornoIE

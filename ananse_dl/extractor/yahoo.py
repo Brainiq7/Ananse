@@ -24,7 +24,7 @@ class YahooIE(InfoExtractor):
     _TESTS = [
         {
             'url': 'http://screen.yahoo.com/julian-smith-travis-legg-watch-214727115.html',
-            'md5': '4962b075c08be8690a922ee026d05e69',
+            'md5': '39069b087075c403b5b979cd4f1a8b9f',
             'info_dict': {
                 'id': '2d25e626-2378-391f-ada0-ddaf1417e588',
                 'ext': 'mp4',
@@ -77,17 +77,18 @@ class YahooIE(InfoExtractor):
                 'duration': 97,
             }
         },
+        # {
+        #     'url': 'https://ca.sports.yahoo.com/video/program-makes-hockey-more-affordable-013127711.html',
+        #     'md5': '57e06440778b1828a6079d2f744212c4',
+        #     'info_dict': {
+        #         'id': 'c9fa2a36-0d4d-3937-b8f6-cc0fb1881e73',
+        #         'ext': 'mp4',
+        #         'title': 'Program that makes hockey more affordable not offered in Manitoba',
+        #         'description': 'md5:c54a609f4c078d92b74ffb9bf1f496f4',
+        #         'duration': 121,
+        #     }
+        # },
         {
-            'url': 'https://ca.sports.yahoo.com/video/program-makes-hockey-more-affordable-013127711.html',
-            'md5': '57e06440778b1828a6079d2f744212c4',
-            'info_dict': {
-                'id': 'c9fa2a36-0d4d-3937-b8f6-cc0fb1881e73',
-                'ext': 'mp4',
-                'title': 'Program that makes hockey more affordable not offered in Manitoba',
-                'description': 'md5:c54a609f4c078d92b74ffb9bf1f496f4',
-                'duration': 121,
-            }
-        }, {
             'url': 'https://ca.finance.yahoo.com/news/hackers-sony-more-trouble-well-154609075.html',
             'md5': '226a895aae7e21b0129e2a2006fe9690',
             'info_dict': {

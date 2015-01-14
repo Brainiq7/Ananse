@@ -11,17 +11,17 @@ from ..utils import (
 class PornoXOIE(InfoExtractor):
     _VALID_URL = r'https?://(?:www\.)?pornoxo\.com/videos/(?P<id>\d+)/(?P<display_id>[^/]+)\.html'
     _TEST = {
-        'url': 'http://www.pornoxo.com/videos/7564/striptease-from-sexy-secretary.html',
-        'md5': '582f28ecbaa9e6e24cb90f50f524ce87',
-        'info_dict': {
-            'id': '7564',
-            'ext': 'flv',
-            'title': 'Striptease From Sexy Secretary!',
-            'description': 'Striptease From Sexy Secretary!',
-            'categories': list,  # NSFW
-            'thumbnail': 're:https?://.*\.jpg$',
-            'age_limit': 18,
-        }
+        # 'url': 'http://www.pornoxo.com/videos/7564/striptease-from-sexy-secretary.html',
+        # 'md5': '582f28ecbaa9e6e24cb90f50f524ce87',
+        # 'info_dict': {
+        #     'id': '7564',
+        #     'ext': 'flv',
+        #     'title': 'Striptease From Sexy Secretary!',
+        #     'description': 'Striptease From Sexy Secretary!',
+        #     'categories': list,  # NSFW
+        #     'thumbnail': 're:https?://.*\.jpg$',
+        #     'age_limit': 18,
+        # }
     }
 
     def _real_extract(self, url):

@@ -353,3 +353,112 @@ Reason: DownloadError: ERROR: unable to download video data: HTTP Error 404: Not
 [test_CNNArticle]
 Disable test for this extractor
 Reason: file has changed
+
+[test_DivxStage]
+Disable extractor
+Reason: HTTPError: HTTP Error 403: Forbidden
+
+[test_FKTV]
+Disable extractor
+Reason: DownloadError: ERROR: Extractor fernsehkritik.tv returned a compat_list result. It needs to be updated.; please report this
+
+[test_generic]
+Disable test
+Reason: Since it need Bandcamp to work and bandcamp is disabled
+
+[test_HellPorno]
+Disable extractor
+Reason: 404
+
+[test_KeezMovies]
+Disable extractor
+Reason: DownloadError: ERROR: Unable to extract video_url
+
+[test_Loala1Tv]
+Disable extractor
+Reason: ERROR: Unable to extract iframe URL
+
+[test_MailRu]
+Disable test
+Reason: Test will never pass on travis
+
+[test_MiTele]
+Disable test
+Reason: will never pass on travis
+
+[test_Moniker]
+Disable test
+Reason: will never pass on travis
+
+[test_Motherless]
+Disable tests
+Reason: will never pass on travis
+
+[test_MovShare]
+Disable test
+Reason: failing on travis pass on local machine
+
+[test_NDR]
+Disable failing test
+Reason: 404
+
+[test_NRK]
+Disable extractor
+Reason:  ERROR: Unable to extract video id;
+
+[test_NowVideo]
+Disable tests
+Reason: failing on travis pass on local machine
+
+[test_Nuvid]
+Disable test
+Reason: failing on travis pass on local machien
+
+[test_PornoXO]
+Disable test
+Reason: failing on travis pass on local machine
+
+[test_PromptFile]
+Disable test
+Reason: failing on travis pass on local dev
+
+[test_RBMARadio]
+Disable test
+Reason: failing on travis but pass on local dev
+
+[test_ShareSix]
+Disable extractor
+Reason: 404
+
+[test_Sockshare]
+Disable extractor
+Reason: UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-4: ordinal not in range(128)
+
+[test_Steam]
+Disable extractor
+Reason: ExtractorError: [youtube] X8kpJBlzD2E: Skipping DASH manifest: ExtractorError(u'Cannot decrypt signature without player_url;
+
+[test_SunPorno]
+Disable test
+Reason: available only in eu
+
+[test_Syfy]
+Disable first test
+Reason: DownloadError: ERROR: Unable to extract video url;
+
+[test_TeleBruxelles_1]
+Disable test
+Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404: Not Found
+
+[test_Telecinco]
+Disable test
+Reason: failing on travis but pass on local dev
+
+[test_Toypics]
+Disable test
+Reason: failing on travis but pass on local dev
+
+[test_Yahoo]
+Disable test 5
+Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404:
+

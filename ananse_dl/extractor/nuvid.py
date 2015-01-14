@@ -15,16 +15,16 @@ from ..utils import (
 class NuvidIE(InfoExtractor):
     _VALID_URL = r'https?://(?:www|m)\.nuvid\.com/video/(?P<id>[0-9]+)'
     _TEST = {
-        'url': 'http://m.nuvid.com/video/1310741/',
-        'md5': 'eab207b7ac4fccfb4e23c86201f11277',
-        'info_dict': {
-            'id': '1310741',
-            'ext': 'mp4',
-            'title': 'Horny babes show their awesome bodeis and',
-            'duration': 129,
-            'upload_date': '20140508',
-            'age_limit': 18,
-        }
+        # 'url': 'http://m.nuvid.com/video/1310741/',
+        # 'md5': 'eab207b7ac4fccfb4e23c86201f11277',
+        # 'info_dict': {
+        #     'id': '1310741',
+        #     'ext': 'mp4',
+        #     'title': 'Horny babes show their awesome bodeis and',
+        #     'duration': 129,
+        #     'upload_date': '20140508',
+        #     'age_limit': 18,
+        # }
     }
 
     def _real_extract(self, url):

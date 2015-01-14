@@ -8,7 +8,7 @@ class RUHDIE(InfoExtractor):
     _VALID_URL = r'http://(?:www\.)?ruhd\.ru/play\.php\?vid=(?P<id>\d+)'
     _TEST = {
         'url': 'http://www.ruhd.ru/play.php?vid=207',
-        'md5': 'd1a9ec4edf8598e3fbd92bb16072ba83',
+        'md5': 'c61666c47fcc6deb02d7ef08544da1f0',
         'info_dict': {
             'id': '207',
             'ext': 'divx',

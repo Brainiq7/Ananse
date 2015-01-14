@@ -9,15 +9,15 @@ class ToypicsIE(InfoExtractor):
     IE_DESC = 'Toypics user profile'
     _VALID_URL = r'https?://videos\.toypics\.net/view/(?P<id>[0-9]+)/.*'
     _TEST = {
-        'url': 'http://videos.toypics.net/view/514/chancebulged,-2-1/',
-        'md5': '16e806ad6d6f58079d210fe30985e08b',
-        'info_dict': {
-            'id': '514',
-            'ext': 'mp4',
-            'title': 'Chance-Bulge\'d, 2',
-            'age_limit': 18,
-            'uploader': 'kidsune',
-        }
+        # 'url': 'http://videos.toypics.net/view/514/chancebulged,-2-1/',
+        # 'md5': '16e806ad6d6f58079d210fe30985e08b',
+        # 'info_dict': {
+        #     'id': '514',
+        #     'ext': 'mp4',
+        #     'title': 'Chance-Bulge\'d, 2',
+        #     'age_limit': 18,
+        #     'uploader': 'kidsune',
+        # }
     }
 
     def _real_extract(self, url):

@@ -16,12 +16,12 @@ class MovShareIE(NovaMovIE):
     _DESCRIPTION_REGEX = r'<strong>Description:</strong> ([^<]+)</p>'
 
     _TEST = {
-        'url': 'http://www.movshare.net/video/559e28be54d96',
-        'md5': 'abd31a2132947262c50429e1d16c1bfd',
-        'info_dict': {
-            'id': '559e28be54d96',
-            'ext': 'flv',
-            'title': 'dissapeared image',
-            'description': 'optical illusion  dissapeared image  magic illusion',
-        }
+        # 'url': 'http://www.movshare.net/video/559e28be54d96',
+        # 'md5': 'abd31a2132947262c50429e1d16c1bfd',
+        # 'info_dict': {
+        #     'id': '559e28be54d96',
+        #     'ext': 'flv',
+        #     'title': 'dissapeared image',
+        #     'description': 'optical illusion  dissapeared image  magic illusion',
+        # }
     }

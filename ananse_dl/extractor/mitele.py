@@ -19,16 +19,16 @@ class MiTeleIE(InfoExtractor):
     _VALID_URL = r'http://www\.mitele\.es/[^/]+/[^/]+/[^/]+/(?P<id>[^/]+)/'
 
     _TEST = {
-        'url': 'http://www.mitele.es/programas-tv/diario-de/la-redaccion/programa-144/',
-        'md5': '6a75fe9d0d3275bead0cb683c616fddb',
-        'info_dict': {
-            'id': '0fce117d',
-            'ext': 'mp4',
-            'title': 'Programa 144 - Tor, la web invisible',
-            'description': 'md5:3b6fce7eaa41b2d97358726378d9369f',
-            'display_id': 'programa-144',
-            'duration': 2913,
-        },
+        # 'url': 'http://www.mitele.es/programas-tv/diario-de/la-redaccion/programa-144/',
+        # 'md5': '6a75fe9d0d3275bead0cb683c616fddb',
+        # 'info_dict': {
+        #     'id': '0fce117d',
+        #     'ext': 'mp4',
+        #     'title': 'Programa 144 - Tor, la web invisible',
+        #     'description': 'md5:3b6fce7eaa41b2d97358726378d9369f',
+        #     'display_id': 'programa-144',
+        #     'duration': 2913,
+        # },
     }
 
     def _real_extract(self, url):
