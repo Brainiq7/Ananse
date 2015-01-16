@@ -262,7 +262,7 @@ class CultureboxIE(FranceTVBaseInfoExtractor):
 
     _TEST = {
         'url': 'http://culturebox.francetvinfo.fr/festivals/dans-les-jardins-de-william-christie/dans-les-jardins-de-william-christie-le-camus-162553',
-        'md5': '6b4814eaa67289ef28aaf3e4d1dfb034',
+        'md5': '129c486850406acfbac2d275d07a6dfe',
         'info_dict': {
             'id': 'EV_22853',
             'ext': 'flv',

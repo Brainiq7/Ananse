@@ -44,17 +44,17 @@ class YahooIE(InfoExtractor):
                 'duration': 151,
             },
         },
-        {
-            'url': 'https://screen.yahoo.com/community/community-sizzle-reel-203225340.html?format=embed',
-            'md5': '60e8ac193d8fb71997caa8fce54c6460',
-            'info_dict': {
-                'id': '4fe78544-8d48-39d8-97cd-13f205d9fcdb',
-                'ext': 'mp4',
-                'title': "Yahoo Saves 'Community'",
-                'description': 'md5:4d4145af2fd3de00cbb6c1d664105053',
-                'duration': 170,
-            }
-        },
+        # {
+        #     'url': 'https://screen.yahoo.com/community/community-sizzle-reel-203225340.html?format=embed',
+        #     'md5': '60e8ac193d8fb71997caa8fce54c6460',
+        #     'info_dict': {
+        #         'id': '4fe78544-8d48-39d8-97cd-13f205d9fcdb',
+        #         'ext': 'mp4',
+        #         'title': "Yahoo Saves 'Community'",
+        #         'description': 'md5:4d4145af2fd3de00cbb6c1d664105053',
+        #         'duration': 170,
+        #     }
+        # },
         {
             'url': 'https://tw.screen.yahoo.com/election-2014-askmayor/敢問市長-黃秀霜批賴清德-非常高傲-033009720.html',
             'md5': '3a09cf59349cfaddae1797acc3c087fc',
