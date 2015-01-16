@@ -460,11 +460,5 @@ Reason: failing on travis but pass on local dev
 
 [test_Yahoo]
 Disable test 5
-Disable test 3
 Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404:
-Reason: DownloadError: ERROR: Unable to download webpage: HTTP Error 404
-
-[test_ExtremeTube]
-Disable extractor
-Reason: DownloadError: ERROR: Unable to extract video_url
 

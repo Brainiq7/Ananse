@@ -21,7 +21,7 @@ class VuClipIE(InfoExtractor):
         'info_dict': {
             'id': '922692425',
             'ext': '3gp',
-            'title': 'The Toy Soldiers - Hollywood Movie Trailer - Video',
+            'title': 'The Toy Soldiers - Hollywood Movie Trailer',
             'duration': 180,
         }
     }

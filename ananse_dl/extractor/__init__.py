@@ -104,7 +104,7 @@ from .defense import DefenseGouvFrIE
 from .dropbox import DropboxIE
 from .ebaumsworld import EbaumsWorldIE
 from .ehow import EHowIE
-# from .eighttracks import EightTracksIE
+from .eighttracks import EightTracksIE
 from .einthusan import EinthusanIE
 from .eitb import EitbIE
 from .ellentv import (

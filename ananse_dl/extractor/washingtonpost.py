@@ -29,7 +29,7 @@ class WashingtonPostIE(InfoExtractor):
                 'upload_date': '20140322',
             },
         }, {
-            'md5': 'e1d5734c06865cc504ad99dc2de0d443',
+            'md5': 'f645a07652c2950cd9134bb852c5f5eb',
             'info_dict': {
                 'id': '41255e28-b14a-11e3-b8b3-44b1d1cd4c1f',
                 'ext': 'mp4',
