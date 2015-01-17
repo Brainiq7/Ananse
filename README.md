@@ -404,6 +404,9 @@ If you want to create a build of ananse yourself, you'll need
 **Coming soon.** 
 But any extractor that works in [youtube-dl](https://github.com/rg3/youtube-dl/) will work here
 
+**Note:** All pull requests for extractors should be send to the extractor_testing branch and if your extractor passes it test will be merge to the master branch. Because extractors don't always behaviors as expected and something pass while other times fail, 
+extractor tests has be disable in the master branch
+
 # CONTRIBUTING
 
 See the [CONTRIBUTING file](https://github.com/Oteng/Ananse/blob/master/CONTRIBUTING.md)

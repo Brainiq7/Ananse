@@ -135,6 +135,12 @@ Pull requests may be approved by any committer with sufficient
 expertise to take full responsibility for the change, according to the
 "Landing Patches" protocol described below.
 
+
+**Note:** All pull requests for extractors should be send to the extractor_testing branch 
+and if your extractor passes it test will be merge to the master branch. Because 
+extractors don't always behaviors as expected and something pass while other times fail, 
+extractor tests has be disable in the master branch 
+
 ## Landing Patches/Features
 
 - All bugfixes require a test case which demonstrates the defect.  The
