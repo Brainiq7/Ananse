@@ -215,11 +215,6 @@ def generator(test_case):
 
     return test_template
 
-#disabling extractor test all together
-#full test to thing test is empty
-defs = []
-
-
 # And add them to TestDownload
 for n, test_case in enumerate(defs):
     test_method = generator(test_case)
