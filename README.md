@@ -383,7 +383,8 @@ $ ananse --dateafter 20000101 --datebefore 20091231`
 
 To run Ananse as a developer, you don't need to build anything either. Simply execute
 
-    python -m ananse
+    cd Ananse
+    python ananse [options] url [url...]
 
 To run the test, simply invoke your favorite test runner, or execute a test file directly; any of the following work:
 
