@@ -19,6 +19,7 @@ import socket
 import sys
 import time
 import traceback
+import requests 
 
 if os.name == 'nt':
     import ctypes
