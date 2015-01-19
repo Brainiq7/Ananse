@@ -19,7 +19,7 @@ import socket
 import sys
 import time
 import traceback
-import requests 
+import requests
 
 if os.name == 'nt':
     import ctypes
@@ -564,17 +564,17 @@ class AnanseDl(object):
 
     @staticmethod
     def add_extra_info(info_dict, extra_info):
-        '''Set the keys from extra_info in info dict if they are missing'''
+        """Set the keys from extra_info in info dict if they are missing"""
         for key, value in extra_info.items():
             info_dict.setdefault(key, value)
 
     def extract_info(self, url, download=True, ie_key=None, extra_info={},
                      process=True):
-        '''
+        """
         Returns a list with a dictionary for each video we find.
         If 'download', also downloads the videos.
         extra_info is a dict containing the extra values to add to each result
-         '''
+         """
 
         if ie_key:
             ies = [self.get_info_extractor(ie_key)]
@@ -1162,6 +1162,23 @@ class AnanseDl(object):
 
         for url in url_list:
             try:
+                #check to see if the url is a direct link to a file
+                #or search for the real url and download it
+                file_url = re.search(r'(tar|gz|exe|jar|zip)$', url)
+                if file_url:
+                    res_header = requests.head(url)
+                    content_type = re.match(r'(text/html|application)', res_header.headers['content-type']).group()
+                    if content_type == 'application':
+                        title = url.split('/')
+                        title = title[len(title)-1]
+                        res = self.process_info({
+                            'url': url,
+                            'title': title,
+                            'id': title,
+                            'ext': file_url.group()
+                        })
+                    elif content_type == 'text/html':
+                        pass
                 # It also downloads the videos
                 res = self.extract_info(url)
             except UnavailableVideoError:
