@@ -241,6 +241,7 @@ class AnanseDl(object):
         if params.get('bidi_workaround', False):
             try:
                 import pty
+
                 master, slave = pty.openpty()
                 width = get_term_width()
                 if width is None:
@@ -261,13 +262,14 @@ class AnanseDl(object):
                 self._output_channel = os.fdopen(master, 'rb')
             except OSError as ose:
                 if ose.errno == 2:
-                    self.report_warning('Could not find fribidi executable, ignoring --bidi-workaround . Make sure that  fribidi  is an executable file in one of the directories in your $PATH.')
+                    self.report_warning(
+                        'Could not find fribidi executable, ignoring --bidi-workaround . Make sure that  fribidi  is an executable file in one of the directories in your $PATH.')
                 else:
                     raise
 
         if (sys.version_info >= (3,) and sys.platform != 'win32' and
-                sys.getfilesystemencoding() in ['ascii', 'ANSI_X3.4-1968']
-                and not params.get('restrictfilenames', False)):
+                    sys.getfilesystemencoding() in ['ascii', 'ANSI_X3.4-1968']
+            and not params.get('restrictfilenames', False)):
             # On Python 3, the Unicode filesystem API will throw errors (#1474)
             self.report_warning(
                 'Assuming --restrict-filenames since file system encoding '
@@ -276,7 +278,8 @@ class AnanseDl(object):
             self.params['restrictfilenames'] = True
 
         if '%(stitle)s' in self.params.get('outtmpl', ''):
-            self.report_warning('%(stitle)s is deprecated. Use the %(title)s and the --restrict-filenames flag(which also secures %(uploader)s et al) instead.')
+            self.report_warning(
+                '%(stitle)s is deprecated. Use the %(title)s and the --restrict-filenames flag(which also secures %(uploader)s et al) instead.')
 
         self._setup_opener()
 
@@ -497,7 +500,8 @@ class AnanseDl(object):
             autonumber_templ = '%0' + str(autonumber_size) + 'd'
             template_dict['autonumber'] = autonumber_templ % self._num_downloads
             if template_dict.get('playlist_index') is not None:
-                template_dict['playlist_index'] = '%0*d' % (len(str(template_dict['n_entries'])), template_dict['playlist_index'])
+                template_dict['playlist_index'] = '%0*d' % (
+                    len(str(template_dict['n_entries'])), template_dict['playlist_index'])
             if template_dict.get('resolution') is None:
                 if template_dict.get('width') and template_dict.get('height'):
                     template_dict['resolution'] = '%dx%d' % (template_dict['width'], template_dict['height'])
@@ -520,7 +524,8 @@ class AnanseDl(object):
             filename = tmpl % template_dict
             return filename
         except ValueError as err:
-            self.report_error('Error in output template: ' + str(err) + ' (encoding: ' + repr(preferredencoding()) + ')')
+            self.report_error(
+                'Error in output template: ' + str(err) + ' (encoding: ' + repr(preferredencoding()) + ')')
             return None
 
     def _match_entry(self, info_dict):
@@ -547,10 +552,12 @@ class AnanseDl(object):
         if view_count is not None:
             min_views = self.params.get('min_views')
             if min_views is not None and view_count < min_views:
-                return 'Skipping %s, because it has not reached minimum view count (%d/%d)' % (video_title, view_count, min_views)
+                return 'Skipping %s, because it has not reached minimum view count (%d/%d)' % (
+                    video_title, view_count, min_views)
             max_views = self.params.get('max_views')
             if max_views is not None and view_count > max_views:
-                return 'Skipping %s, because it has exceeded the maximum view count (%d/%d)' % (video_title, view_count, max_views)
+                return 'Skipping %s, because it has exceeded the maximum view count (%d/%d)' % (
+                    video_title, view_count, max_views)
         age_limit = self.params.get('age_limit')
         if age_limit is not None:
             actual_age_limit = info_dict.get('age_limit')
@@ -640,7 +647,7 @@ class AnanseDl(object):
         if result_type in ('url', 'url_transparent'):
             extract_flat = self.params.get('extract_flat', False)
             if ((extract_flat == 'in_playlist' and 'playlist' in extra_info) or
-                    extract_flat is True):
+                        extract_flat is True):
                 if self.params.get('forcejson', False):
                     self.to_stdout(json.dumps(ie_result))
                 return ie_result
@@ -753,6 +760,7 @@ class AnanseDl(object):
                     }
                 )
                 return r
+
             ie_result['entries'] = [
                 self.process_ie_result(_fixup(r), download, extra_info)
                 for r in ie_result['entries']
@@ -932,7 +940,8 @@ class AnanseDl(object):
 
         if download:
             if len(formats_to_download) > 1:
-                self.to_screen('[info] %s: downloading video in %s formats' % (info_dict['id'], len(formats_to_download)))
+                self.to_screen(
+                    '[info] %s: downloading video in %s formats' % (info_dict['id'], len(formats_to_download)))
             for format in formats_to_download:
                 new_info = dict(info_dict)
                 new_info.update(format)
@@ -1111,6 +1120,7 @@ class AnanseDl(object):
                         if self.params.get('verbose'):
                             self.to_stdout('[debug] Invoking downloader on %r' % info.get('url'))
                         return fd.download(name, info)
+
                     if info_dict.get('requested_formats') is not None:
                         downloaded = []
                         success = True
@@ -1141,7 +1151,8 @@ class AnanseDl(object):
                 except (OSError, IOError) as err:
                     raise UnavailableVideoError(err)
                 except (ContentTooShortError, ) as err:
-                    self.report_error('content too short (expected %s bytes and served %s)' % (err.expected, err.downloaded))
+                    self.report_error(
+                        'content too short (expected %s bytes and served %s)' % (err.expected, err.downloaded))
                     return
 
             if success:
@@ -1156,25 +1167,28 @@ class AnanseDl(object):
         """Download a given list of URLs."""
         outtmpl = self.params.get('outtmpl', DEFAULT_OUTTMPL)
         if (len(url_list) > 1 and
-                '%' not in outtmpl
-                and self.params.get('max_downloads') != 1):
+                    '%' not in outtmpl
+            and self.params.get('max_downloads') != 1):
             raise SameFileError(outtmpl)
 
         for url in url_list:
             try:
-                #check to see if the url is a direct link to a file
-                #or search for the real url and download it
-                file_url = re.search(r'(tar|gz|exe|jar|zip)$', url)
+                # check to see if the url is a direct link to a file
+                # or search for the real url and download it
+                file_url = re.search(r'(tar|gz|exe|jar|zip|bin)$', url)
                 if file_url:
                     res_header = requests.head(url)
                     content_type = re.match(r'(text/html|application)', res_header.headers['content-type']).group()
                     if content_type == 'application':
                         title = url.split('/')
-                        title = title[len(title)-1]
+                        title = title[len(title) - 1]
+                        # force the file name to the title since the
+                        # title is the actual file name
+                        self.params['outtmpl'] = "%(title)s"
                         res = self.process_info({
                             'url': url,
                             'title': title,
-                            'id': title,
+                            'id': '',  # since this is a file we don't really need an id
                             'ext': file_url.group()
                         })
                     elif content_type == 'text/html':
@@ -1302,7 +1316,7 @@ class AnanseDl(object):
                 res += ', '
             res += '%s container' % fdict['container']
         if (fdict.get('vcodec') is not None and
-                fdict.get('vcodec') != 'none'):
+                    fdict.get('vcodec') != 'none'):
             if res:
                 res += ', '
             res += fdict['vcodec']
@@ -1357,8 +1371,8 @@ class AnanseDl(object):
             formats_s[-1] += (' ' if self._format_note(formats[-1]) else '') + '(best)'
 
         header_line = line({
-            'format_id': 'format code', 'ext': 'extension',
-            'resolution': 'resolution', 'format_note': 'note'}, idlen=idlen)
+                               'format_id': 'format code', 'ext': 'extension',
+                               'resolution': 'resolution', 'format_note': 'note'}, idlen=idlen)
         self.to_screen('[info] Available formats for %s:\n%s\n%s' %
                        (info_dict['id'], header_line, '\n'.join(formats_s)))
 
