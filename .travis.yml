@@ -5,7 +5,7 @@ python:
   - "3.3"
   - "3.4"
 install:
-  - pip install -r requests
+  - pip install requests
 script: nosetests test --verbose
 notifications:
   email:
