@@ -32,6 +32,7 @@ from .compat import (
     compat_str,
     compat_urllib_error,
     compat_urllib_request,
+    compat_urlparse
 )
 from .utils import (
     escape_url,
@@ -470,10 +471,10 @@ class AnanseDl(object):
             self.to_stderr(warning_message)
 
     def report_error(self, message, tb=None):
-        '''
+        """
         Do the same as trouble, but prefixes the message with 'ERROR:', colored
         in red if stderr is a tty file.
-        '''
+        """
         if self._err_file.isatty() and os.name != 'nt':
             _msg_header = '\033[0;31mERROR:\033[0m'
         else:
@@ -1185,14 +1186,15 @@ class AnanseDl(object):
                         # force the file name to the title since the
                         # title is the actual file name
                         self.params['outtmpl'] = "%(title)s"
-                        res = self.process_info({
+                        self.process_info({
                             'url': url,
                             'title': title,
                             'id': '',  # since this is a file we don't really need an id
                             'ext': file_url.group()
                         })
                     elif content_type == 'text/html':
-                        pass
+                        actual_url = self.extract_url_for_files(url, requests.get(url).text)
+                        self.download([actual_url])
                 # It also downloads the videos
                 res = self.extract_info(url)
             except UnavailableVideoError:
@@ -1205,6 +1207,14 @@ class AnanseDl(object):
                     self.to_stdout(json.dumps(res))
 
         return self._download_retcode
+
+    def extract_url_for_files(self, url, page):
+        #redirect using http-equiv
+        redirect_re = re.compile('<meta[^>]*?url=(.*?)["\']', re.IGNORECASE)
+        match = redirect_re.search(page)
+        if match:
+            return compat_urlparse.urljoin(url, match.groups()[0].strip())
+        return None
 
     def download_with_info_file(self, info_filename):
         with io.open(info_filename, 'r', encoding='utf-8') as f:
